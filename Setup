@@ -1,0 +1,1304 @@
+#!/bin/sh
+# vim: filetype=sh:syntax=sh:tabstop=2:shiftwidth=2:expandtab
+#
+###### System properties (locked/read-only)
+# script-version: 1.0.23.5a
+# dosbox-variants: dosbox-x dosbox-staging dosbox
+# library-file: Library.txt
+# program-file: Program.txt
+# markdown-file: README.md
+# hypertext-file: README.html
+#
+###### Library properties (overridable in library configuration file)
+# backup-directory: .backup
+# script-export-file: 1
+# script-include-text: -1
+#
+###### Program properties (overridable in program configuration file)
+# asset-verify: 1
+# thumbnail-file: Thumbnail.png
+# thumbnail-source: Assets/coverart.jpg
+# thumbnail-width: 250
+#
+###### Application properties (overridable in library or program configuration file)
+# montage-file: Montage.png
+# montage-grid: 5
+# montage-width: 1000
+#
+###### DOSBox variant compatibility (overridable in library or program configuration file)
+### 🟩 Fully supported
+### 🟨 Runnable with issues
+### 🟥 Unsupported, unplayable, or broken
+### ⬜ Untested
+# dosbox: [DOSBox](https://www.dosbox.com/) 🟩
+# dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) 🟩
+# dosbox: [DOSBox-X](https://dosbox-x.com/) 🟩
+#
+# name: Simple DOSBox Client
+# name: SDC
+# info: A lightweight DOSBox client in one shell script
+# tag: Version = ###script-version###
+# tag: Type = Shell Script
+# tag: Shell = POSIX Compliant
+# tag: Interface = CLI
+# tag: License = MIT
+#
+# text: ## What is *Simple DOSBox Client*?
+# text: Ever want to relive your past gaming experience, but your modern computer can no longer run it?
+# text:
+# text: - *The good news is* — there is *DOSBox*. DOSBox is a free and open-source emulator which runs software for DOS-compatible disk operating systems.
+# text: - *The not-so-good thing is* — setting up programs in DOSBox is not that simple — you would be tinkering with hardware configuration, downloading floppy or CD-ROM images, mounting them, installing the program, executing DOS commands, and so on.
+# text:
+# text: **Simple DOSBox Client (SDC)** aims to simplify these processes and, at the same time, manage your collection of DOS programs. All the actions needed for setting up a program in DOSBox, from downloading the asset files to finally running the program, can be organised into a single configuration file. You can compile all the configuration files into a collection of programs (library). **SDC** combines several utilities into a single shell script (the `Setup` script). It switches functionality based on the script's filename.
+# text:
+# text: ### `🎛️ Setup + 📚 Library.txt`
+# text: The `Setup` script is the only script you will ever need to start building your retro gaming system. It will copy itself into other script files according to their intended roles. It pairs up with the `Library.txt` configuration file in the root directory of your library to deliver all the program configuration files; generate all program, category, and library documents; and build the directory structure of your library.
+# text:
+# text: ### `🚀 Launch + 📓 Program.txt`
+# text: The `Launch` script and the `Program.txt` configuration file are the central core of a program. They are responsible for downloading assets, integrity checking, executing custom code, restoring from or loading a snapshot, generating a montage image of screen captures (located in the `System/capture` directory), and running the program. The `Launch` script will copy itself into other script files after the first execution:
+# text:
+# text: - **`🪲 Debug`** — It launches DOSBox without running the `[autoexec]` section of the `Program.txt` configuration file. The debug console is a clean-slate DOSBox terminal, so manually mount hard-disk drives and floppy or CD-ROM images as needed.
+# text: - **`📷 Snapshot`** — It saves the entire content of the directory `System/drive` as a compressed file. Some programs require a snapshot of another program (e.g. certain games only run on *Windows 3.1x*).
+# text: - **`🗑️ Uninstall`** — It uninstalls the program by removing the generated `System` directory, `Debug` script, `Snapshot` script, and itself.
+# text:
+# text: ## Host Requirements
+# text: ### DOSBox Variant
+# text: You require at least one variant (flavour) of DOSBox as the backend. Well-known **DOSBox** forks are **DOSBox Staging** and **DOSBox-X**. The script supports these three variants (the original and the two forks).
+# text:
+# text: - `dosbox` 📎 ┃ [Homepage](https://www.dosbox.com/) ┃ [Wikipedia](https://en.wikipedia.org/wiki/DOSBox) ┃ [Source](https://sourceforge.net/projects/dosbox/) ┃ [Homebrew](https://formulae.brew.sh/formula/dosbox)
+# text:   - **DOSBox** is the de facto standard for running DOS games. It was first released in 2002 when DOS technology was becoming obsolete.
+# text: - `dosbox-staging` 📎 ┃ [Homepage](https://dosbox-staging.github.io/) ┃ [Source](https://github.com/dosbox-staging/dosbox-staging) ┃ [Homebrew](https://formulae.brew.sh/formula/dosbox-staging) ┃ [Snap](https://snapcraft.io/install/dosbox-staging/ubuntu)
+# text:   - **DOSBox Staging** aims to be a modern continuation of DOSBox, with better coding practices and more advanced features.
+# text: - `dosbox-x` 📎 ┃ [Homepage](https://dosbox-x.com/) ┃ [Source](https://github.com/joncampbell123/dosbox-x) ┃ [Homebrew](https://formulae.brew.sh/formula/dosbox-x) ┃ [Snap](https://snapcraft.io/install/dosbox-x/ubuntu)
+# text:   - **DOSBox-X** aims to be compatible with all pre-2000 DOS and Windows 9x-based hardware scenarios. It offers a screen capture functionality that works well with the montage image generation feature (requires **ImageMagick**).
+# text:
+# text: If you have multiple DOSBox variants in the system, you can set the `SDC_DOSBOX` environment variable to enforce which DOSBox variant to use.
+# text: ```shell
+# text: # shell profile
+# text: SDC_DOSBOX="dosbox-staging"
+# text: export SDC_DOSBOX
+# text:
+# text: # direct invocation
+# text: SDC_DOSBOX="dosbox-x" ./Launch
+# text: ```
+# text:
+# text: ### Recommended Tools (Optional)
+# text: - `imagemagick` 📎 ┃ [Homepage](https://imagemagick.org/) ┃ [Wikipedia](https://en.wikipedia.org/wiki/ImageMagick) ┃ [Source](https://github.com/imagemagick/imagemagick) ┃ [Homebrew](https://formulae.brew.sh/formula/imagemagick)
+# text:   - **ImageMagick** provides `mogrify` and `montage` commands. If installed, it will automatically generate a montage for all screen captures you made during the program run.
+# text: - `mdcat` 📎 ┃ [Source](https://github.com/swsnr/mdcat) ┃ [Homebrew](https://formulae.brew.sh/formula/mdcat)
+# text:   - **`mdcat`** renders markdown format on your terminal. Hence, it works best with a terminal emulator that supports graphics rendering (such as [iTerm2](https://iterm2.com/), [Kitty](https://sw.kovidgoyal.net/kitty/), or [WezTerm](https://wezfurlong.org/wezterm/)).
+# text: - `pandoc` 📎 ┃ [Homepage](https://pandoc.org/) ┃ [Wikipedia](https://en.wikipedia.org/wiki/Pandoc) ┃ [Source](https://hackage.haskell.org/package/pandoc) ┃ [Homebrew](https://formulae.brew.sh/formula/pandoc)
+# text:   - **Pandoc** allows converting markdown documents into HTML. You can browse the library/collection from a web browser.
+# text: - `pngquant` 📎 ┃ [Homepage](https://pngquant.org/) ┃ [Source](https://github.com/kornelski/pngquant) ┃ [Homebrew](https://formulae.brew.sh/formula/pngquant)
+# text:   - The **`pngquant`** tool is a command-line utility and a library for the lossy compression of PNG images.
+
+# section: DOSBox wrapper functions
+{
+  sdc__dosbox__debug() {
+    "${sdc__dosbox__command}" -noautoexec -conf ./dosbox.conf >>./dosbox.logs 2>&1
+  }
+  sdc__dosbox__config() {
+    if [ -f "${sdc__program__file}" ]; then
+      "${sdc__dosbox__command}" -noautoexec -exit -c "config -writeconf System/dosbox.conf" -c "exit" -conf "${sdc__program__file}" >>./System/dosbox.logs 2>&1
+    else
+      "${sdc__dosbox__command}" -noautoexec -exit -c "config -writeconf System/dosbox.conf" -c "exit" >>./System/dosbox.logs 2>&1
+    fi
+  }
+  sdc__dosbox__launch() {
+    "${sdc__dosbox__command}" -conf ./dosbox.conf >>./dosbox.logs 2>&1
+  }
+  sdc__dosbox__version() {
+    "${sdc__dosbox__command}" -version
+  }
+}
+
+# section: DOSBox Staging wrapper functions
+{
+  sdc__dosbox_staging__debug() {
+    sdc__dosbox__debug
+  }
+  sdc__dosbox_staging__config() {
+    if [ -f "${sdc__program__file}" ]; then
+      "${sdc__dosbox__command}" -noautoexec -exit -c "config -wcp System/dosbox.conf" -conf "${sdc__program__file}" >>./System/dosbox.logs 2>&1
+    else
+      "${sdc__dosbox__command}" -noautoexec -exit -c "config -wcp System/dosbox.conf" >>./System/dosbox.logs 2>&1
+    fi
+  }
+  sdc__dosbox_staging__launch() {
+    sdc__dosbox__launch
+  }
+  sdc__dosbox_staging__version() {
+    "${sdc__dosbox__command}" --version
+  }
+}
+
+# section: DOSBox-X wrapper functions
+{
+  sdc__dosbox_x__debug() {
+    "${sdc__dosbox__command}" -noautoexec -set title="[ ${sdc__application__name} ]" -conf ./dosbox.conf >>./dosbox.logs 2>&1
+  }
+  sdc__dosbox_x__config() {
+    if [ -f "${sdc__program__file}" ]; then
+      "${sdc__dosbox__command}" -noautoexec -silent -exit -nolog -c "config -all -wcp ./System/dosbox.conf" -conf "${sdc__program__file}" >>./System/dosbox.logs 2>&1
+    else
+      "${sdc__dosbox__command}" -noautoexec -silent -exit -nolog -c "config -all -wcp ./System/dosbox.conf" >>./System/dosbox.logs 2>&1
+    fi
+  }
+  sdc__dosbox_x__launch() {
+    "${sdc__dosbox__command}" -set title="${sdc__application__name}" -conf ./dosbox.conf >>./dosbox.logs 2>&1
+  }
+  sdc__dosbox_x__version() {
+    "${sdc__dosbox__command}" -v
+  }
+}
+
+# section: Message printing functions
+{
+  sdc__message__plain() {
+    printf '%s\n' "${*}"
+  }
+  sdc__message__action() {
+    printf '%s\n' "[#] ${*}"
+  }
+  sdc__message__info() {
+    printf '%s\n' "[i] ${*}"
+  }
+  sdc__message__item() {
+    printf '%s\n' "    ┃ ${*}"
+  }
+  sdc__message__prompt() {
+    printf '%s ' "[?] ${*} [Y/*]?"
+    __stty="$(stty -g)"
+    stty raw -echo
+    sdc__prompt__reply="$(head -c 1)"
+    stty "${__stty}"
+    unset __stty
+  }
+  sdc__message__error() {
+    printf '%s\n' "[E] ${*}" >&2
+    printf '%s ' "[!] Press any key to quit" >&2
+    read -r __key </dev/tty
+    exit 1
+  }
+}
+
+# section: Configuration parsing functions
+{
+  sdc__parse__key_value() {
+    if [ -z "${3}" ] || [ ! -f "${3}" ]; then
+      sdc__message__error "Missing third argument: configuration file <sdc__parse__key_value>"
+    fi
+    if [ -n "${1}" ] && [ -n "${2}" ]; then
+      __config="$(grep "^# ${1}: " "${3}" | sed "s/^# ${1}: //g")"
+      if [ -n "${4}" ] && [ -f "${4}" ] && [ "${4}" != "${3}" ]; then
+        __alter="$(grep "^# ${1}: " "${4}" | sed "s/^# ${1}: //g")"
+        if [ -n "${__alter}" ]; then
+          __config="${__alter}"
+        fi
+      fi
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__parse__key_value>"
+      echo "${__config}" >"${__tmpfile}"
+      while IFS= read -r __index; do
+        __key="${__index%% = *}"
+        __value="${__index#*= }"
+        if [ "$(command -v "sdc__callback__${2}")" = "sdc__callback__${2}" ]; then
+          if [ "${__key}" = "${__value}" ]; then
+            "sdc__callback__${2}" "${__key}"
+          else
+            "sdc__callback__${2}" "${__key}" "${__value}"
+          fi
+        else
+          sdc__message__error "Unimplemented callback function: sdc__callback__${2} <sdc__parse__key_value>"
+        fi
+      done <"${__tmpfile}"
+    fi
+    unset __config __alter __tmpfile __index __key __value
+  }
+  sdc__parse__value() {
+    if [ -z "${3}" ] || [ ! -f "${3}" ]; then
+      sdc__message__error "Missing third argument: configuration file <sdc__parse__value>"
+    fi
+    if [ -n "${1}" ] && [ -n "${2}" ]; then
+      __config="$(grep "^# ${1}: " "${3}" | sed "s/^# ${1}: //g")"
+      if [ -n "${4}" ] && [ -f "${4}" ] && [ "${4}" != "${3}" ]; then
+        __alter="$(grep "^# ${1}: " "${4}" | sed "s/^# ${1}: //g")"
+        if [ -n "${__alter}" ]; then
+          __config="${__alter}"
+        fi
+      fi
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__parse__value>"
+      echo "${__config}" >"${__tmpfile}"
+      while IFS= read -r __index; do
+        if [ "$(command -v "sdc__callback__${2}")" = "sdc__callback__${2}" ]; then
+          "sdc__callback__${2}" "${__index}"
+        else
+          sdc__message__error "Unimplemented callback function: sdc__callback__${2} <sdc__parse__value>"
+        fi
+      done <"${__tmpfile}"
+    fi
+    unset __config __alter __tmpfile __index
+  }
+  sdc__parse__text() {
+    if [ -z "${3}" ] || [ ! -f "${3}" ]; then
+      sdc__message__error "Missing third argument: configuration file <sdc__parse__text>"
+    fi
+    if [ -n "${1}" ] && [ -n "${2}" ]; then
+      __config="$(grep "^# ${1}:" "${3}" | sed "s/^# ${1}: //g;s/^# ${1}://g")"
+      if [ -n "${4}" ] && [ -f "${4}" ] && [ "${4}" != "${3}" ]; then
+        __alter="$(grep "^# ${1}:" "${4}" | sed "s/^# ${1}: //g;s/^# ${1}://g")"
+        if [ -n "${__alter}" ]; then
+          __config="${__alter}"
+        fi
+      fi
+      if [ "$(command -v "sdc__callback__${2}")" = "sdc__callback__${2}" ]; then
+        "sdc__callback__${2}" "${__config}"
+      else
+        sdc__message__error "Unimplemented callback function: sdc__callback__${2} <sdc__parse__text>"
+      fi
+    fi
+    unset __config __alter
+  }
+}
+
+# section: Configuration callback functions
+{
+  sdc__callback__application() {
+    if [ -n "${1}" ] && [ "${sdc__application__slug}" = "${sdc__application__name}" ]; then
+      sdc__application__name="${1}"
+      sdc__application__slug=""
+    fi
+  }
+  sdc__callback__print() {
+    sdc__message__plain "${*}"
+  }
+  sdc__callback__reset_file() {
+    if [ -n "${1}" ]; then
+      __dirpath="$(dirname "${1}")"
+      if [ ! -d "${__dirpath}" ]; then
+        mkdir -p "${__dirpath}"
+      fi
+      if [ -f "${1}" ]; then
+        sdc__utility__remove_file "${1}"
+      fi
+    fi
+    unset __dirpath
+  }
+  sdc__callback__append_file() {
+    if [ -n "${1}" ]; then
+      if [ ! -f "${1}" ]; then
+        sdc__message__item "${1#./} [FILE]"
+        touch "${1}"
+      fi
+      if [ -n "${2}" ]; then
+        printf '%s\n' "${2}" >>"${1}"
+      else
+        printf '%s\n' "" >>"${1}"
+      fi
+    fi
+  }
+  sdc__callback__symbolic_link() {
+    if [ -n "${1}" ]; then
+      __dirpath="$(dirname "${1}")"
+      sdc__message__item "${1#./} [LINK]"
+      if [ ! -d "${__dirpath}" ]; then
+        mkdir -p "${__dirpath}"
+      fi
+      rm -f "${1}"
+      (
+        cd "${__dirpath}" || sdc__message__error "Inaccessible directory: ${__dirpath} <sdc__callback__symbolic_link>"
+        ln -sf "${2}" "$(basename "${1}")"
+      )
+    fi
+    unset __dirpath
+  }
+  sdc__callback__base64_decode() {
+    if [ -n "${1}" ]; then
+      __dirpath="$(dirname "${1}")"
+      if [ ! -d "${__dirpath}" ]; then
+        mkdir -p "${__dirpath}"
+      fi
+      if [ -f "${1}" ]; then
+        rm -f "${1}"
+      fi
+      if [ -n "${2}" ]; then
+        sdc__message__item "${1#./} [DECODE]"
+        printf '%s' "${2}" | base64 -d >"${1}"
+      fi
+    fi
+    unset __dirpath
+  }
+  sdc__callback__download_file() {
+    __download="n"
+    if [ ! -d "Assets" ]; then
+      mkdir "Assets"
+    fi
+    if [ -n "${1}" ] && [ -n "${2}" ] && [ ! -f "Assets/${1}" ]; then
+      if [ -z "${sdc__download__match}" ]; then
+        __download="y"
+      elif [ -n "${sdc__download__match}" ] && [ "${sdc__download__match}" = "Assets/${1}" ]; then
+        __download="y"
+      fi
+      if [ "${__download}" = "y" ]; then
+        sdc__message__item "Fetching ${2} ‣‣‣ Assets/${1}"
+        if ! curl --progress-bar -f -o "Assets/${1}" -L -S "${2}"; then
+          rm -f "Assets/${1}"
+          sdc__message__error "Failed to download asset file: ${2} <sdc__callback__download_file>"
+        fi
+      fi
+    fi
+    unset __download
+  }
+  sdc__callback__verify_file() {
+    __verify="n"
+    if [ -n "${1}" ] && [ -n "${2}" ]; then
+      if [ -z "${sdc__download__match}" ]; then
+        __verify="y"
+      elif [ -n "${sdc__download__match}" ] && [ "${sdc__download__match}" = "Assets/${1}" ]; then
+        __verify="y"
+      fi
+      if [ "${__verify}" = "y" ]; then
+        if [ -f "Assets/${1}" ]; then
+          sdc__message__item "Verifying ${1}"
+          __source="$(sdc__utility__sha256_checksum "Assets/${1}" | head -c 64 | tr '[:upper:]' '[:lower:]')"
+          __target="$(echo "${2}" | head -c 64 | tr '[:upper:]' '[:lower:]')"
+          if [ "${__source}" != "${__target}" ]; then
+            sdc__message__error "Checksum failed: Assets/${1} (${__source} != ${__target}) <sdc__callback__verify_file>"
+          fi
+        else
+          sdc__message__error "Unable to verify non-existant file: Assets/${1} <sdc__callback__verify_file>"
+        fi
+      fi
+    fi
+    unset __verify __source __target
+  }
+  sdc__callback__execute_code() {
+    if [ -n "${1}" ]; then
+      sdc__message__action "$> ${1}"
+      sdc__message__prompt "Execute the above command"
+      if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
+        sdc__message__plain "executing..."
+        if ! sh -c "${1}"; then
+          sdc__utility__uninstall_program
+          sdc__message__error "Command execution failed: ${1} <sdc__callback__execute_code>"
+        fi
+        sdc__message__info "Command executed"
+      else
+        sdc__message__plain ""
+        sdc__message__info "Command cancelled"
+        exit 1
+      fi
+      unset sdc__prompt__reply
+    fi
+  }
+  sdc__callback__require_snapshot() {
+    if [ -n "${1}" ]; then
+      __file="${1}/Snapshot-${sdc__dosbox__variant}.tgz"
+      if [ -f "${__file}" ]; then
+        tar -zxvf "${__file}" --directory "System/drive"
+      else
+        sdc__utility__uninstall_program
+        sdc__message__error "Missing snapshot requirement: ${__file} <sdc__callback__require_snapshot>"
+      fi
+    fi
+    unset __file
+  }
+  sdc__callback__markdown_name() {
+    if [ -n "${1}" ] && [ "${1}" != "${sdc__application__name}" ]; then
+      if [ -n "${2}" ]; then
+        printf '%s' "「**${1}** (${2})」"
+      else
+        printf '%s' "「**${1}**」"
+      fi
+    fi
+  }
+  sdc__callback__markdown_divider() {
+    if [ -n "${1}" ]; then
+      if [ -n "${2}" ]; then
+        printf '%s' "┃ ${1}: **${2}** "
+      else
+        printf '%s' "┃ **${1}** "
+      fi
+    fi
+  }
+  sdc__callback__markdown_quote() {
+    if [ -n "${1}" ]; then
+      if [ -n "${2}" ]; then
+        printf '%s\n' "> ❝ ${2} ❞ — *${1}*"
+      else
+        printf '%s\n' "> ❝ ${1} ❞"
+      fi
+      printf '%s\n' ">"
+    fi
+  }
+}
+
+# section: Utility/helper functions
+{
+  sdc__utility__backup_file() {
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      __dirpath="$(dirname "${1}")"
+      if [ -L "${__dirpath}" ]; then
+        sdc__message__item "${__dirpath#./} [LINK]"
+        printf '%s\n' "# link: ${__dirpath#./} = $(sdc__utility__relative_path "${__dirpath}")" >>"${sdc__backup__file}"
+      else
+        sdc__message__item "${1#./} [FILE]"
+        printf '%s\n' "#" >>"${sdc__backup__file}"
+        while IFS= read -r __index; do
+          if [ -n "${__index}" ]; then
+            printf '%s\n' "# file: ${1#./} = ${__index}" >>"${sdc__backup__file}"
+          else
+            printf '%s\n' "# file: ${1#./}" >>"${sdc__backup__file}"
+          fi
+        done <"${1}"
+        printf '%s\n' "#" >>"${sdc__backup__file}"
+      fi
+    fi
+    unset __dirpath __index
+  }
+  sdc__utility__copy_script() {
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      __dirpath="$(dirname "${1}")"
+      if [ ! -f "${__dirpath}/${sdc__script__file}" ]; then
+        if [ -f "${__dirpath}/Launch" ]; then
+          rm -f "${__dirpath}/Launch"
+          sdc__message__item "${__dirpath#./}/Launch"
+          cp "${sdc__script__file}" "${__dirpath}/Launch"
+        fi
+        if [ -f "${__dirpath}/Debug" ]; then
+          rm -f "${__dirpath}/Debug"
+          sdc__message__item "${__dirpath#./}/Debug"
+          cp "${sdc__script__file}" "${__dirpath}/Debug"
+        fi
+        if [ -f "${__dirpath}/Snapshot" ]; then
+          rm -f "${__dirpath}/Snapshot"
+          sdc__message__item "${__dirpath#./}/Snapshot"
+          cp "${sdc__script__file}" "${__dirpath}/Snapshot"
+        fi
+        if [ -f "${__dirpath}/Uninstall" ]; then
+          rm -f "${__dirpath}/Uninstall"
+          sdc__message__item "${__dirpath#./}/Uninstall"
+          cp "${sdc__script__file}" "${__dirpath}/Uninstall"
+        fi
+        if [ ! -f "${__dirpath}/Launch" ]; then
+          sdc__message__item "${__dirpath#./}/Launch"
+          cp "${sdc__script__file}" "${__dirpath}/Launch"
+        fi
+      fi
+    fi
+    unset __dirpath
+  }
+  sdc__utility__remove_file() {
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      sdc__message__item "${1#./} [DELETE]"
+      rm -f "${1}"
+    fi
+  }
+  sdc__utility__program_document() {
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      __curpath="$(pwd)"
+      __dirpath="$(dirname "${1}")"
+      __verify="$(sdc__parse__value asset-verify print "Setup" "${1}")"
+      if [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ]; then
+        sdc__download__match="$(sdc__parse__value thumbnail-source print "Setup" "${1}")"
+      fi
+      sdc__parse__value name application "${1}"
+      sdc__application__slug="${sdc__application__name}"
+      if [ -z "${sdc__program__count}" ]; then
+        sdc__program__count=0
+      fi
+      sdc__program__list="${sdc__program__list}┃ [${sdc__application__name}]($(sdc__utility__urlencode_string "${__dirpath}/${sdc__markdown__file}")) "
+      sdc__program__count=$((sdc__program__count + 1))
+      cd "${__dirpath}" || sdc__message__error "Inaccessible directory: ${__dirpath} <sdc__utility__program_document>"
+      sdc__message__action "Creating ${sdc__application__name} document"
+      sdc__parse__key_value asset download_file "${sdc__program__file}"
+      if [ "${__verify}" = "1" ]; then
+        sdc__parse__key_value check verify_file "${sdc__program__file}"
+      fi
+      sdc__utility__application_document
+      sdc__utility__convert_html
+      cd "${__curpath}" || sdc__message__error "Inaccessible directory: ${__curpath} <sdc__utility__program_document>"
+      unset sdc__download__match
+      __tfile="$(sdc__parse__value thumbnail-file print "Setup" "${1}")"
+      if [ -z "${sdc__thumbnail__count}" ]; then
+        sdc__thumbnail__count=0
+      fi
+      if [ -f "${__dirpath}/${__tfile}" ]; then
+        sdc__thumbnail__list="${sdc__thumbnail__list} \"${__dirpath}/${__tfile}\""
+        sdc__thumbnail__count=$((sdc__thumbnail__count + 1))
+      fi
+    fi
+    unset __curpath __dirpath __verify __tfile
+  }
+  sdc__utility__application_document() {
+    __config="${sdc__program__file}"
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      __config="${1}"
+    fi
+    __alter=""
+    if [ -n "${2}" ] && [ -f "${2}" ]; then
+      __alter="${2}"
+    fi
+    if [ -f "${sdc__markdown__file}" ]; then
+      rm -f "${sdc__markdown__file}"
+    fi
+    __tfile="$(sdc__parse__value thumbnail-file print "${sdc__script__file}" "${__alter}")"
+    __tsource="$(sdc__parse__value thumbnail-source print "${sdc__script__file}" "${__alter}")"
+    if [ -f "${__tfile}" ]; then
+      printf '%s\n\n' "![](${__tfile} 'application-thumbnail')" >>"${sdc__markdown__file}"
+    elif [ -f "${__tsource}" ] && [ -x "$(command -v montage)" ]; then
+      __twidth="$(sdc__parse__value thumbnail-width print "${sdc__script__file}" "${__alter}")"
+      montage -background none -shadow -geometry +5+5 -resize "${__twidth}" "${__tsource}" "${__tfile}"
+      if [ -x "$(command -v pngquant)" ]; then
+        pngquant "${__tfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__tfile}"
+      fi
+      if [ -f "${__tfile}" ]; then
+        printf '%s\n\n' "![](${__tfile} 'application-thumbnail')" >>"${sdc__markdown__file}"
+      fi
+    fi
+    printf '%s\n\n' "# ${sdc__application__name}" >>"${sdc__markdown__file}"
+    __alias="$(sdc__parse__key_value name markdown_name "${__config}" "${__alter}")"
+    if [ -n "${__alias}" ]; then
+      printf '%s\n\n' "${__alias}" >>"${sdc__markdown__file}"
+    fi
+    __info="$(sdc__parse__key_value info markdown_quote "${__config}" "${__alter}")"
+    if [ -n "${__info}" ]; then
+      printf '%s\n\n' "${__info}" >>"${sdc__markdown__file}"
+    fi
+    __tag="$(sdc__parse__key_value tag markdown_divider "${__config}" "${__alter}")"
+    if [ -n "${__tag}" ]; then
+      printf '%s\n\n' "📌 ${__tag}" >>"${sdc__markdown__file}"
+    fi
+    __dosbox="$(sdc__parse__key_value dosbox markdown_divider "${sdc__script__file}" "${__alter}")"
+    if [ -n "${__dosbox}" ]; then
+      printf '%s\n\n' "📦 ${__dosbox}" >>"${sdc__markdown__file}"
+    fi
+    __site="$(sdc__parse__key_value site markdown_divider "${__config}" "${__alter}")"
+    if [ -n "${__site}" ]; then
+      printf '%s\n\n' "📎 ${__site}" >>"${sdc__markdown__file}"
+    fi
+    __include="$(sdc__parse__value script-include-text print "${sdc__script__file}" "${__alter}")"
+    if [ "${sdc__script__file}" = "Setup" ]; then
+      if [ "${__include}" = "-1" ]; then
+        __text="$(sdc__parse__text text print "${sdc__script__file}")"
+        if [ -n "${__text}" ]; then
+          printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
+        fi
+      fi
+      if [ -n "${__alter}" ]; then
+        __text="$(sdc__parse__text text print "${__alter}")"
+        if [ -n "${__text}" ]; then
+          printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
+        fi
+      fi
+      if [ "${__include}" = "1" ]; then
+        __text="$(sdc__parse__text text print "${sdc__script__file}")"
+        if [ -n "${__text}" ]; then
+          printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
+        fi
+      fi
+    else
+      __text="$(sdc__parse__text text print "${__config}")"
+      if [ -n "${__text}" ]; then
+        printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
+      fi
+    fi
+    __code="$(sdc__parse__text code print "${__config}" "${__alter}")"
+    if [ -n "${__code}" ]; then
+      {
+        printf '%s\n' '```shell'
+        printf '%s\n' "${__code}"
+        printf '%s\n\n' '```'
+      } >>"${sdc__markdown__file}"
+    fi
+    __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${__alter}")"
+    if [ -f "${__mfile}" ]; then
+      printf '%s\n\n' "![](${__mfile} '${sdc__application__name}')" >>"${sdc__markdown__file}"
+    fi
+    if [ "${sdc__script__file}" = "Setup" ] && [ -n "${sdc__category__list}" ] && [ -n "${sdc__program__list}" ]; then
+      __catlabel="Category"
+      __applabel="Program"
+      if [ -n "${sdc__category__count}" ] && [ "${sdc__category__count}" -gt 1 ]; then
+        __catlabel="${sdc__category__count} Categories"
+      fi
+      if [ -n "${sdc__program__count}" ] && [ "${sdc__program__count}" -gt 1 ]; then
+        __applabel="${sdc__program__count} Programs"
+      fi
+      {
+        printf '%s\n>\n' "> <table><tr><td width=\"50%\">"
+        printf '%s\n' "> ### 🗄️ ${__catlabel}"
+        printf '%b>\n' "${sdc__category__list}"
+        printf '%s\n>\n' "> </td><td width=\"50%\">"
+        printf '%s\n' "> ### 📓 ${__applabel}"
+        printf '%s\n' "> 🔎 ${sdc__program__list}"
+        printf '%s\n\n' "> </td></tr></table>"
+        printf '%s\n\n' "&nbsp;"
+      } >>"${sdc__markdown__file}"
+    fi
+    unset __config __alter __tfile __tsource __twidth __alias __info __tag __dosbox __site __include __text __code __mfile __catlabel __applabel
+  }
+  sdc__utility__category_document() {
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      sdc__parse__value name application "${1}"
+      sdc__application__slug="${sdc__application__name}"
+      __config="$(basename "${1}")"
+      __dirpath="$(dirname "${1}")"
+      __catpath="$(dirname "${__dirpath}")"
+      __apppath="$(sdc__utility__relative_path "${__dirpath}")"
+      if [ ! -f "${__catpath}/${sdc__markdown__file}" ]; then
+        __count="$(find -L "${__catpath}" -name "${__config}" | wc -l | xargs)"
+        sdc__message__item "${__catpath#./}"
+        printf '%s\n\n' "# 🗂️ $(echo "${__catpath}" | sed "s/\.\///;s/\// ‣ /g") (${__count})" >>"${__catpath}/${sdc__markdown__file}"
+      fi
+      sdc__message__item "${__catpath#./} ◄ ${sdc__application__name}"
+      {
+        __tfile="$(sdc__parse__value thumbnail-file print "${sdc__script__file}" "${1}")"
+        __cover="0"
+        if [ -f "${__dirpath}/${__tfile}" ]; then
+          __cover="1"
+          {
+            printf '%s\n>\n' "> <table><tr><td width=\"255\">"
+            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__tfile}") '${sdc__application__name}')"
+            printf '%s\n>\n' "> </td>"
+            printf '%s\n>\n' "> <td>"
+          } >>"${__catpath}/${sdc__markdown__file}"
+        fi
+        printf '%s\n>\n' "> ## [${sdc__application__name}]($(sdc__utility__urlencode_string "${__apppath}/${sdc__markdown__file}"))" >>"${__catpath}/${sdc__markdown__file}"
+        __tag="$(sdc__parse__key_value tag markdown_divider "${1}")"
+        if [ -n "${__tag}" ]; then
+          printf '%s\n>\n' "> 📌 ${__tag}" >>"${__catpath}/${sdc__markdown__file}"
+        fi
+        __info="$(sdc__parse__key_value info markdown_quote "${1}")"
+        if [ -n "${__info}" ]; then
+          printf '%s\n>\n' "${__info}" >>"${__catpath}/${sdc__markdown__file}"
+        fi
+        if [ "${__cover}" = "0" ]; then
+          __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${1}")"
+          if [ -f "${__dirpath}/${__mfile}" ]; then
+            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__mfile}") '${sdc__application__name}')" >>"${__catpath}/${sdc__markdown__file}"
+          fi
+        else
+          printf '%s\n' "> </td></tr></table>" >>"${__catpath}/${sdc__markdown__file}"
+        fi
+        printf '\n%s\n\n' "&nbsp;" >>"${__catpath}/${sdc__markdown__file}"
+      }
+    fi
+    unset __config __dirpath __catpath __apppath __count __tfile __cover __tag __info __mfile
+  }
+  sdc__utility__category_list() {
+    if [ -n "${1}" ] && [ -f "${1}" ]; then
+      __dirpath="$(dirname "${1}")"
+      if [ ! -f "${__dirpath}/${sdc__program__file}" ] && [ ! -f "${__dirpath}/Setup" ]; then
+        sdc__message__item "${__dirpath#./}"
+        (
+          cd "${__dirpath}" || sdc__message__error "Inaccessible directory: ${__dirpath} <sdc__utility__category_list>"
+          sdc__utility__convert_html
+        )
+        __count="$(find -L "${__dirpath}" -name "${sdc__program__file}" | wc -l | xargs)"
+        if [ -z "${sdc__category__count}" ]; then
+          sdc__category__count=0
+        fi
+        sdc__category__list="${sdc__category__list}> - 🗂️ [$(echo "${__dirpath} (${__count})" | sed 's/\.\///;s/\// ‣ /g')]($(sdc__utility__urlencode_string "${1}"))\n"
+        sdc__category__count=$((sdc__category__count + 1))
+      fi
+    fi
+    unset __dirpath __count
+  }
+  sdc__utility__convert_html() {
+    if [ -x "$(command -v pandoc)" ]; then
+      {
+        printf '%s\n' "<html><head>"
+        printf '%s\n' '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">'
+        printf '%s\n' '<style>[title~="application-thumbnail"] { float: right; padding: 0 0 2.5% 2.5%; }</style>'
+        printf '%s\n' "</head><body>"
+      } >"${sdc__hypertext__file}"
+      pandoc -f markdown -t html "${sdc__markdown__file}" | sed "s/${sdc__markdown__file}/${sdc__hypertext__file}/g" >>"${sdc__hypertext__file}"
+      {
+        printf '%s\n' "<p>&nbsp;</p>"
+        printf '%s\n' '<p style="text-align: right;"><small>'
+        printf '%s\n' "<strong>「Simple DOSBox Client v${sdc__script__version}」</strong>"
+        printf '%s\n' ' 💧 <a href="https://watercss.kognise.dev">water.css</a>'
+        printf '%s\n' "</small></p></body></html>"
+      } >>"${sdc__hypertext__file}"
+    fi
+  }
+  sdc__utility__urlencode_string() {
+    perl -MURI::Escape -e 'print uri_escape_utf8($ARGV[0], "^A-Za-z0-9\-\._~/");' "${1}"
+  }
+  sdc__utility__sha256_checksum() {
+    if [ -f "${1}" ]; then
+      if [ -x "$(command -v sha256sum)" ]; then
+        sha256sum "${1}"
+      elif [ -x "$(command -v shasum)" ]; then
+        shasum -a 256 "${1}"
+      else
+        sdc__message__error "Required command not found: sha256sum/shasum <sdc__utility__sha256_checksum>"
+      fi
+    fi
+  }
+  sdc__utility__relative_path() {
+    if [ -L "${1}" ]; then
+      readlink "${1}"
+    elif [ -d "${1}" ]; then
+      perl -MFile::Spec -e 'print File::Spec->abs2rel(@ARGV)' "${1}" "$(dirname "${1}")"
+    fi
+  }
+  sdc__utility__configure_dosbox() {
+    if [ -f "${sdc__program__file}" ] && [ -f "System/dosbox.conf" ] && [ -f "System/dosbox.orig" ]; then
+      __source="$(sdc__utility__sha256_checksum "${sdc__program__file}" | head -c 64 | tr '[:upper:]' '[:lower:]')"
+      __target="$(sdc__utility__sha256_checksum "System/dosbox.orig" | head -c 64 | tr '[:upper:]' '[:lower:]')"
+      if [ "${__source}" != "${__target}" ]; then
+        sdc__message__info "${sdc__program__file} changed"
+        rm -f "System/dosbox.conf"
+        rm -f "System/dosbox.orig"
+      fi
+    fi
+    if [ ! -f "System/dosbox.conf" ]; then
+      if [ -f "${sdc__program__file}" ]; then
+        cp "${sdc__program__file}" "System/dosbox.orig"
+      fi
+      if [ "$(command -v "sdc__${sdc__dosbox__variant}__config")" = "sdc__${sdc__dosbox__variant}__config" ]; then
+        "sdc__${sdc__dosbox__variant}__config"
+      else
+        sdc__message__error "Unimplemented DOSBox function: sdc__${sdc__dosbox__variant}__config <sdc__utility__configure_dosbox>"
+      fi
+    fi
+    unset __source __target
+  }
+  sdc__utility__uninstall_program() {
+    if [ -f "Debug" ]; then
+      rm -f "Debug"
+    fi
+    if [ -f "Snapshot" ]; then
+      rm -f "Snapshot"
+    fi
+    if [ -d "System" ]; then
+      rm -rf "System"
+    fi
+    if [ -f "Uninstall" ]; then
+      rm -f "Uninstall"
+    fi
+  }
+}
+
+# section: Script command functions
+{
+  sdc__script__Setup() {
+    sdc__library__file="$(sdc__parse__value library-file print "${sdc__script__file}")"
+    sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
+    sdc__markdown__file="$(sdc__parse__value markdown-file print "${sdc__script__file}")"
+    sdc__hypertext__file="$(sdc__parse__value hypertext-file print "${sdc__script__file}")"
+    __bakpath="$(sdc__parse__value backup-directory print "${sdc__script__file}" "${sdc__library__file}")"
+    __export="$(sdc__parse__value script-export-file print "${sdc__script__file}" "${sdc__library__file}")"
+    if [ -f "${sdc__library__file}" ]; then
+      sdc__message__action "Setting-up library"
+    else
+      sdc__message__action "Setting-up EMPTY library"
+    fi
+    sdc__message__action "Backing-up files"
+    {
+      if [ "${__bakpath}" != "#" ]; then
+        if [ ! -d "${__bakpath}" ]; then
+          mkdir -p "${__bakpath}"
+        fi
+        sdc__backup__file="${__bakpath}/$(date -u +%Y%m%d%H%M%S).txt"
+        printf '%s\n#\n' "# vim: filetype=ini:syntax=dosini" >"${sdc__backup__file}"
+        __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+        find -L . -name "${sdc__program__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+        while IFS= read -r __index; do
+          sdc__utility__backup_file "${__index}/${sdc__program__file}"
+        done <"${__tmpfile}"
+      fi
+    }
+    sdc__message__action "Exporting files"
+    {
+      if [ "${__export}" = "1" ]; then
+        sdc__parse__key_value file reset_file "${sdc__script__file}"
+        sdc__parse__key_value file append_file "${sdc__script__file}"
+        sdc__parse__key_value link symbolic_link "${sdc__script__file}"
+        sdc__parse__key_value base64 base64_decode "${sdc__script__file}"
+      fi
+      if [ -f "${sdc__library__file}" ]; then
+        sdc__parse__key_value file reset_file "${sdc__library__file}"
+        sdc__parse__key_value file append_file "${sdc__library__file}"
+        sdc__parse__key_value link symbolic_link "${sdc__library__file}"
+        sdc__parse__key_value base64 base64_decode "${sdc__library__file}"
+      fi
+    }
+    sdc__message__action "Copying scripts"
+    {
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+      find . -name "${sdc__program__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+      while IFS= read -r __index; do
+        sdc__utility__copy_script "${__index}/${sdc__program__file}"
+      done <"${__tmpfile}"
+    }
+    sdc__message__action "Cleaning-up documents"
+    {
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+      find -L . -name "${sdc__markdown__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+      while IFS= read -r __index; do
+        sdc__utility__remove_file "${__index}/${sdc__markdown__file}"
+      done <"${__tmpfile}"
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+      find -L . -name "${sdc__hypertext__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+      while IFS= read -r __index; do
+        sdc__utility__remove_file "${__index}/${sdc__hypertext__file}"
+      done <"${__tmpfile}"
+      sdc__script__file="Launch"
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+      find . -name "${sdc__program__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+      while IFS= read -r __index; do
+        sdc__utility__program_document "${__index}/${sdc__program__file}"
+      done <"${__tmpfile}"
+      sdc__script__file="Setup"
+    }
+    sdc__message__action "Creating category documents"
+    {
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+      find -L . -name "${sdc__program__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+      while IFS= read -r __index; do
+        sdc__utility__category_document "${__index}/${sdc__program__file}"
+      done <"${__tmpfile}"
+    }
+    sdc__message__action "Creating library document"
+    {
+      __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__script__Setup>"
+      find . -name "${sdc__markdown__file}" -type f -exec dirname '{}' \; | sort >"${__tmpfile}"
+      while IFS= read -r __index; do
+        sdc__utility__category_list "${__index}/${sdc__markdown__file}"
+      done <"${__tmpfile}"
+      sdc__parse__value name application "${sdc__script__file}" "${sdc__library__file}"
+      __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${sdc__library__file}")"
+      __mgrid="$(sdc__parse__value montage-grid print "${sdc__script__file}" "${sdc__library__file}")"
+      __mwidth="$(sdc__parse__value montage-width print "${sdc__script__file}" "${sdc__library__file}")"
+      if [ "${__mgrid}" != "0" ] && [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ] && [ -n "${sdc__thumbnail__count}" ] && [ "${sdc__thumbnail__count}" -gt 0 ]; then
+        sdc__message__action "Creating montage"
+        eval montage -background none -shadow -geometry +5+5 -tile "${__mgrid}" "${sdc__thumbnail__list}" "${__mfile}" &&
+          mogrify -resize "${__mwidth}" "${__mfile}"
+        if [ -x "$(command -v pngquant)" ]; then
+          pngquant "${__mfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__mfile}"
+        fi
+      fi
+      sdc__utility__application_document "${sdc__script__file}" "${sdc__library__file}"
+      sed -i".sdc" "s/###script-version###/${sdc__script__version}/g" "${sdc__markdown__file}"
+      rm -f -- *.sdc
+      sdc__utility__convert_html
+    }
+    sdc__message__info "Library setup completed"
+    unset __bakpath __export __index __tmpfile __mfile __mgrid __mwidth
+  }
+  sdc__script__Launch() {
+    sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
+    sdc__markdown__file="$(sdc__parse__value markdown-file print "${sdc__script__file}")"
+    sdc__hypertext__file="$(sdc__parse__value hypertext-file print "${sdc__script__file}")"
+    if [ -f "${sdc__program__file}" ]; then
+      sdc__parse__value name application "${sdc__program__file}"
+    fi
+    if [ -f "${sdc__program__file}" ]; then
+      sdc__message__action "Downloading assets"
+      sdc__parse__key_value asset download_file "${sdc__program__file}"
+      __verify="$(sdc__parse__value asset-verify print "${sdc__script__file}" "${sdc__program__file}")"
+      if [ "${__verify}" = "1" ]; then
+        sdc__message__action "Verifying checksums"
+        sdc__parse__key_value check verify_file "${sdc__program__file}"
+      fi
+      sdc__message__action "Exporting files"
+      sdc__parse__key_value file reset_file "${sdc__program__file}"
+      sdc__parse__key_value file append_file "${sdc__program__file}"
+      sdc__parse__key_value link symbolic_link "${sdc__program__file}"
+      sdc__parse__key_value base64 base64_decode "${sdc__program__file}"
+    fi
+    if [ ! -d "System" ]; then
+      mkdir -p "System/drive"
+      mkdir -p "System/drivez"
+      if [ -d "Assets" ] && [ "$(ls -A Assets)" ]; then
+        (
+          cd System || sdc__message__error "Inaccessible directory: System <sdc__script__Launch>"
+          ln -sf ../Assets .
+        )
+      fi
+      __restore="0"
+      if [ -f "Snapshot-${sdc__dosbox__variant}.tgz" ]; then
+        sdc__message__prompt "Restore ${sdc__application__name} snapshot"
+        if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
+          sdc__message__plain "restoring..."
+          tar -zxvf "Snapshot-${sdc__dosbox__variant}.tgz" --directory "System/drive"
+          __restore="1"
+          sdc__message__info "${sdc__application__name} snapshot restored"
+        else
+          sdc__message__plain ""
+        fi
+        unset sdc__prompt__reply
+      fi
+      if [ "${__restore}" = "0" ]; then
+        sdc__parse__value snapshot require_snapshot "${sdc__program__file}"
+      fi
+      sdc__parse__value code execute_code "${sdc__program__file}"
+    fi
+    if [ ! -f "Debug" ]; then
+      cp "${sdc__script__file}" "Debug"
+    fi
+    if [ ! -f "Snapshot" ]; then
+      cp "${sdc__script__file}" "Snapshot"
+    fi
+    if [ ! -f "Uninstall" ]; then
+      cp "${sdc__script__file}" "Uninstall"
+    fi
+    if [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ] && [ -d "System/capture" ]; then
+      __count="$(find "System/capture" -name "*.png" | wc -l | sed "s/^ *//;s/ *$//")"
+      __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${sdc__program__file}")"
+      __mgrid="$(sdc__parse__value montage-grid print "${sdc__script__file}" "${sdc__program__file}")"
+      __mwidth="$(sdc__parse__value montage-width print "${sdc__script__file}" "${sdc__program__file}")"
+      if [ "${__mgrid}" != "0" ] && [ "${__count}" != "0" ]; then
+        sdc__message__action "Creating montage"
+        montage -background none -shadow -geometry +5+5 -tile "${__mgrid}" "System/capture/*.png" "${__mfile}" &&
+          mogrify -resize "${__mwidth}" "${__mfile}"
+        if [ -x "$(command -v pngquant)" ]; then
+          pngquant "${__mfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__mfile}"
+        fi
+      fi
+    fi
+    sdc__utility__configure_dosbox
+    sdc__message__action "Creating ${sdc__application__name} document"
+    sdc__utility__application_document
+    sdc__utility__convert_html
+    sdc__message__action "Launching ${sdc__application__name} program"
+    sdc__message__plain ""
+    if [ -f "${sdc__program__file}" ] && [ -f "${sdc__markdown__file}" ]; then
+      if [ -x "$(command -v mdcat)" ]; then
+        mdcat "${sdc__markdown__file}"
+      else
+        if [ -x "$(command -v pandoc)" ]; then
+          pandoc -f markdown -t plain "${sdc__markdown__file}"
+        else
+          cat "${sdc__markdown__file}"
+        fi
+      fi
+    fi
+    if [ "$(command -v "sdc__${sdc__dosbox__variant}__launch")" = "sdc__${sdc__dosbox__variant}__launch" ]; then
+      (
+        cd "System" || sdc__message__error "Inaccessible directory: System <sdc__script__Launch>"
+        "sdc__${sdc__dosbox__variant}__launch"
+        sdc__message__plain ""
+        sdc__message__info "${sdc__application__name} program ended"
+      )
+    else
+      sdc__message__error "Unimplemented DOSBox function: sdc__${sdc__dosbox__variant}__launch <sdc__script__Launch>"
+    fi
+    unset __verify __restore __count __mfile __mgrid __mwidth
+  }
+  sdc__script__Debug() {
+    sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
+    if [ -f "${sdc__program__file}" ]; then
+      sdc__parse__value name application "${sdc__program__file}"
+    fi
+    if [ "$(command -v "sdc__${sdc__dosbox__variant}__version")" = "sdc__${sdc__dosbox__variant}__version" ]; then
+      "sdc__${sdc__dosbox__variant}__version"
+    else
+      sdc__message__error "Unimplemented DOSBox function: sdc__${sdc__dosbox__variant}__version <sdc__script__Debug>"
+    fi
+    sdc__utility__configure_dosbox
+    if [ "$(command -v "sdc__${sdc__dosbox__variant}__debug")" = "sdc__${sdc__dosbox__variant}__debug" ]; then
+      sdc__message__action "Starting ${sdc__application__name} debug console"
+      (
+        cd "System" || sdc__message__error "Inaccessible directory: System <sdc__script__Debug>"
+        "sdc__${sdc__dosbox__variant}__debug"
+      )
+      sdc__message__info "${sdc__application__name} debug console closed"
+    else
+      sdc__message__error "Unimplemented DOSBox function: sdc__${sdc__dosbox__variant}__debug <sdc__script__Debug>"
+    fi
+  }
+  sdc__script__Snapshot() {
+    sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
+    if [ -f "${sdc__program__file}" ]; then
+      sdc__parse__value name application "${sdc__program__file}"
+    fi
+    if [ -d "System/drive" ] && [ "$(ls -A "System/drive")" ]; then
+      __file="Snapshot-${sdc__dosbox__variant}-$(date -u +%Y%m%d%H%M%S).tgz"
+      __link="Snapshot-${sdc__dosbox__variant}.tgz"
+      sdc__message__action "Creating ${sdc__application__name} snapshot"
+      (
+        cd "System/drive" || sdc__message__error "Inaccessible directory: System/drive <sdc__script__Snapshot>"
+        tar -zcvf "../../${__file}" ./*
+      )
+      rm -f "${__link}"
+      ln -sf "${__file}" "${__link}"
+      sdc__message__info "${sdc__application__name} snapshot created"
+    else
+      sdc__message__error "Inaccessible directory or empty source for snapshot: System/drive <sdc__script__Snapshot>"
+    fi
+    unset __file __link
+  }
+  sdc__script__Uninstall() {
+    sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
+    if [ -f "${sdc__program__file}" ]; then
+      sdc__parse__value name application "${sdc__program__file}"
+    fi
+    sdc__message__prompt "Uninstall ${sdc__application__name}"
+    if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
+      sdc__message__plain "uninstalling..."
+      sdc__utility__uninstall_program
+      sdc__message__info "${sdc__application__name} uninstalled"
+    else
+      sdc__message__plain ""
+      sdc__message__info "${sdc__application__name} uninstallation cancelled"
+    fi
+    unset sdc__prompt__reply
+  }
+}
+
+# section: Main process
+{
+  for __index in base64 basename cat cp curl date dirname find grep head ln ls mkdir mktemp perl rm sed sh sort stty tar touch tr wc xargs; do
+    if [ ! -x "$(command -v "${__index}")" ]; then
+      sdc__message__error "Required command not found: ${__index} <sdc__main>"
+    fi
+  done
+  cd "$(dirname "${0}")" || sdc__message__error "Inaccessible directory: ${0} <sdc__main>"
+  sdc__script__file="$(basename "${0}")"
+  sdc__script__tmpdir="$(mktemp -d "${TMPDIR:-/tmp}/sdc.XXXXXXXX")" || sdc__message__error "Temporary directory creation failed <sdc__main>"
+  trap 'rm -rf "${sdc__script__tmpdir}"' EXIT
+  sdc__script__version="$(sdc__parse__value script-version print "${sdc__script__file}")"
+  sdc__application__slug="$(basename "$(pwd)" | sed "s/([^)]*)//g;s/[ ]*$//")"
+  sdc__application__name="${sdc__application__slug}"
+  sdc__dosbox__command="${SDC_DOSBOX:-}"
+  if [ "${sdc__dosbox__command}" = "" ]; then
+    __variant="$(sdc__parse__value dosbox-variants print "${sdc__script__file}")"
+    for __index in ${__variant}; do
+      if [ -x "$(command -v "${__index}")" ]; then
+        sdc__dosbox__command="${__index}"
+        break
+      fi
+    done
+    if [ "${sdc__dosbox__command}" = "" ]; then
+      sdc__message__error "No supported DOSBox variant found: ${__variant} <sdc__main>"
+    fi
+    unset __variant
+  fi
+  unset __index
+  if [ ! -x "$(command -v "${sdc__dosbox__command}")" ]; then
+    sdc__message__error "DOSBox command not found: ${sdc__dosbox__command} <sdc__main>"
+  fi
+  sdc__dosbox__variant="$(basename "${sdc__dosbox__command}" | sed "s/[^[:alnum:]]/_/g")"
+  if [ "$(command -v "sdc__script__${sdc__script__file}")" != "sdc__script__${sdc__script__file}" ]; then
+    sdc__message__error "Unimplemented script function: sdc__script__${sdc__script__file} <sdc__main>"
+  fi
+  sdc__message__info "Script version ${sdc__script__version}"
+  "sdc__script__${sdc__script__file}"
+}
+
+# file: .gitignore = .DS_Store
+# file: .gitignore = .backup/
+# file: .gitignore = Assets/
+# file: .gitignore = System/
+# file: .gitignore = Program.txt
+# file: .gitignore = Launch
+# file: .gitignore = Debug
+# file: .gitignore = Snapshot
+# file: .gitignore = Uninstall
+# file: .gitignore = Snapshot*.tgz
+# file: .gitignore = Template-*.txt
+# file: .gitignore = README.html
+#
+# file: LICENSE = The MIT License (MIT)
+# file: LICENSE
+# file: LICENSE = Copyright © 2023 Ario Jatmiko
+# file: LICENSE
+# file: LICENSE = Permission is hereby granted, free of charge, to any person
+# file: LICENSE = obtaining a copy of this software and associated documentation
+# file: LICENSE = files (the “Software”), to deal in the Software without
+# file: LICENSE = restriction, including without limitation the rights to use,
+# file: LICENSE = copy, modify, merge, publish, distribute, sublicense, and/or sell
+# file: LICENSE = copies of the Software, and to permit persons to whom the
+# file: LICENSE = Software is furnished to do so, subject to the following
+# file: LICENSE = conditions:
+# file: LICENSE
+# file: LICENSE = The above copyright notice and this permission notice shall be
+# file: LICENSE = included in all copies or substantial portions of the Software.
+# file: LICENSE
+# file: LICENSE = THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+# file: LICENSE = EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+# file: LICENSE = OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# file: LICENSE = NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+# file: LICENSE = HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+# file: LICENSE = WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# file: LICENSE = FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# file: LICENSE = OTHER DEALINGS IN THE SOFTWARE.
+#
+# file: Template-Library.txt = # vim: filetype=ini:syntax=dosini
+# file: Template-Library.txt = #
+# file: Template-Library.txt = ###### Library properties
+# file: Template-Library.txt = # backup-directory: .backup
+# file: Template-Library.txt = # script-export-file: 1
+# file: Template-Library.txt = # script-include-text: -1
+# file: Template-Library.txt = # montage-file: Montage.png
+# file: Template-Library.txt = # montage-grid: 5
+# file: Template-Library.txt = # montage-width: 1000
+# file: Template-Library.txt = #
+# file: Template-Library.txt = ###### DOSBox variant compatibility
+# file: Template-Library.txt = ### 🟩 Fully supported
+# file: Template-Library.txt = ### 🟨 Runnable with issues
+# file: Template-Library.txt = ### 🟥 Unsupported, unplayable, or broken
+# file: Template-Library.txt = ### ⬜ Untested
+# file: Template-Library.txt = # dosbox: DOSBox = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: DOSBox Staging = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: DOSBox-X = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # name: Library Name
+# file: Template-Library.txt = # name: <alias>
+# file: Template-Library.txt = # info: This is a library configuration file template. Enter library description here.
+# file: Template-Library.txt = # tag: <key> = <value>
+# file: Template-Library.txt = # site: [DOSBox](https://www.dosbox.com/)
+# file: Template-Library.txt = # site: [DOSBox Staging](https://dosbox-staging.github.io/)
+# file: Template-Library.txt = # site: [DOSBox-X](https://dosbox-x.com/)
+# file: Template-Library.txt = # site: [More link...](https://...)
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # text: ## Library Heading
+# file: Template-Library.txt = # text: Describe your library (markdown format).
+# file: Template-Library.txt = # text:
+# file: Template-Library.txt = # text: ### Library Sub-heading
+# file: Template-Library.txt = # text: More library information (markdown format).
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # file: LICENSE = Content of LICENSE line #1
+# file: Template-Library.txt = # file: LICENSE = Content of LICENSE line #2
+# file: Template-Library.txt = # file: LICENSE = Content of LICENSE line #3
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # file: Template-Library.txt = Content of Template-Library.txt line #1
+# file: Template-Library.txt = # file: Template-Library.txt = Content of Template-Library.txt line #2
+# file: Template-Library.txt = # file: Template-Library.txt = Content of Template-Library.txt line #3
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # file: Template-Program.txt = Content of Template-Program.txt line #1
+# file: Template-Library.txt = # file: Template-Program.txt = Content of Template-Program.txt line #2
+# file: Template-Library.txt = # file: Template-Program.txt = Content of Template-Program.txt line #3
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # file: Games/Example/Program.txt = Content of Program.txt line #1
+# file: Template-Library.txt = # file: Games/Example/Program.txt = Content of Program.txt line #2
+# file: Template-Library.txt = # file: Games/Example/Program.txt = Content of Program.txt line #3
+# file: Template-Library.txt = #
+# file: Template-Library.txt = # link: <destination1> = <source1>
+# file: Template-Library.txt = # link: <destination2> = <source2>
+# file: Template-Library.txt = # link: <destination3> = <source3>
+#
+# file: Template-Program.txt = # vim: filetype=ini:syntax=dosini
+# file: Template-Program.txt = #
+# file: Template-Program.txt = ###### Program properties
+# file: Template-Program.txt = # asset-verify: 1
+# file: Template-Program.txt = # thumbnail-file: Thumbnail.png
+# file: Template-Program.txt = # thumbnail-source: Assets/coverart.jpg
+# file: Template-Program.txt = # thumbnail-width: 250
+# file: Template-Program.txt = # montage-file: Montage.png
+# file: Template-Program.txt = # montage-grid: 5
+# file: Template-Program.txt = # montage-width: 1000
+# file: Template-Program.txt = #
+# file: Template-Program.txt = ###### DOSBox variant compatibility
+# file: Template-Program.txt = ### 🟩 Fully supported
+# file: Template-Program.txt = ### 🟨 Runnable with issues
+# file: Template-Program.txt = ### 🟥 Unsupported, unplayable, or broken
+# file: Template-Program.txt = ### ⬜ Untested
+# file: Template-Program.txt = # dosbox: DOSBox = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: DOSBox Staging = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: DOSBox-X = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = #
+# file: Template-Program.txt = # name: Program Name
+# file: Template-Program.txt = # name: <alias>
+# file: Template-Program.txt = # info: This is a program configuration file template. Enter program description here.
+# file: Template-Program.txt = # tag: Year = YYYY
+# file: Template-Program.txt = # tag: Genre = Action • Adventure • Educational • Gambling • Idle • Puzzle • Racing • Role-playing • Simulation • Sports • Strategy
+# file: Template-Program.txt = # tag: Platform = DOS / Windows 3.1x / Windows 9x
+# file: Template-Program.txt = # tag: License = Abandonware / Shareware / Freeware / Demo / Unlicensed / Discontinued / Proprietary
+# file: Template-Program.txt = # tag: Category = <Perspective> • <Pacing> • <Gameplay> • <Sports> • <Educational> • <Vehicular> • <Setting> • <Narrative> • <Other>
+# file: Template-Program.txt = # tag: Media = Compressed Package / CD-ROM / Floppy Disk
+# file: Template-Program.txt = # tag: Publisher = <Publisher 1> • <Publisher 2>
+# file: Template-Program.txt = # tag: Developer = <Developer 1> • <Developer 2>
+# file: Template-Program.txt = # tag: Patched • Add-on • Compilation • Extras • Copy Protection • No Manual • Extra Command
+# file: Template-Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
+# file: Template-Program.txt = # site: [MobyGames](https://www.mobygames.com/)
+# file: Template-Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/)
+# file: Template-Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/)
+# file: Template-Program.txt = # site: [Where to buy? 💰🆓](https://)
+# file: Template-Program.txt = #
+# file: Template-Program.txt = # text: ## Host Requirements
+# file: Template-Program.txt = # text: - Requirements on the host operating system (e.g. installing 7zip, md2iso).
+# file: Template-Program.txt = # text:
+# file: Template-Program.txt = # text: ## Installation Notes
+# file: Template-Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
+# file: Template-Program.txt = # text: - Things to do at installation (e.g. setting up audio/video configuration).
+# file: Template-Program.txt = # text:
+# file: Template-Program.txt = # text: ## Additional Notes
+# file: Template-Program.txt = # text: - Things to do after installation or during the program run (e.g. in-game settings, post-installation tasks, etc).
+# file: Template-Program.txt = # text:
+# file: Template-Program.txt = # text: ## Known Issues
+# file: Template-Program.txt = # text: - Issues encountered when running the program on a specific DOSBox variant.
+# file: Template-Program.txt = # text:
+# file: Template-Program.txt = # text: ## Licensing Information
+# file: Template-Program.txt = # text: - Things to note regarding the program license or release.
+# file: Template-Program.txt
+# file: Template-Program.txt = [sdl]
+# file: Template-Program.txt = #fullscreen = true
+# file: Template-Program.txt = #fullresolution = original
+# file: Template-Program.txt = #windowresolution = 1024x768
+# file: Template-Program.txt = #windowposition = ,
+# file: Template-Program.txt = #output = opengl
+# file: Template-Program.txt = #autolock = true
+# file: Template-Program.txt
+# file: Template-Program.txt = [dosbox]
+# file: Template-Program.txt = #machine = vesa_nolfb
+# file: Template-Program.txt = #memsize = 32
+# file: Template-Program.txt
+# file: Template-Program.txt = [render]
+# file: Template-Program.txt = #aspect = true
+# file: Template-Program.txt = #aspect_ratio = -1:-1
+# file: Template-Program.txt = #scaler = hardware2x forced
+# file: Template-Program.txt = #autofit = false
+# file: Template-Program.txt
+# file: Template-Program.txt = [video]
+# file: Template-Program.txt = #vmemsize = 8
+# file: Template-Program.txt
+# file: Template-Program.txt = [cpu]
+# file: Template-Program.txt = #core = dynamic
+# file: Template-Program.txt = #cputype = pentium
+# file: Template-Program.txt = #cycles = max
+# file: Template-Program.txt
+# file: Template-Program.txt = [autoexec]
+# file: Template-Program.txt = @ECHO OFF
+# file: Template-Program.txt
+# file: Template-Program.txt = MOUNT C "./drive"
+# file: Template-Program.txt = #IMGMOUNT A "./Assets/disk.img" -t floppy
+# file: Template-Program.txt = #IMGMOUNT D "./Assets/cdrom.cue" -t iso
+# file: Template-Program.txt = #MOUNT X "./Assets"
+# file: Template-Program.txt = GOTO F_DEBUG
+# file: Template-Program.txt
+# file: Template-Program.txt = IF NOT EXIST C:\APP\APP.EXE GOTO F_INSTALL
+# file: Template-Program.txt = IF EXIST C:\APP\APP.EXE GOTO F_START
+# file: Template-Program.txt
+# file: Template-Program.txt = :F_INSTALL
+# file: Template-Program.txt = D:
+# file: Template-Program.txt = INSTALL.EXE
+# file: Template-Program.txt
+# file: Template-Program.txt = :F_START
+# file: Template-Program.txt = C:
+# file: Template-Program.txt = CD C:\APP
+# file: Template-Program.txt = APP.EXE
+# file: Template-Program.txt
+# file: Template-Program.txt = :F_EXIT
+# file: Template-Program.txt = EXIT
+# file: Template-Program.txt
+# file: Template-Program.txt = :F_DEBUG
+# file: Template-Program.txt
+# file: Template-Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/
+# file: Template-Program.txt = # check: coverart.jpg = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# file: Template-Program.txt = # asset: cdrom.bin = https://archive.org/
+# file: Template-Program.txt = # check: cdrom.bin = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# file: Template-Program.txt = # asset: manual.pdf = https://archive.org/
+# file: Template-Program.txt = # check: manual.pdf = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# file: Template-Program.txt = # asset: patch.zip = https://archive.org/
+# file: Template-Program.txt = # check: patch.zip = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# file: Template-Program.txt = #
+# file: Template-Program.txt = # file: Assets/cdrom.cue = FILE "cdrom.bin" BINARY
+# file: Template-Program.txt = # file: Assets/cdrom.cue =   TRACK 01 MODE1/2352
+# file: Template-Program.txt = # file: Assets/cdrom.cue =     INDEX 01 00:00:00
+# file: Template-Program.txt = #
+# file: Template-Program.txt = # code: echo "Hello, World!"
+#
+# base64: Thumbnail.png = iVBORw0KGgoAAAANSUhEUgAAASwAAABlCAMAAADAgy5XAAADAFBMVEVHcEwAAAAJCQkLCgoDAwMHBgYKCgoSEREKCgoAAAAJCAgDAgIDAgMJCAgHBgcJCAkhHR4IBwcDAwMEAwMFBQUaFxggHB0KCQkFBAQMCwsDAwMgHB0AAAAgHR0hHR4eGxzl5eQfGxyqqavOzc4fHB0AAAChoKL09PQgHR349/fu7u3p6egjICHc29yPjo6WlZi3trnDwsN+fn2IiIebmppmZmavrq8/Pz9eXl5EQ0MuLi5ubm5ZWVlAQEBXV1YjHyAkHzEAAAD///8iHR4fHR719PTz8/P4+PgiHS8hHCwCAgICnf8prikHbNDAAf//+wD/2yr/ADUB/wPiOQQEBAT29vaxsbHd3d1XV1mQkJGLiowPDw/v7+83NjkKCgqhoaEjIiIsLCn6+vozMTJeXV/h4eFMS0xFRUeZmZoVFRXr6+slJiSoqKl7enwoIzHHx8czid7MzM0oKjhQUVTm5uZzcnXlOgU8PD5AQEaDgoQZGRltbG1jY2YlgNpcxlz+/v5oaGrR0dH+7WC5ubnAwMD/+odorPDsakIZd9VFu0X+4Dr+5Edbo+vmUCFAkuP//pLHFf/thmcgRnDseVfnXTPoev9RwlHsh//Z2dlOmubMJ/7/8m3umoQ4tTgvJiH/6FH/9nvRNv7hbfztkHbnQxYzdTLaUv7fX/9FOip1tfXWRP8hNlFmzWbylv+BvPjJNwklkychX5fzrZrV1dWALhXxpI9DJh+qW0TlwykrTSknOiSbkipZJh3AqjccY6uNxPz8DTRy0XOSHDosYCpbFnOTgSu8fWx3EphZUCoMZLuq1PMO/RBSdZzy8atpYTNQRDT++Qp8cje2U86/dsq1PBet8q2tD+E+KULzqrHIwWQ2HTZDGlB/Q404e8AwqDB+136G3YaZC8hhnV8uni6JRjOO4Y7j0lVDiUhRKFxXib1jsmKSj1WlNsNlPG3f2ncK60nr5n/IEDcJ1oKc/Qr/mSEMjuP/6gsJt8e4/Ah0/Q7U/Q4CkOaSOgABAAAAAAJHcEw6tAjzAAABAHRSTlMA6iQULQxmAgaTHIV1Tz3X/jWjsr7r9kbJV1/k9tX7wA6v7cGb4fMqhkdmhnWo3vTf1dtHpaLIz9S/wthtp0T///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AuUGfxwAAIABJREFUeNrs2VtMWnkaAPBRpIfipbVVLFItihbxsmo606fJAp4DAp03Ba9YEFQUwXhBQV0v0aTxwYdOL9OH1mSnZabpNtHWWzRmE+PGZPvSZMdkk01jG9uJm6bzuE87TfZ//v//OZyDgKLuw16+NGnlciq/fN93vu/PF1/8P04eosTERJHof+XTCtOl0iwxcZy3EuLU5IzChMKMi8kpqUn//WZEVl5mrlqSU5RIxI2ccuHcZS0Tly9Ds6x0sfA/zIwQJGWlSlOzkgSH/OJEaabapqbjSpowntrLPnspQRshLl8+d4k2SxML/52fT65UqophqFRKpZw4/qXE0oIcmUSSK5HIcvJKk2J4EWckaiaOqkWI01IyCk3amEGbnU3OzkoTnLqZXFlcUqaouFoe8Hl8Hk+g/GqFoqxEpZQfi6o0Jxd+ejpjbLlqWV5qtF+YkGayVurzBUmiI9ReNrf2QlFrd3e21IY9aEJm0qzE0zKTq0oU+Y2jHVavxmBEYdD0WdtHyivKiuP2Eklz1OEhyYuSNFIZ/TSptpH037JsQWyoqLUHguptm5zqbhxpt3eGk2lNtYXnMoBZaqJYdLKcKlGUj/q9AMig4YSBduvr8OUripXxFKSgQKKOELKiCLc7IgtZ2YL760ArV3I2KdZ/lRaz9qi6Khjmgd5uT8fw5wgvAWaFFy8c20yuKsufsGqMPCcumdHr91SUKI98bXEe1qEoOllIisI/5+alH7hIeg62GhsL0q8+fzErVrGcidmmGCwYuskGf0v0fkabpWSnJwoIIh6q8n5vVCnGq280v0wlOlrrvQJlSMr29MMqiA8fNuYYrpwsIf9XE+axVmP7sL+dOyM4HSwQzRY/9/Wfm4apsPpMSLiEzI4wahCAql1j1BwaIL2c+UfKLpxXpPr16u3bt+/cuXXr1t2dpRXMlZPK10rLhK8Njj0fG5uh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

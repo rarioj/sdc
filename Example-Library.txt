@@ -1,0 +1,1087 @@
+# vim: filetype=ini:syntax=dosini
+#
+# site: Cover Arts = [MobyGames](https://www.mobygames.com/)
+# site: Program Assets = [Archive.org](https://archive.org/)
+#
+# text: ## Getting Started
+# text: ### The Example Library
+# text: It is not necessary to clone or download the whole repository. All you need is the latest [`Setup ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script. An example library file is also available as [`Example-Library.txt ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Example-Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
+# text:
+# text: 1. Create an empty library directory.
+# text: 2. Download the `Example-Library.txt` configuration file and the `Setup` script (use the `curl -o` option to rename the output).
+# text: 3. Make the `Setup` script executable.
+# text: 4. Run the `Setup` script.
+# text:
+# text: ```shell
+# text: mkdir sdc-example
+# text: cd sdc-example
+# text: curl "https://raw.githubusercontent.com/rarioj/sdc/main/Example-Library.txt" -o Library.txt
+# text: curl "https://raw.githubusercontent.com/rarioj/sdc/main/Setup" -o Setup
+# text: chmod a+x Setup
+# text: ./Setup
+# text: ```
+# text:
+# text: 5. When everything goes well, go to the desired game directory.
+# text: 6. Run the `Launch` script and enjoy the game.
+# text:
+# text: ```shell
+# text: cd "Games/By Genre/Adventure/Beneath a Steel Sky"
+# text: ./Launch
+# text: ```
+# text:
+# text: ### Setting Up a Library
+# text: If you have a `Library.txt` configuration file available, all you need is the `Setup` script:
+# text:
+# text: 1. Go to the directory where the `Library.txt` configuration file resides.
+# text: 2. Download the `Setup` script.
+# text: 3. Make the `Setup` script executable.
+# text: 4. Run the `Setup` script.
+# text: 5. When everything goes well, go to the desired program directory.
+# text: 6. Run the `Launch` script.
+# text:
+# text: ```shell
+# text: cd [path/to/library]
+# text: curl "https://raw.githubusercontent.com/rarioj/sdc/main/Setup" -o Setup
+# text: chmod a+x Setup
+# text: ./Setup
+# text: cd [path/to/program]
+# text: ./Launch
+# text: ```
+# text:
+# text: ### Setting Up a Program (Without Library)
+# text: If you have a single `Program.txt` configuration file and want to run it without setting up the whole library, you can download the `Setup` script as `Launch`:
+# text:
+# text: 1. Go to the directory where the `Program.txt` configuration file resides.
+# text: 2. Download the `Setup` script as `Launch` (use the `curl -o` option to rename the output).
+# text: 3. Make the `Launch` script executable.
+# text: 4. Run the `Launch` script.
+# text:
+# text: ```shell
+# text: cd [path/to/program]
+# text: curl "https://raw.githubusercontent.com/rarioj/sdc/main/Setup" -o Launch
+# text: chmod a+x Launch
+# text: ./Launch
+# text: ```
+#
+# file: All Programs/Games/Alien Carnage/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Alien Carnage/Program.txt = #
+# file: All Programs/Games/Alien Carnage/Program.txt = # name: Alien Carnage
+# file: All Programs/Games/Alien Carnage/Program.txt = # name: Halloween Harry
+# file: All Programs/Games/Alien Carnage/Program.txt = # info: Harry is the name. Action is the game! If Duke Nukem has a twin separated at birth, you can bet it is the hot-action hero Halloween Harry! Do not let the name fool you. This guy is no pumpkinhead! The planet is in trouble, so Harry is blasting double! Only you can help him save the earth from aliens intent on transforming humans into zombie slaves to conquer the universe. Called to Space Station Liberty, Harry stands tall and receives his orders. Join him on his high-risk mission to infiltrate the bizarre alien ship, now burrowed under a high-rise city!
+# file: All Programs/Games/Alien Carnage/Program.txt = # info: Wikipedia = In May 2007, John Passfield and 3D Realms released Alien Carnage as freeware.
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Year = 1993
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Category = Side view • Platform • Shooter • Horror
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Publisher = Apogee Software, Ltd. • WizardWorks Group, Inc. • FormGen, Inc. • 3D Realms Entertainment, Inc.
+# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Developer = Interactive Binary Illusions • SubZero Software
+# file: All Programs/Games/Alien Carnage/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Alien_Carnage)
+# file: All Programs/Games/Alien Carnage/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/522/alien-carnage/)
+# file: All Programs/Games/Alien Carnage/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Halloween+Harry&gid=2378)
+# file: All Programs/Games/Alien Carnage/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/alien-carnage-1pe)
+# file: All Programs/Games/Alien Carnage/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/alien-carnage_48/)
+# file: All Programs/Games/Alien Carnage/Program.txt = #
+# file: All Programs/Games/Alien Carnage/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press **S** to select Sound Blaster.
+# file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press **M** to enable Music.
+# file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press **K** to calibrate keyboard.
+# file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press **Esc** or **Enter** to complete the configuration.
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = [cpu]
+# file: All Programs/Games/Alien Carnage/Program.txt = cycles = 8000
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = [autoexec]
+# file: All Programs/Games/Alien Carnage/Program.txt = @ECHO OFF
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Alien Carnage/Program.txt = IMGMOUNT D "./Assets/cdrom.iso" -t iso
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = IF NOT EXIST C:\CARNAGE\CARNAGE.EXE GOTO F_INSTALL
+# file: All Programs/Games/Alien Carnage/Program.txt = IF EXIST C:\CARNAGE\CARNAGE.EXE GOTO F_START
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = :F_INSTALL
+# file: All Programs/Games/Alien Carnage/Program.txt = C:
+# file: All Programs/Games/Alien Carnage/Program.txt = MD CARNAGE
+# file: All Programs/Games/Alien Carnage/Program.txt = CD CARNAGE
+# file: All Programs/Games/Alien Carnage/Program.txt = COPY D:\*.*
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = :F_START
+# file: All Programs/Games/Alien Carnage/Program.txt = C:
+# file: All Programs/Games/Alien Carnage/Program.txt = CD C:\CARNAGE
+# file: All Programs/Games/Alien Carnage/Program.txt = CARNAGE.EXE
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = :F_EXIT
+# file: All Programs/Games/Alien Carnage/Program.txt = EXIT
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = :F_DEBUG
+# file: All Programs/Games/Alien Carnage/Program.txt
+# file: All Programs/Games/Alien Carnage/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/273533-alien-carnage-dos-front-cover.jpg
+# file: All Programs/Games/Alien Carnage/Program.txt = # check: coverart.jpg = dc084b87c46a589d621c73947adbda11c940ba800dfc7e3a55f906cb89c555f4
+# file: All Programs/Games/Alien Carnage/Program.txt = # asset: cdrom.iso = https://archive.org/download/Alien_Carnage_1994_Multi_Media_International_NL_en/Alien%20Carnage%20%281994%29%28Multi%20Media%20International%29%28NL%29%28en%29.iso
+# file: All Programs/Games/Alien Carnage/Program.txt = # check: cdrom.iso = 8cef244fe578f113f9af3dfb9099b7ba0bf55a9323b65ce93beb46281b2012d1
+# file: All Programs/Games/Alien Carnage/Program.txt = # asset: manual.pdf = https://archive.org/download/AlienCarnage_201603/Alien%20Carnage.pdf
+# file: All Programs/Games/Alien Carnage/Program.txt = # check: manual.pdf = 504e33dd2a43873a13dd29704b4d77e17ef440842e3eb1ddb6e6b530e516c588
+#
+#
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = #
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: Beneath a Steel Sky
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: BASS
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: Beyond The Abyss
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Robert Foster is an innocent outsider stranded in a vast city where oppressed civilians live and work in soaring tower blocks. All while the corrupt, covetous and wealthy lie underground, shielded from all pollution. Alone, save for a robot circuit board; Foster must fight for survival and discover the sinister truth behind this abduction.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Wikipedia = The game was made available as freeware – and with the source code released – for PC platforms in 2003.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Year = 1994
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Genre = Adventure
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Publisher = Virgin Interactive Entertainment, Inc. • Revolution Software Ltd.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Developer = Revolution Software Ltd.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Beneath_a_Steel_Sky)
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/386/beneath-a-steel-sky/)
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Beneath+a+Steel+Sky&gid=1740)
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/beneath-a-steel-sky-21i)
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/beneath_a_steel_sky)
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = #
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text: - Setup Menu:
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text:   - Sound Card: **Sound Blaster / Ad lib**.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text:   - Port Addresses: All **Auto-Detect**.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = [sdl]
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = autolock = true
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = [autoexec]
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = @ECHO OFF
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = IMGMOUNT D "./Assets/cdrom.iso" -t iso
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = IF NOT EXIST C:\SKY\SKY.BAT GOTO F_INSTALL
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = IF EXIST C:\SKY\SKY.BAT GOTO F_START
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = :F_INSTALL
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = D:
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = INSTALL.EXE
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = :F_START
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = C:
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = CD C:\SKY
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = CALL SKY.BAT
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = :F_EXIT
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = EXIT
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = :F_DEBUG
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/4894785-beneath-a-steel-sky-dos-front-cover.jpg
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # check: coverart.jpg = 354c8afe2ef2c2230101c77fb1410357e1f2dc32ac402562a1fb3d36a319d917
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # asset: cdrom.iso = https://archive.org/download/Beneath_a_Steel_Sky_1995_Virgin/Beneath%20a%20Steel%20Sky%20%281995%29%28Virgin%29.iso
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # check: cdrom.iso = be975cb3b7d800797490b3dcedb89b502776ad8f89e09f60b127b5fa456d0a1c
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # asset: manual.pdf = https://archive.org/download/beneath_a_steel_sky_manual/beneath_a_steel_sky_manual.pdf
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # check: manual.pdf = 9490a08dffeaac2c39293e71b643a0088bf14a140ea41a23c02a52e711d98b36
+#
+#
+# file: All Programs/Games/Bio Menace/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Bio Menace/Program.txt = #
+# file: All Programs/Games/Bio Menace/Program.txt = # name: Bio Menace
+# file: All Programs/Games/Bio Menace/Program.txt = # name: Bio Hazard
+# file: All Programs/Games/Bio Menace/Program.txt = # info: You are Snake Logan, a top CIA operative who likes to do things his way. Metro City has fallen under the attack of hideous mutants. Your mission is to fly recon over the city and report back. While circling over the city, you're shot down by hostile forces and forced to crash land on the streets of Metro. Grabbing any supplies you can find, you are out to discover the source of these mutants and especially the guy who shot you down!
+# file: All Programs/Games/Bio Menace/Program.txt = # info: Wikipedia = Apogee released the game as freeware on December 23, 2005 as a 'Christmas present', and the full game can be downloaded from the Apogee website.
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: Year = 1993
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: Category = Side view • Platform
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/Bio Menace/Program.txt = # tag: Publisher & Developer = Apogee Software, Ltd. • 3D Realms Entertainment, Inc.
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Bio_Menace)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/236/bio-menace/)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 1: Dr. Mangle's Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+1%3A+Dr.+Mangle%27s+Lab&gid=1345)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 2: The Hidden Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+2%3A+The+Hidden+Lab&gid=2964)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 3: Master Cain](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+3%3A+Master+Cain&gid=2965)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/bio-menace-22a)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/bio_menace)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/bio-menace_42/)
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = [autoexec]
+# file: All Programs/Games/Bio Menace/Program.txt = @ECHO OFF
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Bio Menace/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = IF NOT EXIST C:\MENACE\BMENACE1.EXE GOTO F_INSTALL
+# file: All Programs/Games/Bio Menace/Program.txt = IF EXIST C:\MENACE\BMENACE1.EXE GOTO F_START
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_INSTALL
+# file: All Programs/Games/Bio Menace/Program.txt = C:
+# file: All Programs/Games/Bio Menace/Program.txt = CD C:\
+# file: All Programs/Games/Bio Menace/Program.txt = MD UNZIP
+# file: All Programs/Games/Bio Menace/Program.txt = CD UNZIP
+# file: All Programs/Games/Bio Menace/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = CD C:\
+# file: All Programs/Games/Bio Menace/Program.txt = MD MENACE
+# file: All Programs/Games/Bio Menace/Program.txt = CD MENACE
+# file: All Programs/Games/Bio Menace/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Bio Menace/Program.txt = C:\UNZIP\UNZIP.EXE -o BIOPATCH.ZIP
+# file: All Programs/Games/Bio Menace/Program.txt = IF NOT EXIST X:\README.TXT COPY README.TXT X:\README.TXT
+# file: All Programs/Games/Bio Menace/Program.txt = IF NOT EXIST X:\HINT.TXT COPY BM-HINT.TXT X:\HINT.TXT
+# file: All Programs/Games/Bio Menace/Program.txt = IF NOT EXIST X:\HELP.TXT COPY BM-HELP.TXT X:\HELP.TXT
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_START
+# file: All Programs/Games/Bio Menace/Program.txt = CLS
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO Bio Menace
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO.
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO 1. Play Bio Menace Episode 1: Dr. Mangle''s Lab
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO 2. Play Bio Menace Episode 2: The Hidden Lab
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO 3. Play Bio Menace Episode 3: Master Cain
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO 4. Exit Program
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO.
+# file: All Programs/Games/Bio Menace/Program.txt = CHOICE /C:1234 /N "Please select:"
+# file: All Programs/Games/Bio Menace/Program.txt = IF ERRORLEVEL==4 GOTO F_EXIT
+# file: All Programs/Games/Bio Menace/Program.txt = IF ERRORLEVEL==3 GOTO F_BMENACE3
+# file: All Programs/Games/Bio Menace/Program.txt = IF ERRORLEVEL==2 GOTO F_BMENACE2
+# file: All Programs/Games/Bio Menace/Program.txt = IF ERRORLEVEL==1 GOTO F_BMENACE1
+# file: All Programs/Games/Bio Menace/Program.txt = GOTO F_EXIT
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_BMENACE1
+# file: All Programs/Games/Bio Menace/Program.txt = C:
+# file: All Programs/Games/Bio Menace/Program.txt = CD C:\MENACE
+# file: All Programs/Games/Bio Menace/Program.txt = BIOPATCH.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = BMENACE1.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = GOTO F_START
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_BMENACE2
+# file: All Programs/Games/Bio Menace/Program.txt = C:
+# file: All Programs/Games/Bio Menace/Program.txt = CD C:\MENACE
+# file: All Programs/Games/Bio Menace/Program.txt = BIOPATCH.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = BMENACE2.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = GOTO F_START
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_BMENACE3
+# file: All Programs/Games/Bio Menace/Program.txt = C:
+# file: All Programs/Games/Bio Menace/Program.txt = CD C:\MENACE
+# file: All Programs/Games/Bio Menace/Program.txt = BIOPATCH.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = BMENACE3.EXE
+# file: All Programs/Games/Bio Menace/Program.txt = GOTO F_START
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_EXIT
+# file: All Programs/Games/Bio Menace/Program.txt = EXIT
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = :F_DEBUG
+# file: All Programs/Games/Bio Menace/Program.txt
+# file: All Programs/Games/Bio Menace/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5700293-bio-menace-dos-front-cover.jpg
+# file: All Programs/Games/Bio Menace/Program.txt = # check: coverart.jpg = fd0ecf61455194c78f16b3c4c53ea742425019b87fe446a7a2cc80dca9201365
+# file: All Programs/Games/Bio Menace/Program.txt = # asset: game.zip = https://archive.org/download/bmfreew/bmfreew.zip
+# file: All Programs/Games/Bio Menace/Program.txt = # check: game.zip = 09a889331ef0bb259dd9b60ce58033fed8d2eef94d1ff21474c6a53c2fe86d6d
+# file: All Programs/Games/Bio Menace/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Bio Menace/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Blackthorne/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Blackthorne/Program.txt = #
+# file: All Programs/Games/Blackthorne/Program.txt = # name: Blackthorne
+# file: All Programs/Games/Blackthorne/Program.txt = # name: Blackhawk = Europe
+# file: All Programs/Games/Blackthorne/Program.txt = # info: Through the dark vastness of space, exiled prince Kyle Blackthorne returns to Tuul to avenge his murdered father and restore the shattered Lightstone. The conqueror Sarlac opposes his vicious troops against the enraged prince. But the evil lord will soon find out: an army is not enough against a single fierce fighter with a vengeance!
+# file: All Programs/Games/Blackthorne/Program.txt = # info: Wikipedia = In 2013, Blizzard released the game for free on their Battle.net PC client.
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Year = 1994
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Category = Side view • Platform • Shooter • Fantasy
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Publisher = Interplay Productions, Inc. • Blizzard Entertainment Inc.
+# file: All Programs/Games/Blackthorne/Program.txt = # tag: Developer = Blizzard Entertainment Inc.
+# file: All Programs/Games/Blackthorne/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Blackthorne)
+# file: All Programs/Games/Blackthorne/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1445/blackthorne/)
+# file: All Programs/Games/Blackthorne/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Blackthorne&gid=1645)
+# file: All Programs/Games/Blackthorne/Program.txt = # site: Game Manual = [MyAbandonware](https://www.myabandonware.com/game/blackthorne-2p8)
+# file: All Programs/Games/Blackthorne/Program.txt = #
+# file: All Programs/Games/Blackthorne/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/Blackthorne/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
+# file: All Programs/Games/Blackthorne/Program.txt = # text: - Main Menu:
+# file: All Programs/Games/Blackthorne/Program.txt = # text:   - Select digitized sound card: **Sound Blaster**; Port: **220**; IRQ: **7**; DMA Channel: **1**.
+# file: All Programs/Games/Blackthorne/Program.txt = # text:   - Select music sound card: **Sound Blaster**; Port: **220**.
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = [cpu]
+# file: All Programs/Games/Blackthorne/Program.txt = cycles = 16000
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = [autoexec]
+# file: All Programs/Games/Blackthorne/Program.txt = @ECHO OFF
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Blackthorne/Program.txt = IMGMOUNT D "./Assets/cdrom.cue" -t iso
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = IF NOT EXIST C:\BTHORNE\BTHORNE.EXE GOTO F_INSTALL
+# file: All Programs/Games/Blackthorne/Program.txt = IF EXIST C:\BTHORNE\BTHORNE.EXE GOTO F_START
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = :F_INSTALL
+# file: All Programs/Games/Blackthorne/Program.txt = D:
+# file: All Programs/Games/Blackthorne/Program.txt = INST.EXE
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = :F_START
+# file: All Programs/Games/Blackthorne/Program.txt = C:
+# file: All Programs/Games/Blackthorne/Program.txt = CD C:\BTHORNE
+# file: All Programs/Games/Blackthorne/Program.txt = BTHORNE.EXE
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = :F_EXIT
+# file: All Programs/Games/Blackthorne/Program.txt = EXIT
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = :F_DEBUG
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/4138084-blackthorne-dos-front-cover.jpg
+# file: All Programs/Games/Blackthorne/Program.txt = # check: coverart.jpg = 483e966c5396680bd6210935f3006e2da313167fc1e831dc03b8db084299fbf7
+# file: All Programs/Games/Blackthorne/Program.txt = # asset: cdrom.bin = https://archive.org/download/blackthorneusarerelease/Blackthorne%20%28USA%29%20%28Rerelease%29.zip/Blackthorne%20%28USA%29%20%28Rerelease%29.bin
+# file: All Programs/Games/Blackthorne/Program.txt = # check: cdrom.bin = f6174c8d6af6f0125070d19d881a585f7edf8231ca86fa1b226fc257ea691d0b
+# file: All Programs/Games/Blackthorne/Program.txt = # asset: manual.pdf = https://dl2.myabandonware.com/f/3ke/Blackthorne_Manual_Mac_EN.pdf
+# file: All Programs/Games/Blackthorne/Program.txt = # check: manual.pdf = b6e59c1a6564522f431cc60dd9f56aca9b7cb820d2ef364e7e300e608be97f95
+# file: All Programs/Games/Blackthorne/Program.txt = #
+# file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue = FILE "cdrom.bin" BINARY
+# file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue =   TRACK 01 MODE1/2352
+# file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue =     INDEX 01 00:00:00
+#
+#
+# file: All Programs/Games/Electroman/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Electroman/Program.txt = #
+# file: All Programs/Games/Electroman/Program.txt = # name: Electroman
+# file: All Programs/Games/Electroman/Program.txt = # name: Electro Man
+# file: All Programs/Games/Electroman/Program.txt = # name: Electro Body
+# file: All Programs/Games/Electroman/Program.txt = # info: After drifting off to sleep late one night at the planetary base, Jacek woke to discover that his unit had lost all its power. Climbing the darkened stairway, he found that alien beings had invaded the HQ and killed all humans - including his wife and children! Only his friend Placek remained, and together they escaped to another planet. Now it is time for revenge. Spending all his insurance money, Jacek underwent many costly operations giving him superhuman strength and senses. He armed himself with weapons and set out for the conquered station. Jacek is unaware that the aliens have rebuilt the station with numerous security systems built to keep him out. Can you help our hero?
+# file: All Programs/Games/Electroman/Program.txt = # info: Wikipedia = Though initially offered under a shareware license, the game was released as freeware by the developer on June 25, 2006, under the Creative Commons Attribution-ShareAlike 2.5 license.
+# file: All Programs/Games/Electroman/Program.txt = # tag: Year = 1992
+# file: All Programs/Games/Electroman/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Electroman/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Electroman/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Electroman/Program.txt = # tag: Category = Side view • Platform • Shooter • Sci-fi
+# file: All Programs/Games/Electroman/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/Electroman/Program.txt = # tag: Publisher = xLand Games • Epic MegaGames, Inc. • Monkey Business, Inc.
+# file: All Programs/Games/Electroman/Program.txt = # tag: Developer = xLand Games
+# file: All Programs/Games/Electroman/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Electro_Man)
+# file: All Programs/Games/Electroman/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/752/electroman/)
+# file: All Programs/Games/Electroman/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Electroman&gid=3021)
+# file: All Programs/Games/Electroman/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/electroman-1ux)
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = [autoexec]
+# file: All Programs/Games/Electroman/Program.txt = @ECHO OFF
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Electroman/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = IF NOT EXIST C:\ELECTRO\EM.EXE GOTO F_INSTALL
+# file: All Programs/Games/Electroman/Program.txt = IF EXIST C:\ELECTRO\EM.EXE GOTO F_START
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = :F_INSTALL
+# file: All Programs/Games/Electroman/Program.txt = C:
+# file: All Programs/Games/Electroman/Program.txt = CD C:\
+# file: All Programs/Games/Electroman/Program.txt = MD UNZIP
+# file: All Programs/Games/Electroman/Program.txt = CD UNZIP
+# file: All Programs/Games/Electroman/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Electroman/Program.txt = CD C:\
+# file: All Programs/Games/Electroman/Program.txt = MD ELECTRO
+# file: All Programs/Games/Electroman/Program.txt = CD ELECTRO
+# file: All Programs/Games/Electroman/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Electroman/Program.txt = IF NOT EXIST X:\README.TXT COPY README.TXT X:\README.TXT
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = :F_START
+# file: All Programs/Games/Electroman/Program.txt = C:
+# file: All Programs/Games/Electroman/Program.txt = CD C:\ELECTRO
+# file: All Programs/Games/Electroman/Program.txt = EM.EXE
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = :F_EXIT
+# file: All Programs/Games/Electroman/Program.txt = EXIT
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = :F_DEBUG
+# file: All Programs/Games/Electroman/Program.txt
+# file: All Programs/Games/Electroman/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/4433602-electroman-dos-front-cover.jpg
+# file: All Programs/Games/Electroman/Program.txt = # check: coverart.jpg = dc324a464f9eca243daba2871049cb850517e153982ff6cc6344a4302de26a4a
+# file: All Programs/Games/Electroman/Program.txt = # asset: game.zip = https://archive.org/download/ElectroMan_786/em.zip
+# file: All Programs/Games/Electroman/Program.txt = # check: game.zip = b9cac8edc0708625c70e992f62ed8adacf9013b82eb3b149ecd0b2504dbeac47
+# file: All Programs/Games/Electroman/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Electroman/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = #
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # name: Flight of the Amazon Queen
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # info: Joe King, a pilot for hire and owner of the Amazon Queen aeroplane, arrives at a hotel in Rio de Janeiro to transport his next customer, famous film actress Faye Russel only to be ambushed by his Dutch rival Anderson. When Joe pilots the Amazon Queen towards the location of Faye's shoot, a storm causes him to crashland in the Amazon jungle. Joe begins searching the jungle, encountering an entire tribe of Amazon women who capture him and take in Faye.
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # info: Wikipedia = In March 2004, the game was released as freeware, and support for it was added to ScummVM, allowing it to be played on Linux, Mac OS X, Windows, and many other operating systems and consoles.
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Year = 1995
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Genre = Adventure
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Publisher = Renegade Software • WarnerActive • GT Interactive Software Europe Ltd.
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Developer = Interactive Binary Illusions
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Flight_of_the_Amazon_Queen)
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/352/flight-of-the-amazon-queen/)
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Flight+of+the+Amazon+Queen&gid=1780)
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/flight-of-the-amazon-queen-2rn)
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/flight_of_the_amazon_queen)
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = #
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # text: - Music: **Sound Blaster**
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # text: - Sound Effects: **Sound Blaster**
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # text: - Press `ENTER` when done.
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = [sdl]
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = autolock = true
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = [autoexec]
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = @ECHO OFF
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = IMGMOUNT D "./Assets/cdrom.cue" -t iso
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = D:
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = CALL AQ.BAT
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = :F_EXIT
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = EXIT
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = :F_DEBUG
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5428760-flight-of-the-amazon-queen-dos-front-cover.jpg
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # check: coverart.jpg = e049d080d1857b5d63eaa86c654c5d035ae45321f4ba28ee170075d68763cf7d
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # asset: cdrom.img = https://archive.org/download/msdos_Flight_of_the_Amazon_Queen_1995/Flight_of_the_Amazon_Queen_1995.zip/fqueen%2Fcd%2FFlight%20of%20the%20Amazon%20Queen%20CCD.img
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # check: cdrom.img = e4ce26fa3e78f49edf3b3322e0470ef96d7536864f39f5ebd756e23d2ec4e15c
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # asset: manual.pdf = https://archive.org/download/flightoftheamazonqueen_201910/Goodies.zip/Goodies%2Ffotaq_manual%2FFlight%20of%20the%20Amazon%20Queen_manual.pdf
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # check: manual.pdf = 1d032ab816743813ffbb77e4291d4c4b74cfa8cb0ef077db18fa6b8426487cd8
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # asset: guide.pdf = https://archive.org/download/FlightOfTheAmazonQueenOfficialPlayingGuide/Flight%20Of%20The%20Amazon%20Queen%20Official%20Playing%20Guide.pdf
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # check: guide.pdf = d63c1ba3a868d434bcca5a24d5b1c6eb1e1d4f8af1f4f2496c8fa64e7b47a3cf
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = #
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # file: Assets/cdrom.cue = FILE "cdrom.img" BINARY
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # file: Assets/cdrom.cue =   TRACK 01 MODE2/2352
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # file: Assets/cdrom.cue =     INDEX 01 00:00:00
+#
+#
+# file: All Programs/Games/God of Thunder/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/God of Thunder/Program.txt = #
+# file: All Programs/Games/God of Thunder/Program.txt = # name: God of Thunder
+# file: All Programs/Games/God of Thunder/Program.txt = # name: GoT
+# file: All Programs/Games/God of Thunder/Program.txt = # info: You are Thor, The God of Thunder! Your father is Odin, the mightiest Norse God and the ruler of Asgard. Odin must fall into a deep sleep (known as the Odinsleep) every few hundred centuries to rejuvenate his power. Your half-brother is Loki, The God of Mischief. Loki has seized the opportunity of this most recent Odinsleep and obtained the help of his most powerful allies to take control of Midgard (Earth).
+# file: All Programs/Games/God of Thunder/Program.txt = # info: Wikipedia = On March 27, 2020, Ron Davis released the source code, music and sound effects as public-domain software on SourceForge.
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Year = 1993
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Category = Top-down • Puzzle elements • Fantasy
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Publisher = Software Creations • Advantage Plus Distributors Inc.
+# file: All Programs/Games/God of Thunder/Program.txt = # tag: Developer = Adept Software
+# file: All Programs/Games/God of Thunder/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/God_of_Thunder_(video_game))
+# file: All Programs/Games/God of Thunder/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1019/god-of-thunder/)
+# file: All Programs/Games/God of Thunder/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=God+of+Thunder&gid=1277)
+# file: All Programs/Games/God of Thunder/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/god-of-thunder-1um)
+# file: All Programs/Games/God of Thunder/Program.txt = # site: [Adept Software](https://www.adeptsoftware.com/got/)
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = [autoexec]
+# file: All Programs/Games/God of Thunder/Program.txt = @ECHO OFF
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/God of Thunder/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = IF NOT EXIST C:\GOT\GOT.EXE GOTO F_INSTALL
+# file: All Programs/Games/God of Thunder/Program.txt = IF EXIST C:\GOT\GOT.EXE GOTO F_START
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = :F_INSTALL
+# file: All Programs/Games/God of Thunder/Program.txt = C:
+# file: All Programs/Games/God of Thunder/Program.txt = CD C:\
+# file: All Programs/Games/God of Thunder/Program.txt = MD UNZIP
+# file: All Programs/Games/God of Thunder/Program.txt = CD UNZIP
+# file: All Programs/Games/God of Thunder/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/God of Thunder/Program.txt = CD C:\
+# file: All Programs/Games/God of Thunder/Program.txt = MD GOT
+# file: All Programs/Games/God of Thunder/Program.txt = CD GOT
+# file: All Programs/Games/God of Thunder/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/God of Thunder/Program.txt = IF NOT EXIST X:\MANUAL.TXT COPY MANUAL.TXT X:\MANUAL.TXT
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = :F_START
+# file: All Programs/Games/God of Thunder/Program.txt = C:
+# file: All Programs/Games/God of Thunder/Program.txt = CD C:\GOT
+# file: All Programs/Games/God of Thunder/Program.txt = GOT.EXE
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = :F_EXIT
+# file: All Programs/Games/God of Thunder/Program.txt = EXIT
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = :F_DEBUG
+# file: All Programs/Games/God of Thunder/Program.txt
+# file: All Programs/Games/God of Thunder/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/4964387-god-of-thunder-dos-front-cover.jpg
+# file: All Programs/Games/God of Thunder/Program.txt = # check: coverart.jpg = e50ce1d561bb258dc21bc3fb9ec9f9643e7bc2f7dd9d9935ec014084505ff103
+# file: All Programs/Games/God of Thunder/Program.txt = # asset: game.zip = https://archive.org/download/god_of_thunder_free/god_of_thunder_free.zip
+# file: All Programs/Games/God of Thunder/Program.txt = # check: game.zip = 94962e6fcbc6d547debda11224d00fdec7a0d03bacdf7d82d08ed8ea289c0c5e
+# file: All Programs/Games/God of Thunder/Program.txt = # asset: manual.pdf = https://www.adeptsoftware.com/got/got_manual.pdf
+# file: All Programs/Games/God of Thunder/Program.txt = # check: manual.pdf = a2c2c7b9b82a8374f821dac2fa595fd7953ea61d110fc85f1c73196dab478900
+# file: All Programs/Games/God of Thunder/Program.txt = # asset: hint.pdf = https://www.adeptsoftware.com/got/got_hintbook.pdf
+# file: All Programs/Games/God of Thunder/Program.txt = # check: hint.pdf = 2126c50f7645a21507dd9df7aa52d6d5af2f4a8b7635517cfaad22d07328c726
+# file: All Programs/Games/God of Thunder/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/God of Thunder/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Jetpack/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Jetpack/Program.txt = #
+# file: All Programs/Games/Jetpack/Program.txt = # name: Jetpack
+# file: All Programs/Games/Jetpack/Program.txt = # info: Use your Jetpack model L1069-E to explore 100 hazardous levels of dungeons! Equipped with Jet Turbines and armed with a powerful Phase Shifter, you quest for precious gems through dungeons full of treasures and peril.
+# file: All Programs/Games/Jetpack/Program.txt = # info: Wikipedia = Jetpack is a platform game available as freeware, developed by American studio Adept Software and originally published as shareware by Software Creations in 1993.
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Year = 1993
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Jetpack/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Category = Side view • Arcade • Platform • Puzzle elements • Shooter
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Publisher = Software Creations
+# file: All Programs/Games/Jetpack/Program.txt = # tag: Developer = Adept Software
+# file: All Programs/Games/Jetpack/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Jetpack_(video_game))
+# file: All Programs/Games/Jetpack/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/10449/jetpack/)
+# file: All Programs/Games/Jetpack/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Jetpack&gid=1263)
+# file: All Programs/Games/Jetpack/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/jetpack-1pg)
+# file: All Programs/Games/Jetpack/Program.txt = # site: [Adept Software](https://www.adeptsoftware.com/jetpack/)
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = [cpu]
+# file: All Programs/Games/Jetpack/Program.txt = cycles = 8000
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = [autoexec]
+# file: All Programs/Games/Jetpack/Program.txt = @ECHO OFF
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Jetpack/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = IF NOT EXIST C:\JETPAK15\JETPACK.EXE GOTO F_INSTALL
+# file: All Programs/Games/Jetpack/Program.txt = IF EXIST C:\JETPAK15\JETPACK.EXE GOTO F_START
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = :F_INSTALL
+# file: All Programs/Games/Jetpack/Program.txt = C:
+# file: All Programs/Games/Jetpack/Program.txt = CD C:\
+# file: All Programs/Games/Jetpack/Program.txt = MD UNZIP
+# file: All Programs/Games/Jetpack/Program.txt = CD UNZIP
+# file: All Programs/Games/Jetpack/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Jetpack/Program.txt = CD C:\
+# file: All Programs/Games/Jetpack/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Jetpack/Program.txt = IF NOT EXIST X:\MANUAL.TXT COPY C:\JETPAK15\MANUAL.TXT X:\MANUAL.TXT
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = :F_START
+# file: All Programs/Games/Jetpack/Program.txt = CLS
+# file: All Programs/Games/Jetpack/Program.txt = ECHO Jetpack 1.5
+# file: All Programs/Games/Jetpack/Program.txt = ECHO.
+# file: All Programs/Games/Jetpack/Program.txt = ECHO 1. Play Jetpack
+# file: All Programs/Games/Jetpack/Program.txt = ECHO 2. Graphics Module Switcher
+# file: All Programs/Games/Jetpack/Program.txt = ECHO 3. Exit Program
+# file: All Programs/Games/Jetpack/Program.txt = ECHO.
+# file: All Programs/Games/Jetpack/Program.txt = CHOICE /C:123 /N "Please select:"
+# file: All Programs/Games/Jetpack/Program.txt = IF ERRORLEVEL==3 GOTO F_EXIT
+# file: All Programs/Games/Jetpack/Program.txt = IF ERRORLEVEL==2 GOTO F_JSWITCH
+# file: All Programs/Games/Jetpack/Program.txt = IF ERRORLEVEL==1 GOTO F_JETPACK
+# file: All Programs/Games/Jetpack/Program.txt = GOTO F_EXIT
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = :F_JSWITCH
+# file: All Programs/Games/Jetpack/Program.txt = C:
+# file: All Programs/Games/Jetpack/Program.txt = CD C:\JETPAK15
+# file: All Programs/Games/Jetpack/Program.txt = JSWITCH.EXE
+# file: All Programs/Games/Jetpack/Program.txt = GOTO F_START
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = :F_JETPACK
+# file: All Programs/Games/Jetpack/Program.txt = C:
+# file: All Programs/Games/Jetpack/Program.txt = CD C:\JETPAK15
+# file: All Programs/Games/Jetpack/Program.txt = JETPACK.EXE
+# file: All Programs/Games/Jetpack/Program.txt = GOTO F_START
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = :F_EXIT
+# file: All Programs/Games/Jetpack/Program.txt = EXIT
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = :F_DEBUG
+# file: All Programs/Games/Jetpack/Program.txt
+# file: All Programs/Games/Jetpack/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/8927880-jetpack-dos-front-cover.jpg
+# file: All Programs/Games/Jetpack/Program.txt = # check: coverart.jpg = bf5cba24bf6f4c1e73e832535276f8ad2da6c557fcddb855fb17a2fd593707d6
+# file: All Programs/Games/Jetpack/Program.txt = # asset: game.zip = https://archive.org/download/Jetpack/jetpak15.zip
+# file: All Programs/Games/Jetpack/Program.txt = # check: game.zip = db3f1a48ad21d7fcdd1956048b4cca9bc8f6ea21e78f981408399bee9a757b97
+# file: All Programs/Games/Jetpack/Program.txt = # asset: manual.pdf = https://www.adeptsoftware.com/jetpack/jet_manual.pdf
+# file: All Programs/Games/Jetpack/Program.txt = # check: manual.pdf = 1470dc7facd5755b260b42ce0e52909108713b1d097c105ad96fc6d2bc5b5d53
+# file: All Programs/Games/Jetpack/Program.txt = # asset: hint.pdf = https://www.adeptsoftware.com/jetpack/jet_hintbook.pdf
+# file: All Programs/Games/Jetpack/Program.txt = # check: hint.pdf = c589734dd1c30d1c1d0b96c567331d4ad8383102cf0f9b9ee697657da2b082e7
+# file: All Programs/Games/Jetpack/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Jetpack/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Lure of the Temptress/Program.txt = #
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # name: Lure of the Temptress
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # info: You play Diermot, who finds himself imprisoned in a depressing cell. Meanwhile, life in the village of Turnvale goes on as ever, just an ordinary day. Well, as normal as you could hope for, considering the Skorl are in town. They're big, ugly, and not particularly pleasant! Will they overpower Diermot? Or can he escape from his cell and bring peace back to the land? It depends on you.
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # info: Wikipedia = The game was well-received and re-released as freeware on April 1, 2003.
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Year = 1992
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Genre = Adventure
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements • Fantasy
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Publisher = Virgin Games, Ltd. • Konami of America, Inc. • Hit Squad, The • Sold Out Sales & Marketing Ltd. • Revolution Software Ltd.
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Developer = Revolution Software Ltd.
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Lure_of_the_Temptress)
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1134/lure-of-the-temptress/)
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Lure+of+the+Temptress&gid=1087)
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/lure-of-the-temptress-1ge)
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/lure_of_the_temptress)
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = [sdl]
+# file: All Programs/Games/Lure of the Temptress/Program.txt = autolock = true
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = [autoexec]
+# file: All Programs/Games/Lure of the Temptress/Program.txt = @ECHO OFF
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Lure of the Temptress/Program.txt = IMGMOUNT D "./Assets/cdrom.iso" -t iso
+# file: All Programs/Games/Lure of the Temptress/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Lure of the Temptress/Program.txt = IF NOT EXIST X:\MANUAL.PDF COPY D:\MANUAL.PDF X:
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = D:
+# file: All Programs/Games/Lure of the Temptress/Program.txt = CALL CDGO.BAT
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = :F_EXIT
+# file: All Programs/Games/Lure of the Temptress/Program.txt = EXIT
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = :F_DEBUG
+# file: All Programs/Games/Lure of the Temptress/Program.txt
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/7959182-lure-of-the-temptress-dos-front-cover.jpg
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # check: coverart.jpg = 9565355f4a318f8aa7fe22e7bba4d0e97f5a1bb2fb6389dc8d461c26e1185df8
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # asset: cdrom.iso = https://archive.org/download/Lure_of_the_Temptress_1997_Sold_Out_budget/Lure%20of%20the%20Temptress%20%281997%29%28Sold%20Out%29%5Bbudget%5D.iso
+# file: All Programs/Games/Lure of the Temptress/Program.txt = # check: cdrom.iso = 4715e3f70397c02208e1e55dabbff2b41ac4685677a3052843d9dfba02af9c38
+#
+#
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/One Must Fall 2097/Program.txt = #
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # name: One Must Fall 2097
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # name: One Must Fall: 2097
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF:2097
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Governments are puppets to big corporations - and the largest corporation being "World Aeronautics and Robotics" (WAR). If you want to get ahead in the competitive corporate corridors of WAR, you need to master the use of human-assisted robots (HARs). These gigantic robots' purposes include defence and controlling far-flung planetary outposts. The next outpost up for colonization is Jupiter's moon Ganymede. The highly-paid job as pilot of the WAR representative will compete fiercely, and you must qualify for the position by proving your worth in the arena. It will be the grandest one-on-one combat since the Roman Era.
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Wikipedia = In February 1999, the game was declared freeware by the developers.
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Year = 1994
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Category = Side view • Arcade • Fighting • Mecha • Sci-fi
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Publisher = Moon Doggie • Epic MegaGames, Inc. • Diversions Entertainment
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Developer = Diversions Entertainment
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/One_Must_Fall:_2097)
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/234/one-must-fall-2097/)
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=One+Must+Fall+2097&gid=1843)
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/one-must-fall-2097-2a7)
+# file: All Programs/Games/One Must Fall 2097/Program.txt = #
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # text:
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # text: ## Additional Notes
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # text: - Select sound card: **Sound Blaster 16 (Stereo)** and **Ultra High Quality (Pentium)**.
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = [cpu]
+# file: All Programs/Games/One Must Fall 2097/Program.txt = cputype = pentium
+# file: All Programs/Games/One Must Fall 2097/Program.txt = cycles = 16000
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = [autoexec]
+# file: All Programs/Games/One Must Fall 2097/Program.txt = @ECHO OFF
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/One Must Fall 2097/Program.txt = IMGMOUNT D "./Assets/cdrom.iso" -t iso
+# file: All Programs/Games/One Must Fall 2097/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = IF NOT EXIST C:\OMF\OMF.EXE GOTO F_INSTALL
+# file: All Programs/Games/One Must Fall 2097/Program.txt = IF EXIST C:\OMF\OMF.EXE GOTO F_START
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = :F_INSTALL
+# file: All Programs/Games/One Must Fall 2097/Program.txt = D:
+# file: All Programs/Games/One Must Fall 2097/Program.txt = INSTALL.EXE
+# file: All Programs/Games/One Must Fall 2097/Program.txt = IF NOT EXIST X:\MANUAL.TXT COPY D:\MANUAL\MANUAL.DOC X:\MANUAL.TXT
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = :F_START
+# file: All Programs/Games/One Must Fall 2097/Program.txt = C:
+# file: All Programs/Games/One Must Fall 2097/Program.txt = CD C:\OMF
+# file: All Programs/Games/One Must Fall 2097/Program.txt = OMF.EXE
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = :F_EXIT
+# file: All Programs/Games/One Must Fall 2097/Program.txt = EXIT
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = :F_DEBUG
+# file: All Programs/Games/One Must Fall 2097/Program.txt
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/4532223-one-must-fall-2097-dos-front-cover.jpg
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # check: coverart.jpg = 65e0694a156ec9ea13903dc90d35ad5bbcb73953f9de7161664e6239ebd2d37b
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # asset: cdrom.iso = https://archive.org/download/omf-21-cd/OMF21CD.ISO
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # check: cdrom.iso = 684b9670b1cd5421ef3f2086e8be2e39d858ce1fd6eec6a3708375ad47ca7272
+#
+#
+# file: All Programs/Games/Stargunner/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Stargunner/Program.txt = #
+# file: All Programs/Games/Stargunner/Program.txt = # name: Stargunner
+# file: All Programs/Games/Stargunner/Program.txt = # info: Deep within the Andromeda galaxy, the people of Zile grow restless and greedy. The Zilions secretly prepare for a massive strike against the nearby planet Ytima. Fearing such an attack, the Ytimians train an elite squad of "Stargunners." Their mission: To strike and cripple the Zilions' three strongholds, where the Zilion war fleets await the launch order. Good will triumph if the Stargunners can surprise the Zilions and destroy most of their fleet.
+# file: All Programs/Games/Stargunner/Program.txt = # info: Wikipedia = On June 22, 2005, Stargunner was released as freeware.
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Year = 1996
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Stargunner/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Category = Side view • Shooter • Sci-fi
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Publisher = Apogee Software, Ltd. • WizardWorks Group, Inc. • 3D Realms Entertainment, Inc.
+# file: All Programs/Games/Stargunner/Program.txt = # tag: Developer = 3D Realms Entertainment, Inc. • Apogee Software, Ltd.
+# file: All Programs/Games/Stargunner/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Stargunner)
+# file: All Programs/Games/Stargunner/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/922/stargunner/)
+# file: All Programs/Games/Stargunner/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Stargunner&gid=2492)
+# file: All Programs/Games/Stargunner/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/stargunner-c8g)
+# file: All Programs/Games/Stargunner/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/stargunner_45/)
+# file: All Programs/Games/Stargunner/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/stargunner)
+# file: All Programs/Games/Stargunner/Program.txt = # site: [Steam 🆓](https://store.steampowered.com/app/358390/Stargunner/)
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = [cpu]
+# file: All Programs/Games/Stargunner/Program.txt = cycles = 32000
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = [autoexec]
+# file: All Programs/Games/Stargunner/Program.txt = @ECHO OFF
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Stargunner/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = IF NOT EXIST C:\STARGUN\STARGUN.EXE GOTO F_INSTALL
+# file: All Programs/Games/Stargunner/Program.txt = IF EXIST C:\STARGUN\STARGUN.EXE GOTO F_START
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = :F_INSTALL
+# file: All Programs/Games/Stargunner/Program.txt = C:
+# file: All Programs/Games/Stargunner/Program.txt = CD C:\
+# file: All Programs/Games/Stargunner/Program.txt = MD UNZIP
+# file: All Programs/Games/Stargunner/Program.txt = CD UNZIP
+# file: All Programs/Games/Stargunner/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Stargunner/Program.txt = CD C:\
+# file: All Programs/Games/Stargunner/Program.txt = MD STARGUN
+# file: All Programs/Games/Stargunner/Program.txt = CD STARGUN
+# file: All Programs/Games/Stargunner/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Stargunner/Program.txt = IF NOT EXIST X:\MANUAL.PDF COPY SGMANUAL.PDF X:\MANUAL.PDF
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = :F_START
+# file: All Programs/Games/Stargunner/Program.txt = C:
+# file: All Programs/Games/Stargunner/Program.txt = CD C:\STARGUN
+# file: All Programs/Games/Stargunner/Program.txt = STARGUN.EXE
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = :F_EXIT
+# file: All Programs/Games/Stargunner/Program.txt = EXIT
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = :F_DEBUG
+# file: All Programs/Games/Stargunner/Program.txt
+# file: All Programs/Games/Stargunner/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5061324-stargunner-dos-front-cover.jpg
+# file: All Programs/Games/Stargunner/Program.txt = # check: coverart.jpg = d64b841a410922c501b12661adeecbae865b9141e18a5edfb63291d9714a2374
+# file: All Programs/Games/Stargunner/Program.txt = # asset: game.zip = https://archive.org/download/Stargunner/stargunnerfreeware.zip
+# file: All Programs/Games/Stargunner/Program.txt = # check: game.zip = 7a33986004196355e8c86428bd66ad4a1eac54c67373c6253701a7234b8053ae
+# file: All Programs/Games/Stargunner/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Stargunner/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Supaplex/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Supaplex/Program.txt = #
+# file: All Programs/Games/Supaplex/Program.txt = # name: Supaplex
+# file: All Programs/Games/Supaplex/Program.txt = # name: Think!
+# file: All Programs/Games/Supaplex/Program.txt = # info: You are Murphy, a bug hunter extraordinaire, exploring deep inside a crazy computer. The only way out of each brain-teasing level is to collect the Infotrons. The fun begins! Avoid Snik Snaks at all costs; falling Zonks will trap the unwary, exploding discs, electrons, and ports. All add up to this awesome action game!
+# file: All Programs/Games/Supaplex/Program.txt = # info: Wikipedia = The developers of the game have declared the software to be freeware.
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Year = 1991
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Genre = Puzzle
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Supaplex/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Category = Side view
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Media = CD-ROM
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Publisher = Digital Integration Ltd.
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Developer = Think!Ware Development
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Patched • Copy Protection
+# file: All Programs/Games/Supaplex/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Supaplex)
+# file: All Programs/Games/Supaplex/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/2106/supaplex/)
+# file: All Programs/Games/Supaplex/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Supaplex&gid=1618)
+# file: All Programs/Games/Supaplex/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/supaplex-19v)
+# file: All Programs/Games/Supaplex/Program.txt = # site: [Artsoft - Rocks'n'Diamonds](https://www.artsoft.org/rocksndiamonds/)
+# file: All Programs/Games/Supaplex/Program.txt = # site: Game Patch = [Boulder Dash Fan Site 🔓](http://www.bd-fans.com/Supaplex.html)
+# file: All Programs/Games/Supaplex/Program.txt = #
+# file: All Programs/Games/Supaplex/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/Supaplex/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
+# file: All Programs/Games/Supaplex/Program.txt = # text:
+# file: All Programs/Games/Supaplex/Program.txt = # text: ## Additional Notes
+# file: All Programs/Games/Supaplex/Program.txt = # text: - Consult `Assets/MANUAL.PDF` for the game copy protection.
+# file: All Programs/Games/Supaplex/Program.txt = # text: - Select **controls** (game main menu) to configure sound. Click **S.BLASTER + MUSIC + FX**.
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = [sdl]
+# file: All Programs/Games/Supaplex/Program.txt = autolock = true
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = [autoexec]
+# file: All Programs/Games/Supaplex/Program.txt = @ECHO OFF
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Supaplex/Program.txt = IMGMOUNT D "./Assets/cdrom.iso" -t iso
+# file: All Programs/Games/Supaplex/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = IF NOT EXIST C:\SUPAPLEX\SUPAPLEX.EXE GOTO F_INSTALL
+# file: All Programs/Games/Supaplex/Program.txt = IF EXIST C:\SUPAPLEX\SUPAPLEX.EXE GOTO F_START
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = :F_INSTALL
+# file: All Programs/Games/Supaplex/Program.txt = D:
+# file: All Programs/Games/Supaplex/Program.txt = CALL HDINSTALL.BAT
+# file: All Programs/Games/Supaplex/Program.txt = IF NOT EXIST X:\MANUAL.PDF COPY D:\MANUAL\MANUAL.PDF X:
+# file: All Programs/Games/Supaplex/Program.txt = C:
+# file: All Programs/Games/Supaplex/Program.txt = CD C:\
+# file: All Programs/Games/Supaplex/Program.txt = MD UNZIP
+# file: All Programs/Games/Supaplex/Program.txt = CD UNZIP
+# file: All Programs/Games/Supaplex/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Supaplex/Program.txt = CD C:\SUPAPLEX
+# file: All Programs/Games/Supaplex/Program.txt = C:\UNZIP\UNZIP.EXE -o X:\PATCH.ZIP
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = :F_START
+# file: All Programs/Games/Supaplex/Program.txt = C:
+# file: All Programs/Games/Supaplex/Program.txt = CD C:\SUPAPLEX
+# file: All Programs/Games/Supaplex/Program.txt = SUPAPLEX.EXE
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = :F_EXIT
+# file: All Programs/Games/Supaplex/Program.txt = EXIT
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = :F_DEBUG
+# file: All Programs/Games/Supaplex/Program.txt
+# file: All Programs/Games/Supaplex/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/6998862-supaplex-dos-front-cover.jpg
+# file: All Programs/Games/Supaplex/Program.txt = # check: coverart.jpg = 474ec2bb1bcd68aae3a4c7cdd45bcd2e7facf896a8ba9060de4d5c3557468d00
+# file: All Programs/Games/Supaplex/Program.txt = # asset: cdrom.iso = https://archive.org/download/supaplex-cdrom/Supaplex%20%281995%29%28Action%20Replay%29.iso
+# file: All Programs/Games/Supaplex/Program.txt = # check: cdrom.iso = 5e444d9b4b3b58305bdff9fa4ec264442fa4af114abb0832a08ea17b3b9d9e97
+# file: All Programs/Games/Supaplex/Program.txt = # asset: patch.zip = http://www.bd-fans.com/Files/Classic_Supaplex/Bugs/SndFix.zip
+# file: All Programs/Games/Supaplex/Program.txt = # check: patch.zip = 6077d3500132aa5468541ca4e29823e25880b231ea32018d1151216d2053db39
+# file: All Programs/Games/Supaplex/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Supaplex/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Teen Agent/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Teen Agent/Program.txt = #
+# file: All Programs/Games/Teen Agent/Program.txt = # name: Teen Agent
+# file: All Programs/Games/Teen Agent/Program.txt = # name: Teenagent
+# file: All Programs/Games/Teen Agent/Program.txt = # info: One day, two men in dark glasses and long coats captured a teenager; this could be a start of a very long day! Get ready for a wonderfully humorous adventure. Teen Agent is a point-and-click animated graphic adventure that features dozens of detailed hand-painted backgrounds.
+# file: All Programs/Games/Teen Agent/Program.txt = # info: Wikipedia = When the game was originally released, "The Three Tasks" was shareware, and the remaining two sections could be obtained by registering the game. However, the game was later released as freeware.
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Year = 1995
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Genre = Adventure
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Publisher = Union Logic Software Publishing, Inc. • Metropolis Software House • CD Projekt Sp. z o.o.
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: Developer = Metropolis Software House
+# file: All Programs/Games/Teen Agent/Program.txt = # tag: No Manual
+# file: All Programs/Games/Teen Agent/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Teenagent)
+# file: All Programs/Games/Teen Agent/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/6423/teen-agent/)
+# file: All Programs/Games/Teen Agent/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Teen+Agent&gid=2206)
+# file: All Programs/Games/Teen Agent/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/teen-agent-23o)
+# file: All Programs/Games/Teen Agent/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/teenagent)
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = [sdl]
+# file: All Programs/Games/Teen Agent/Program.txt = autolock = true
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = [cpu]
+# file: All Programs/Games/Teen Agent/Program.txt = cycles = 8000
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = [autoexec]
+# file: All Programs/Games/Teen Agent/Program.txt = @ECHO OFF
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Teen Agent/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = IF NOT EXIST C:\TEEN\TEENAGNT.EXE GOTO F_INSTALL
+# file: All Programs/Games/Teen Agent/Program.txt = IF EXIST C:\TEEN\TEENAGNT.EXE GOTO F_START
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = :F_INSTALL
+# file: All Programs/Games/Teen Agent/Program.txt = C:
+# file: All Programs/Games/Teen Agent/Program.txt = CD C:\
+# file: All Programs/Games/Teen Agent/Program.txt = MD UNZIP
+# file: All Programs/Games/Teen Agent/Program.txt = CD UNZIP
+# file: All Programs/Games/Teen Agent/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Teen Agent/Program.txt = CD C:\
+# file: All Programs/Games/Teen Agent/Program.txt = MD TEEN
+# file: All Programs/Games/Teen Agent/Program.txt = CD TEEN
+# file: All Programs/Games/Teen Agent/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = :F_START
+# file: All Programs/Games/Teen Agent/Program.txt = C:
+# file: All Programs/Games/Teen Agent/Program.txt = CD C:\TEEN
+# file: All Programs/Games/Teen Agent/Program.txt = TEENAGNT.EXE
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = :F_EXIT
+# file: All Programs/Games/Teen Agent/Program.txt = EXIT
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = :F_DEBUG
+# file: All Programs/Games/Teen Agent/Program.txt
+# file: All Programs/Games/Teen Agent/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5243164-teen-agent-dos-front-cover.jpg
+# file: All Programs/Games/Teen Agent/Program.txt = # check: coverart.jpg = a2f181ec57fc8adaddca4790ab282d113ad0253a01dbfe79a758693bb08cef7f
+# file: All Programs/Games/Teen Agent/Program.txt = # asset: game.zip = https://archive.org/download/Teenagent_1020/teenagent.ZIP
+# file: All Programs/Games/Teen Agent/Program.txt = # check: game.zip = ba894deb13c34d2be366b473e9bc7d256702d8c969548f2c4165e7ca575670e6
+# file: All Programs/Games/Teen Agent/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Teen Agent/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/The Lost Vikings/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/The Lost Vikings/Program.txt = #
+# file: All Programs/Games/The Lost Vikings/Program.txt = # name: The Lost Vikings
+# file: All Programs/Games/The Lost Vikings/Program.txt = # info: Three hairy Norsemen set the stage for a decade of legendary adventure. Meet Erik the Swift, Baleog the Fierce, and Olaf the Stout - your typical, borderline-insane Vikings who happen to get abducted by aliens. Now it's up to you to slash, smash and solve their way home, an intense arcade action. Pillage and plunder your way through 35 levels of mind-bending arcade action. Combine the unique skills of three distinct Viking personalities to conquer dozens of marauding foes.
+# file: All Programs/Games/The Lost Vikings/Program.txt = # info: Wikipedia = In 2014, the game was added to Battle.net as a free download emulated through DOSBox.
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Year = 1993
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Genre = Action • Puzzle
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Category = Side view • Platform • Fantasy • Sci-fi • Comedy
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Publisher = Interplay Productions, Inc.
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Developer = Silicon & Synapse, Inc.
+# file: All Programs/Games/The Lost Vikings/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/The_Lost_Vikings)
+# file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1547/the-lost-vikings/)
+# file: All Programs/Games/The Lost Vikings/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=The+Lost+Vikings&gid=1032)
+# file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/the-lost-vikings-1mi)
+# file: All Programs/Games/The Lost Vikings/Program.txt = #
+# file: All Programs/Games/The Lost Vikings/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Select sound driver: **Sound Blaster**, sound card port address: **220 (default)**.
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = [cpu]
+# file: All Programs/Games/The Lost Vikings/Program.txt = cycles = 16000
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = [autoexec]
+# file: All Programs/Games/The Lost Vikings/Program.txt = @ECHO OFF
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/The Lost Vikings/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = IF NOT EXIST C:\VIKINGS\VIKINGS.EXE GOTO F_INSTALL
+# file: All Programs/Games/The Lost Vikings/Program.txt = IF EXIST C:\VIKINGS\VIKINGS.EXE GOTO F_START
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = :F_INSTALL
+# file: All Programs/Games/The Lost Vikings/Program.txt = C:
+# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\
+# file: All Programs/Games/The Lost Vikings/Program.txt = MD UNZIP
+# file: All Programs/Games/The Lost Vikings/Program.txt = CD UNZIP
+# file: All Programs/Games/The Lost Vikings/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\
+# file: All Programs/Games/The Lost Vikings/Program.txt = MD VIKINGS
+# file: All Programs/Games/The Lost Vikings/Program.txt = CD VIKINGS
+# file: All Programs/Games/The Lost Vikings/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/The Lost Vikings/Program.txt = SETUP.EXE
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = :F_START
+# file: All Programs/Games/The Lost Vikings/Program.txt = C:
+# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\VIKINGS
+# file: All Programs/Games/The Lost Vikings/Program.txt = VIKINGS.EXE
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = :F_EXIT
+# file: All Programs/Games/The Lost Vikings/Program.txt = EXIT
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = :F_DEBUG
+# file: All Programs/Games/The Lost Vikings/Program.txt
+# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5274011-the-lost-vikings-dos-front-cover.jpg
+# file: All Programs/Games/The Lost Vikings/Program.txt = # check: coverart.jpg = fc4be327b4197ededf63bc725fc7881455e5c308ddbecc7b4f02cab3e39c72ca
+# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: game.zip = https://archive.org/download/Various_DOS_Abandonware_Ark/Lost%20Vikings%20The%20%281992%29%28Interplay%29.zip
+# file: All Programs/Games/The Lost Vikings/Program.txt = # check: game.zip = 6c5bfda553fd9372a21ecaf676989604984554615ac26ae1d46d84d0db5e4613
+# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: manual.pdf = https://archive.org/download/The_Lost_Vikings/The_Lost_Vikings.pdf
+# file: All Programs/Games/The Lost Vikings/Program.txt = # check: manual.pdf = 8d62f41ea0844b01dd07aeb111e07a7e3345660ddadff24da51f92f9c1f22bc8
+# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/The Lost Vikings/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+#
+# file: All Programs/Games/Xargon/Program.txt = # vim: filetype=ini:syntax=dosini
+# file: All Programs/Games/Xargon/Program.txt = #
+# file: All Programs/Games/Xargon/Program.txt = # name: Xargon
+# file: All Programs/Games/Xargon/Program.txt = # name: The Xargon Trilogy
+# file: All Programs/Games/Xargon/Program.txt = # name: Xargon: The Mystery of the Blue Builders
+# file: All Programs/Games/Xargon/Program.txt = # info: Trapped in a fantasy world of bizarre creatures and landscapes, guide archeologist Malvenious through dangerous lands and out of Xargon alive! Avoid spears, spikes & mechanical mashers as you fight lizards, trolls, enormous spiders and deadly purple hoppers through breathtaking 256-colour scenery & animation. Be prepared to lose touch with reality in this new magical adventure.
+# file: All Programs/Games/Xargon/Program.txt = # info: Wikipedia = Allen Pilgrim declared the registered version freeware and released the source code on August 4, 2008.
+# file: All Programs/Games/Xargon/Program.txt = # tag: Year = 1993
+# file: All Programs/Games/Xargon/Program.txt = # tag: Genre = Action
+# file: All Programs/Games/Xargon/Program.txt = # tag: Platform = DOS
+# file: All Programs/Games/Xargon/Program.txt = # tag: License = Freeware
+# file: All Programs/Games/Xargon/Program.txt = # tag: Category = Side view • Arcade • Platform • Fantasy
+# file: All Programs/Games/Xargon/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/Xargon/Program.txt = # tag: Publisher & Developer = Epic MegaGames, Inc.
+# file: All Programs/Games/Xargon/Program.txt = # tag: No Manual
+# file: All Programs/Games/Xargon/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Xargon)
+# file: All Programs/Games/Xargon/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1057/xargon/)
+# file: All Programs/Games/Xargon/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Xargon&gid=2905)
+# file: All Programs/Games/Xargon/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/xargon-21c)
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = [cpu]
+# file: All Programs/Games/Xargon/Program.txt = cycles = 8000
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = [autoexec]
+# file: All Programs/Games/Xargon/Program.txt = @ECHO OFF
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = MOUNT C "./drive"
+# file: All Programs/Games/Xargon/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = IF NOT EXIST C:\XARGON\XARGON.BAT GOTO F_INSTALL
+# file: All Programs/Games/Xargon/Program.txt = IF EXIST C:\XARGON\XARGON.BAT GOTO F_START
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = :F_INSTALL
+# file: All Programs/Games/Xargon/Program.txt = C:
+# file: All Programs/Games/Xargon/Program.txt = CD C:\
+# file: All Programs/Games/Xargon/Program.txt = MD UNZIP
+# file: All Programs/Games/Xargon/Program.txt = CD UNZIP
+# file: All Programs/Games/Xargon/Program.txt = X:\UNZ542X3.EXE
+# file: All Programs/Games/Xargon/Program.txt = CD C:\
+# file: All Programs/Games/Xargon/Program.txt = MD XARGON
+# file: All Programs/Games/Xargon/Program.txt = CD XARGON
+# file: All Programs/Games/Xargon/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = :F_START
+# file: All Programs/Games/Xargon/Program.txt = C:
+# file: All Programs/Games/Xargon/Program.txt = CD C:\XARGON
+# file: All Programs/Games/Xargon/Program.txt = CALL XARGON.BAT
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = :F_EXIT
+# file: All Programs/Games/Xargon/Program.txt = EXIT
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = :F_DEBUG
+# file: All Programs/Games/Xargon/Program.txt
+# file: All Programs/Games/Xargon/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/9121620-xargon-dos-front-cover.jpg
+# file: All Programs/Games/Xargon/Program.txt = # check: coverart.jpg = 132753dcd83a0b8781af893375c78f006d8cd526fae413e26a2afc6ad9a43ebd
+# file: All Programs/Games/Xargon/Program.txt = # asset: game.zip = https://archive.org/download/Xargon_Trilogy/Xargon.zip
+# file: All Programs/Games/Xargon/Program.txt = # check: game.zip = da06d615aab30f104a2b06183a347c0c636e1d4ca0346fcaa46299706bd6fd63
+# file: All Programs/Games/Xargon/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
+# file: All Programs/Games/Xargon/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
+#
+# link: Games/By Genre/Action/Alien Carnage = ../../../All Programs/Games/Alien Carnage
+# link: Games/By Genre/Action/Bio Menace = ../../../All Programs/Games/Bio Menace
+# link: Games/By Genre/Action/Blackthorne = ../../../All Programs/Games/Blackthorne
+# link: Games/By Genre/Action/Electroman = ../../../All Programs/Games/Electroman
+# link: Games/By Genre/Action/God of Thunder = ../../../All Programs/Games/God of Thunder
+# link: Games/By Genre/Action/Jetpack = ../../../All Programs/Games/Jetpack
+# link: Games/By Genre/Action/One Must Fall 2097 = ../../../All Programs/Games/One Must Fall 2097
+# link: Games/By Genre/Action/Stargunner = ../../../All Programs/Games/Stargunner
+# link: Games/By Genre/Action/The Lost Vikings = ../../../All Programs/Games/The Lost Vikings
+# link: Games/By Genre/Action/Xargon = ../../../All Programs/Games/Xargon
+# link: Games/By Genre/Adventure/Beneath a Steel Sky = ../../../All Programs/Games/Beneath a Steel Sky
+# link: Games/By Genre/Adventure/Flight of the Amazon Queen = ../../../All Programs/Games/Flight of the Amazon Queen
+# link: Games/By Genre/Adventure/Lure of the Temptress = ../../../All Programs/Games/Lure of the Temptress
+# link: Games/By Genre/Adventure/Teen Agent = ../../../All Programs/Games/Teen Agent
+# link: Games/By Genre/Puzzle/Supaplex = ../../../All Programs/Games/Supaplex
+# link: Games/By Genre/Puzzle/The Lost Vikings = ../../../All Programs/Games/The Lost Vikings
+# link: Games/By License/Freeware/Alien Carnage = ../../../All Programs/Games/Alien Carnage
+# link: Games/By License/Freeware/Beneath a Steel Sky = ../../../All Programs/Games/Beneath a Steel Sky
+# link: Games/By License/Freeware/Bio Menace = ../../../All Programs/Games/Bio Menace
+# link: Games/By License/Freeware/Blackthorne = ../../../All Programs/Games/Blackthorne
+# link: Games/By License/Freeware/Electroman = ../../../All Programs/Games/Electroman
+# link: Games/By License/Freeware/Flight of the Amazon Queen = ../../../All Programs/Games/Flight of the Amazon Queen
+# link: Games/By License/Freeware/God of Thunder = ../../../All Programs/Games/God of Thunder
+# link: Games/By License/Freeware/Jetpack = ../../../All Programs/Games/Jetpack
+# link: Games/By License/Freeware/Lure of the Temptress = ../../../All Programs/Games/Lure of the Temptress
+# link: Games/By License/Freeware/One Must Fall 2097 = ../../../All Programs/Games/One Must Fall 2097
+# link: Games/By License/Freeware/Stargunner = ../../../All Programs/Games/Stargunner
+# link: Games/By License/Freeware/Supaplex = ../../../All Programs/Games/Supaplex
+# link: Games/By License/Freeware/Teen Agent = ../../../All Programs/Games/Teen Agent
+# link: Games/By License/Freeware/The Lost Vikings = ../../../All Programs/Games/The Lost Vikings
+# link: Games/By License/Freeware/Xargon = ../../../All Programs/Games/Xargon
+# link: Games/By Platform/DOS/Alien Carnage = ../../../All Programs/Games/Alien Carnage
+# link: Games/By Platform/DOS/Beneath a Steel Sky = ../../../All Programs/Games/Beneath a Steel Sky
+# link: Games/By Platform/DOS/Bio Menace = ../../../All Programs/Games/Bio Menace
+# link: Games/By Platform/DOS/Blackthorne = ../../../All Programs/Games/Blackthorne
+# link: Games/By Platform/DOS/Electroman = ../../../All Programs/Games/Electroman
+# link: Games/By Platform/DOS/Flight of the Amazon Queen = ../../../All Programs/Games/Flight of the Amazon Queen
+# link: Games/By Platform/DOS/God of Thunder = ../../../All Programs/Games/God of Thunder
+# link: Games/By Platform/DOS/Jetpack = ../../../All Programs/Games/Jetpack
+# link: Games/By Platform/DOS/Lure of the Temptress = ../../../All Programs/Games/Lure of the Temptress
+# link: Games/By Platform/DOS/One Must Fall 2097 = ../../../All Programs/Games/One Must Fall 2097
+# link: Games/By Platform/DOS/Stargunner = ../../../All Programs/Games/Stargunner
+# link: Games/By Platform/DOS/Supaplex = ../../../All Programs/Games/Supaplex
+# link: Games/By Platform/DOS/Teen Agent = ../../../All Programs/Games/Teen Agent
+# link: Games/By Platform/DOS/The Lost Vikings = ../../../All Programs/Games/The Lost Vikings
+# link: Games/By Platform/DOS/Xargon = ../../../All Programs/Games/Xargon

@@ -1,0 +1,12 @@
+.DS_Store
+.backup/
+Assets/
+System/
+Program.txt
+Launch
+Debug
+Snapshot
+Uninstall
+Snapshot*.tgz
+Template-*.txt
+README.html
