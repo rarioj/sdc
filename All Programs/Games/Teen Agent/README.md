@@ -9,7 +9,7 @@
 > ❝ When the game was originally released, "The Three Tasks" was shareware, and the remaining two sections could be obtained by registering the game. However, the game was later released as freeware. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1995** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy** ┃ Media: **Compressed Package** ┃ Publisher: **Union Logic Software Publishing, Inc. • Metropolis Software House • CD Projekt Sp. z o.o.** ┃ Developer: **Metropolis Software House** ┃ **No Manual** 
+📌 ┃ Year: **1995** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy** ┃ Media: **Compressed Package** ┃ **No Manual** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

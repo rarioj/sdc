@@ -7,7 +7,7 @@
 > ❝ In 2014, the game was added to Battle.net as a free download emulated through DOSBox. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1993** ┃ Genre: **Action • Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Fantasy • Sci-fi • Comedy** ┃ Media: **Compressed Package** ┃ Publisher: **Interplay Productions, Inc.** ┃ Developer: **Silicon & Synapse, Inc.** 
+📌 ┃ Year: **1993** ┃ Genre: **Action • Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Fantasy • Sci-fi • Comedy** ┃ Media: **Compressed Package** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

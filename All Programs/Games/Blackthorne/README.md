@@ -9,7 +9,7 @@
 > ❝ In 2013, Blizzard released the game for free on their Battle.net PC client. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1994** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Shooter • Fantasy** ┃ Media: **CD-ROM** ┃ Publisher: **Interplay Productions, Inc. • Blizzard Entertainment Inc.** ┃ Developer: **Blizzard Entertainment Inc.** 
+📌 ┃ Year: **1994** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Shooter • Fantasy** ┃ Media: **CD-ROM** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

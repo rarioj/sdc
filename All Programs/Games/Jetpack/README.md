@@ -7,7 +7,7 @@
 > ❝ Jetpack is a platform game available as freeware, developed by American studio Adept Software and originally published as shareware by Software Creations in 1993. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Platform • Puzzle elements • Shooter** ┃ Media: **Compressed Package** ┃ Publisher: **Software Creations** ┃ Developer: **Adept Software** 
+📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Platform • Puzzle elements • Shooter** ┃ Media: **Compressed Package** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

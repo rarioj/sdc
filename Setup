@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5b
+# script-version: 1.0.23.5c
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -11,8 +11,8 @@
 # hypertext-file: README.html
 #
 ###### Library properties (overridable in library configuration file)
-# library-source: #
-# library-version: x.y.z
+## library-source: <url>
+## library-version: x.y.z
 # backup-directory: .backup
 # script-export-file: 1
 # script-include-text: -1
@@ -1165,8 +1165,8 @@
 # file: Template-Library.txt = # vim: filetype=ini:syntax=dosini
 # file: Template-Library.txt = #
 # file: Template-Library.txt = ###### Library properties
-# file: Template-Library.txt = # library-source: #
-# file: Template-Library.txt = # library-version: x.y.z
+# file: Template-Library.txt = ## library-source: <url>
+# file: Template-Library.txt = ## library-version: x.y.z
 # file: Template-Library.txt = # backup-directory: .backup
 # file: Template-Library.txt = # script-export-file: 1
 # file: Template-Library.txt = # script-include-text: -1
@@ -1247,8 +1247,6 @@
 # file: Template-Program.txt = # tag: License = Abandonware / Shareware / Freeware / Demo / Unlicensed / Discontinued / Proprietary
 # file: Template-Program.txt = # tag: Category = <Perspective> • <Pacing> • <Gameplay> • <Sports> • <Educational> • <Vehicular> • <Setting> • <Narrative> • <Other>
 # file: Template-Program.txt = # tag: Media = Compressed Package / CD-ROM / Floppy Disk
-# file: Template-Program.txt = # tag: Publisher = <Publisher 1> • <Publisher 2>
-# file: Template-Program.txt = # tag: Developer = <Developer 1> • <Developer 2>
 # file: Template-Program.txt = # tag: Patched • Add-on • Compilation • Extras • Copy Protection • No Manual • Extra Command
 # file: Template-Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 # file: Template-Program.txt = # site: [MobyGames](https://www.mobygames.com/)

@@ -9,7 +9,7 @@
 > ❝ The developers of the game have declared the software to be freeware. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1991** ┃ Genre: **Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view** ┃ Media: **CD-ROM** ┃ Publisher: **Digital Integration Ltd.** ┃ Developer: **Think!Ware Development** ┃ **Patched • Copy Protection** 
+📌 ┃ Year: **1991** ┃ Genre: **Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view** ┃ Media: **CD-ROM** ┃ **Patched • Copy Protection** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

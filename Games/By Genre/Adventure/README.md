@@ -10,7 +10,7 @@
 >
 > ## [Beneath a Steel Sky](../../../All%20Programs/Games/Beneath%20a%20Steel%20Sky/README.md)
 >
-> 📌 ┃ Year: **1994** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania** ┃ Media: **CD-ROM** ┃ Publisher: **Virgin Interactive Entertainment, Inc. • Revolution Software Ltd.** ┃ Developer: **Revolution Software Ltd.** 
+> 📌 ┃ Year: **1994** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania** ┃ Media: **CD-ROM** 
 >
 > ❝ Robert Foster is an innocent outsider stranded in a vast city where oppressed civilians live and work in soaring tower blocks. All while the corrupt, covetous and wealthy lie underground, shielded from all pollution. Alone, save for a robot circuit board; Foster must fight for survival and discover the sinister truth behind this abduction. ❞
 >
@@ -31,7 +31,7 @@
 >
 > ## [Flight of the Amazon Queen](../../../All%20Programs/Games/Flight%20of%20the%20Amazon%20Queen/README.md)
 >
-> 📌 ┃ Year: **1995** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements** ┃ Media: **CD-ROM** ┃ Publisher: **Renegade Software • WarnerActive • GT Interactive Software Europe Ltd.** ┃ Developer: **Interactive Binary Illusions** 
+> 📌 ┃ Year: **1995** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements** ┃ Media: **CD-ROM** 
 >
 > ❝ Joe King, a pilot for hire and owner of the Amazon Queen aeroplane, arrives at a hotel in Rio de Janeiro to transport his next customer, famous film actress Faye Russel only to be ambushed by his Dutch rival Anderson. When Joe pilots the Amazon Queen towards the location of Faye's shoot, a storm causes him to crashland in the Amazon jungle. Joe begins searching the jungle, encountering an entire tribe of Amazon women who capture him and take in Faye. ❞
 >
@@ -52,7 +52,7 @@
 >
 > ## [Lure of the Temptress](../../../All%20Programs/Games/Lure%20of%20the%20Temptress/README.md)
 >
-> 📌 ┃ Year: **1992** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Fantasy** ┃ Media: **CD-ROM** ┃ Publisher: **Virgin Games, Ltd. • Konami of America, Inc. • Hit Squad, The • Sold Out Sales & Marketing Ltd. • Revolution Software Ltd.** ┃ Developer: **Revolution Software Ltd.** 
+> 📌 ┃ Year: **1992** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Fantasy** ┃ Media: **CD-ROM** 
 >
 > ❝ You play Diermot, who finds himself imprisoned in a depressing cell. Meanwhile, life in the village of Turnvale goes on as ever, just an ordinary day. Well, as normal as you could hope for, considering the Skorl are in town. They're big, ugly, and not particularly pleasant! Will they overpower Diermot? Or can he escape from his cell and bring peace back to the land? It depends on you. ❞
 >
@@ -73,7 +73,7 @@
 >
 > ## [Teen Agent](../../../All%20Programs/Games/Teen%20Agent/README.md)
 >
-> 📌 ┃ Year: **1995** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy** ┃ Media: **Compressed Package** ┃ Publisher: **Union Logic Software Publishing, Inc. • Metropolis Software House • CD Projekt Sp. z o.o.** ┃ Developer: **Metropolis Software House** ┃ **No Manual** 
+> 📌 ┃ Year: **1995** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy** ┃ Media: **Compressed Package** ┃ **No Manual** 
 >
 > ❝ One day, two men in dark glasses and long coats captured a teenager; this could be a start of a very long day! Get ready for a wonderfully humorous adventure. Teen Agent is a point-and-click animated graphic adventure that features dozens of detailed hand-painted backgrounds. ❞
 >

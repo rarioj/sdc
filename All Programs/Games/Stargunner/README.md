@@ -7,7 +7,7 @@
 > ❝ On June 22, 2005, Stargunner was released as freeware. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1996** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Shooter • Sci-fi** ┃ Media: **Compressed Package** ┃ Publisher: **Apogee Software, Ltd. • WizardWorks Group, Inc. • 3D Realms Entertainment, Inc.** ┃ Developer: **3D Realms Entertainment, Inc. • Apogee Software, Ltd.** 
+📌 ┃ Year: **1996** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Shooter • Sci-fi** ┃ Media: **Compressed Package** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

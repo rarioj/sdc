@@ -7,7 +7,7 @@
 > ❝ The game was well-received and re-released as freeware on April 1, 2003. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1992** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Fantasy** ┃ Media: **CD-ROM** ┃ Publisher: **Virgin Games, Ltd. • Konami of America, Inc. • Hit Squad, The • Sold Out Sales & Marketing Ltd. • Revolution Software Ltd.** ┃ Developer: **Revolution Software Ltd.** 
+📌 ┃ Year: **1992** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Fantasy** ┃ Media: **CD-ROM** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

@@ -9,7 +9,7 @@
 > ❝ In May 2007, John Passfield and 3D Realms released Alien Carnage as freeware. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Shooter • Horror** ┃ Media: **CD-ROM** ┃ Publisher: **Apogee Software, Ltd. • WizardWorks Group, Inc. • FormGen, Inc. • 3D Realms Entertainment, Inc.** ┃ Developer: **Interactive Binary Illusions • SubZero Software** 
+📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Shooter • Horror** ┃ Media: **CD-ROM** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

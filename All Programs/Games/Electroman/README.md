@@ -9,7 +9,7 @@
 > ❝ Though initially offered under a shareware license, the game was released as freeware by the developer on June 25, 2006, under the Creative Commons Attribution-ShareAlike 2.5 license. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1992** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Shooter • Sci-fi** ┃ Media: **Compressed Package** ┃ Publisher: **xLand Games • Epic MegaGames, Inc. • Monkey Business, Inc.** ┃ Developer: **xLand Games** 
+📌 ┃ Year: **1992** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Shooter • Sci-fi** ┃ Media: **Compressed Package** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

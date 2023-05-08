@@ -9,7 +9,7 @@
 > ❝ Allen Pilgrim declared the registered version freeware and released the source code on August 4, 2008. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Platform • Fantasy** ┃ Media: **Compressed Package** ┃ Publisher & Developer: **Epic MegaGames, Inc.** ┃ **No Manual** 
+📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Platform • Fantasy** ┃ Media: **Compressed Package** ┃ **No Manual** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

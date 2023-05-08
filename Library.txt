@@ -1,7 +1,7 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.05.a
+# library-version: 23.05.b
 #
 # site: Cover Arts = [MobyGames](https://www.mobygames.com/)
 # site: Program Assets = [Archive.org](https://archive.org/)
@@ -66,6 +66,7 @@
 # text: ./Launch
 # text: ```
 #
+#
 # file: All Programs/Games/Alien Carnage/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Alien Carnage/Program.txt = #
 # file: All Programs/Games/Alien Carnage/Program.txt = # name: Alien Carnage
@@ -78,8 +79,6 @@
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: Category = Side view • Platform • Shooter • Horror
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Publisher = Apogee Software, Ltd. • WizardWorks Group, Inc. • FormGen, Inc. • 3D Realms Entertainment, Inc.
-# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Developer = Interactive Binary Illusions • SubZero Software
 # file: All Programs/Games/Alien Carnage/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Alien_Carnage)
 # file: All Programs/Games/Alien Carnage/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/522/alien-carnage/)
 # file: All Programs/Games/Alien Carnage/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Halloween+Harry&gid=2378)
@@ -141,8 +140,6 @@
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Publisher = Virgin Interactive Entertainment, Inc. • Revolution Software Ltd.
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Developer = Revolution Software Ltd.
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Beneath_a_Steel_Sky)
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/386/beneath-a-steel-sky/)
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Beneath+a+Steel+Sky&gid=1740)
@@ -201,7 +198,6 @@
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Category = Side view • Platform
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Bio Menace/Program.txt = # tag: Publisher & Developer = Apogee Software, Ltd. • 3D Realms Entertainment, Inc.
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Bio_Menace)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/236/bio-menace/)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 1: Dr. Mangle's Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+1%3A+Dr.+Mangle%27s+Lab&gid=1345)
@@ -297,8 +293,6 @@
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: Category = Side view • Platform • Shooter • Fantasy
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Blackthorne/Program.txt = # tag: Publisher = Interplay Productions, Inc. • Blizzard Entertainment Inc.
-# file: All Programs/Games/Blackthorne/Program.txt = # tag: Developer = Blizzard Entertainment Inc.
 # file: All Programs/Games/Blackthorne/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Blackthorne)
 # file: All Programs/Games/Blackthorne/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1445/blackthorne/)
 # file: All Programs/Games/Blackthorne/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Blackthorne&gid=1645)
@@ -361,8 +355,6 @@
 # file: All Programs/Games/Electroman/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Electroman/Program.txt = # tag: Category = Side view • Platform • Shooter • Sci-fi
 # file: All Programs/Games/Electroman/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Electroman/Program.txt = # tag: Publisher = xLand Games • Epic MegaGames, Inc. • Monkey Business, Inc.
-# file: All Programs/Games/Electroman/Program.txt = # tag: Developer = xLand Games
 # file: All Programs/Games/Electroman/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Electro_Man)
 # file: All Programs/Games/Electroman/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/752/electroman/)
 # file: All Programs/Games/Electroman/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Electroman&gid=3021)
@@ -418,8 +410,6 @@
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Publisher = Renegade Software • WarnerActive • GT Interactive Software Europe Ltd.
-# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Developer = Interactive Binary Illusions
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Flight_of_the_Amazon_Queen)
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/352/flight-of-the-amazon-queen/)
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Flight+of+the+Amazon+Queen&gid=1780)
@@ -474,8 +464,6 @@
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: Category = Top-down • Puzzle elements • Fantasy
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/God of Thunder/Program.txt = # tag: Publisher = Software Creations • Advantage Plus Distributors Inc.
-# file: All Programs/Games/God of Thunder/Program.txt = # tag: Developer = Adept Software
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/God_of_Thunder_(video_game))
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1019/god-of-thunder/)
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=God+of+Thunder&gid=1277)
@@ -536,8 +524,6 @@
 # file: All Programs/Games/Jetpack/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Jetpack/Program.txt = # tag: Category = Side view • Arcade • Platform • Puzzle elements • Shooter
 # file: All Programs/Games/Jetpack/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Jetpack/Program.txt = # tag: Publisher = Software Creations
-# file: All Programs/Games/Jetpack/Program.txt = # tag: Developer = Adept Software
 # file: All Programs/Games/Jetpack/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Jetpack_(video_game))
 # file: All Programs/Games/Jetpack/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/10449/jetpack/)
 # file: All Programs/Games/Jetpack/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Jetpack&gid=1263)
@@ -620,8 +606,6 @@
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements • Fantasy
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Publisher = Virgin Games, Ltd. • Konami of America, Inc. • Hit Squad, The • Sold Out Sales & Marketing Ltd. • Revolution Software Ltd.
-# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Developer = Revolution Software Ltd.
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Lure_of_the_Temptress)
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1134/lure-of-the-temptress/)
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Lure+of+the+Temptress&gid=1087)
@@ -667,8 +651,6 @@
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Category = Side view • Arcade • Fighting • Mecha • Sci-fi
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Publisher = Moon Doggie • Epic MegaGames, Inc. • Diversions Entertainment
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Developer = Diversions Entertainment
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/One_Must_Fall:_2097)
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/234/one-must-fall-2097/)
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=One+Must+Fall+2097&gid=1843)
@@ -726,8 +708,6 @@
 # file: All Programs/Games/Stargunner/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Category = Side view • Shooter • Sci-fi
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Stargunner/Program.txt = # tag: Publisher = Apogee Software, Ltd. • WizardWorks Group, Inc. • 3D Realms Entertainment, Inc.
-# file: All Programs/Games/Stargunner/Program.txt = # tag: Developer = 3D Realms Entertainment, Inc. • Apogee Software, Ltd.
 # file: All Programs/Games/Stargunner/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Stargunner)
 # file: All Programs/Games/Stargunner/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/922/stargunner/)
 # file: All Programs/Games/Stargunner/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Stargunner&gid=2492)
@@ -790,8 +770,6 @@
 # file: All Programs/Games/Supaplex/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Category = Side view
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Supaplex/Program.txt = # tag: Publisher = Digital Integration Ltd.
-# file: All Programs/Games/Supaplex/Program.txt = # tag: Developer = Think!Ware Development
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Patched • Copy Protection
 # file: All Programs/Games/Supaplex/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Supaplex)
 # file: All Programs/Games/Supaplex/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/2106/supaplex/)
@@ -864,8 +842,6 @@
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Teen Agent/Program.txt = # tag: Publisher = Union Logic Software Publishing, Inc. • Metropolis Software House • CD Projekt Sp. z o.o.
-# file: All Programs/Games/Teen Agent/Program.txt = # tag: Developer = Metropolis Software House
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: No Manual
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Teenagent)
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/6423/teen-agent/)
@@ -928,8 +904,6 @@
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Category = Side view • Platform • Fantasy • Sci-fi • Comedy
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Publisher = Interplay Productions, Inc.
-# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Developer = Silicon & Synapse, Inc.
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/The_Lost_Vikings)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1547/the-lost-vikings/)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=The+Lost+Vikings&gid=1032)
@@ -995,7 +969,6 @@
 # file: All Programs/Games/Xargon/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Xargon/Program.txt = # tag: Category = Side view • Arcade • Platform • Fantasy
 # file: All Programs/Games/Xargon/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Xargon/Program.txt = # tag: Publisher & Developer = Epic MegaGames, Inc.
 # file: All Programs/Games/Xargon/Program.txt = # tag: No Manual
 # file: All Programs/Games/Xargon/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Xargon)
 # file: All Programs/Games/Xargon/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1057/xargon/)
