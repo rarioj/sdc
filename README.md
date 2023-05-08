@@ -7,7 +7,7 @@
 > ❝ A lightweight DOSBox client in one shell script ❞
 >
 
-📌 ┃ Version: **1.0.23.5a** ┃ Type: **Shell Script** ┃ Shell: **POSIX Compliant** ┃ Interface: **CLI** ┃ License: **MIT** 
+📌 ┃ Version: **1.0.23.5b** ┃ Type: **Shell Script** ┃ Shell: **POSIX Compliant** ┃ Interface: **CLI** ┃ License: **MIT** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
@@ -64,17 +64,17 @@ SDC_DOSBOX="dosbox-x" ./Launch
 
 ## Getting Started
 ### The Example Library
-It is not necessary to clone or download the whole repository. All you need is the latest [`Setup ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script. An example library file is also available as [`Example-Library.txt ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Example-Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
+It is not necessary to clone or download the whole repository. All you need is the latest [`Setup ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script. An example library file is also available as [`Library.txt ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
 
 1. Create an empty library directory.
-2. Download the `Example-Library.txt` configuration file and the `Setup` script (use the `curl -o` option to rename the output).
+2. Download the `Library.txt` configuration file and the `Setup` script.
 3. Make the `Setup` script executable.
 4. Run the `Setup` script.
 
 ```shell
 mkdir sdc-example
 cd sdc-example
-curl "https://raw.githubusercontent.com/rarioj/sdc/main/Example-Library.txt" -o Library.txt
+curl "https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt" -o Library.txt
 curl "https://raw.githubusercontent.com/rarioj/sdc/main/Setup" -o Setup
 chmod a+x Setup
 ./Setup

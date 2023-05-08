@@ -16,10 +16,10 @@
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Alien_Carnage)** ┃ **[MobyGames](https://www.mobygames.com/game/522/alien-carnage/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Halloween+Harry&gid=2378)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/alien-carnage-1pe)** ┃ **[3DRealms 🆓](https://3drealms.com/catalog/alien-carnage_48/)** 
 
 ## Installation Notes
-- Press **S** to select Sound Blaster.
-- Press **M** to enable Music.
-- Press **K** to calibrate keyboard.
-- Press **Esc** or **Enter** to complete the configuration.
+- Press `S` to select Sound Blaster.
+- Press `M` to enable Music.
+- Press `K` to calibrate keyboard.
+- Press `ESC` or `ENTER` to complete the configuration.
 
 ![](Montage.png 'Alien Carnage')
 
