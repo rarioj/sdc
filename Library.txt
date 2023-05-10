@@ -1,7 +1,7 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.05.b
+# library-version: 23.5c
 #
 # site: Cover Arts = [MobyGames](https://www.mobygames.com/)
 # site: Program Assets = [Archive.org](https://archive.org/)
@@ -321,9 +321,30 @@
 # file: All Programs/Games/Blackthorne/Program.txt = INST.EXE
 # file: All Programs/Games/Blackthorne/Program.txt
 # file: All Programs/Games/Blackthorne/Program.txt = :F_START
+# file: All Programs/Games/Blackthorne/Program.txt = CLS
+# file: All Programs/Games/Blackthorne/Program.txt = ECHO Blackthorne
+# file: All Programs/Games/Blackthorne/Program.txt = ECHO.
+# file: All Programs/Games/Blackthorne/Program.txt = ECHO 1. Play Blackthorne
+# file: All Programs/Games/Blackthorne/Program.txt = ECHO 2. Read Manual
+# file: All Programs/Games/Blackthorne/Program.txt = ECHO 3. Exit Program
+# file: All Programs/Games/Blackthorne/Program.txt = ECHO.
+# file: All Programs/Games/Blackthorne/Program.txt = CHOICE /C:123 /N "Please select:"
+# file: All Programs/Games/Blackthorne/Program.txt = IF ERRORLEVEL==3 GOTO F_EXIT
+# file: All Programs/Games/Blackthorne/Program.txt = IF ERRORLEVEL==2 GOTO F_MANUAL
+# file: All Programs/Games/Blackthorne/Program.txt = IF ERRORLEVEL==1 GOTO F_BTHORNE
+# file: All Programs/Games/Blackthorne/Program.txt = GOTO F_EXIT
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = :F_BTHORNE
 # file: All Programs/Games/Blackthorne/Program.txt = C:
 # file: All Programs/Games/Blackthorne/Program.txt = CD C:\BTHORNE
 # file: All Programs/Games/Blackthorne/Program.txt = BTHORNE.EXE
+# file: All Programs/Games/Blackthorne/Program.txt = GOTO F_START
+# file: All Programs/Games/Blackthorne/Program.txt
+# file: All Programs/Games/Blackthorne/Program.txt = :F_MANUAL
+# file: All Programs/Games/Blackthorne/Program.txt = D:
+# file: All Programs/Games/Blackthorne/Program.txt = CD D:\BTMANUAL
+# file: All Programs/Games/Blackthorne/Program.txt = VIEW.EXE
+# file: All Programs/Games/Blackthorne/Program.txt = GOTO F_START
 # file: All Programs/Games/Blackthorne/Program.txt
 # file: All Programs/Games/Blackthorne/Program.txt = :F_EXIT
 # file: All Programs/Games/Blackthorne/Program.txt = EXIT
@@ -334,8 +355,6 @@
 # file: All Programs/Games/Blackthorne/Program.txt = # check: coverart.jpg = 483e966c5396680bd6210935f3006e2da313167fc1e831dc03b8db084299fbf7
 # file: All Programs/Games/Blackthorne/Program.txt = # asset: cdrom.bin = https://archive.org/download/blackthorneusarerelease/Blackthorne%20%28USA%29%20%28Rerelease%29.zip/Blackthorne%20%28USA%29%20%28Rerelease%29.bin
 # file: All Programs/Games/Blackthorne/Program.txt = # check: cdrom.bin = f6174c8d6af6f0125070d19d881a585f7edf8231ca86fa1b226fc257ea691d0b
-# file: All Programs/Games/Blackthorne/Program.txt = # asset: manual.pdf = https://dl2.myabandonware.com/f/3ke/Blackthorne_Manual_Mac_EN.pdf
-# file: All Programs/Games/Blackthorne/Program.txt = # check: manual.pdf = b6e59c1a6564522f431cc60dd9f56aca9b7cb820d2ef364e7e300e608be97f95
 # file: All Programs/Games/Blackthorne/Program.txt = #
 # file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue = FILE "cdrom.bin" BINARY
 # file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue =   TRACK 01 MODE1/2352
@@ -848,6 +867,9 @@
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Teen+Agent&gid=2206)
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/teen-agent-23o)
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/teenagent)
+# file: All Programs/Games/Teen Agent/Program.txt = #
+# file: All Programs/Games/Teen Agent/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/Teen Agent/Program.txt = # text: - Sound Source Setup: Select **SoundBlaster**, **Music and sound**, **220h**, **IRQ 7**, and **DMA channel 1**. Save setup & exit.
 # file: All Programs/Games/Teen Agent/Program.txt
 # file: All Programs/Games/Teen Agent/Program.txt = [sdl]
 # file: All Programs/Games/Teen Agent/Program.txt = autolock = true
@@ -861,8 +883,8 @@
 # file: All Programs/Games/Teen Agent/Program.txt = MOUNT C "./drive"
 # file: All Programs/Games/Teen Agent/Program.txt = MOUNT X "./Assets"
 # file: All Programs/Games/Teen Agent/Program.txt
-# file: All Programs/Games/Teen Agent/Program.txt = IF NOT EXIST C:\TEEN\TEENAGNT.EXE GOTO F_INSTALL
-# file: All Programs/Games/Teen Agent/Program.txt = IF EXIST C:\TEEN\TEENAGNT.EXE GOTO F_START
+# file: All Programs/Games/Teen Agent/Program.txt = IF NOT EXIST C:\TAGENT\TEENAGNT.EXE GOTO F_INSTALL
+# file: All Programs/Games/Teen Agent/Program.txt = IF EXIST C:\TAGENT\TEENAGNT.EXE GOTO F_START
 # file: All Programs/Games/Teen Agent/Program.txt
 # file: All Programs/Games/Teen Agent/Program.txt = :F_INSTALL
 # file: All Programs/Games/Teen Agent/Program.txt = C:
@@ -871,13 +893,13 @@
 # file: All Programs/Games/Teen Agent/Program.txt = CD UNZIP
 # file: All Programs/Games/Teen Agent/Program.txt = X:\UNZ542X3.EXE
 # file: All Programs/Games/Teen Agent/Program.txt = CD C:\
-# file: All Programs/Games/Teen Agent/Program.txt = MD TEEN
-# file: All Programs/Games/Teen Agent/Program.txt = CD TEEN
 # file: All Programs/Games/Teen Agent/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Teen Agent/Program.txt = CD C:\TAGENT
+# file: All Programs/Games/Teen Agent/Program.txt = SOUNDSET.EXE
 # file: All Programs/Games/Teen Agent/Program.txt
 # file: All Programs/Games/Teen Agent/Program.txt = :F_START
 # file: All Programs/Games/Teen Agent/Program.txt = C:
-# file: All Programs/Games/Teen Agent/Program.txt = CD C:\TEEN
+# file: All Programs/Games/Teen Agent/Program.txt = CD C:\TAGENT
 # file: All Programs/Games/Teen Agent/Program.txt = TEENAGNT.EXE
 # file: All Programs/Games/Teen Agent/Program.txt
 # file: All Programs/Games/Teen Agent/Program.txt = :F_EXIT
@@ -887,8 +909,8 @@
 # file: All Programs/Games/Teen Agent/Program.txt
 # file: All Programs/Games/Teen Agent/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5243164-teen-agent-dos-front-cover.jpg
 # file: All Programs/Games/Teen Agent/Program.txt = # check: coverart.jpg = a2f181ec57fc8adaddca4790ab282d113ad0253a01dbfe79a758693bb08cef7f
-# file: All Programs/Games/Teen Agent/Program.txt = # asset: game.zip = https://archive.org/download/Teenagent_1020/teenagent.ZIP
-# file: All Programs/Games/Teen Agent/Program.txt = # check: game.zip = ba894deb13c34d2be366b473e9bc7d256702d8c969548f2c4165e7ca575670e6
+# file: All Programs/Games/Teen Agent/Program.txt = # asset: game.zip = https://archive.org/download/msdos_TeenAgent_1995/TeenAgent_1995.zip
+# file: All Programs/Games/Teen Agent/Program.txt = # check: game.zip = e5e0bb422e9664c22348212dc5452bd1b916b0843723b078f6a9fa5839af29f7
 # file: All Programs/Games/Teen Agent/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
 # file: All Programs/Games/Teen Agent/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
 #
@@ -969,7 +991,6 @@
 # file: All Programs/Games/Xargon/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Xargon/Program.txt = # tag: Category = Side view • Arcade • Platform • Fantasy
 # file: All Programs/Games/Xargon/Program.txt = # tag: Media = Compressed Package
-# file: All Programs/Games/Xargon/Program.txt = # tag: No Manual
 # file: All Programs/Games/Xargon/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Xargon)
 # file: All Programs/Games/Xargon/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1057/xargon/)
 # file: All Programs/Games/Xargon/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Xargon&gid=2905)
@@ -997,6 +1018,7 @@
 # file: All Programs/Games/Xargon/Program.txt = MD XARGON
 # file: All Programs/Games/Xargon/Program.txt = CD XARGON
 # file: All Programs/Games/Xargon/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
+# file: All Programs/Games/Xargon/Program.txt = IF NOT EXIST X:\HELPME.TXT COPY C:\XARGON\HELPME.DOC X:\HELPME.TXT
 # file: All Programs/Games/Xargon/Program.txt
 # file: All Programs/Games/Xargon/Program.txt = :F_START
 # file: All Programs/Games/Xargon/Program.txt = C:

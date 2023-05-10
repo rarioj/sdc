@@ -199,7 +199,7 @@
 >
 > ## [Xargon](../../../All%20Programs/Games/Xargon/README.md)
 >
-> 📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Platform • Fantasy** ┃ Media: **Compressed Package** ┃ **No Manual** 
+> 📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Platform • Fantasy** ┃ Media: **Compressed Package** 
 >
 > ❝ Trapped in a fantasy world of bizarre creatures and landscapes, guide archeologist Malvenious through dangerous lands and out of Xargon alive! Avoid spears, spikes & mechanical mashers as you fight lizards, trolls, enormous spiders and deadly purple hoppers through breathtaking 256-colour scenery & animation. Be prepared to lose touch with reality in this new magical adventure. ❞
 >
