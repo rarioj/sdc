@@ -178,7 +178,7 @@
 >
 > ## [The Lost Vikings](../../../All%20Programs/Games/The%20Lost%20Vikings/README.md)
 >
-> 📌 ┃ Year: **1993** ┃ Genre: **Action • Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Fantasy • Sci-fi • Comedy** ┃ Media: **Compressed Package** 
+> 📌 ┃ Year: **1993** ┃ Genre: **Action • Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Fantasy • Sci-fi • Comedy** ┃ Media: **Floppy Disk** ┃ **Copy Protection** 
 >
 > ❝ Three hairy Norsemen set the stage for a decade of legendary adventure. Meet Erik the Swift, Baleog the Fierce, and Olaf the Stout - your typical, borderline-insane Vikings who happen to get abducted by aliens. Now it's up to you to slash, smash and solve their way home, an intense arcade action. Pillage and plunder your way through 35 levels of mind-bending arcade action. Combine the unique skills of three distinct Viking personalities to conquer dozens of marauding foes. ❞
 >

@@ -1,7 +1,7 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.5c
+# library-version: 23.5d
 #
 # site: Cover Arts = [MobyGames](https://www.mobygames.com/)
 # site: Program Assets = [Archive.org](https://archive.org/)
@@ -925,14 +925,17 @@
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Category = Side view • Platform • Fantasy • Sci-fi • Comedy
-# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Media = Compressed Package
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Media = Floppy Disk
+# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Copy Protection
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/The_Lost_Vikings)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1547/the-lost-vikings/)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=The+Lost+Vikings&gid=1032)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/the-lost-vikings-1mi)
 # file: All Programs/Games/The Lost Vikings/Program.txt = #
 # file: All Programs/Games/The Lost Vikings/Program.txt = # text: ## Installation Notes
+# file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
 # file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Select sound driver: **Sound Blaster**, sound card port address: **220 (default)**.
+# file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Consult `Assets/MANUAL.PDF` for the game copy protection.
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = [cpu]
 # file: All Programs/Games/The Lost Vikings/Program.txt = cycles = 16000
@@ -941,26 +944,18 @@
 # file: All Programs/Games/The Lost Vikings/Program.txt = @ECHO OFF
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = MOUNT C "./drive"
-# file: All Programs/Games/The Lost Vikings/Program.txt = MOUNT X "./Assets"
+# file: All Programs/Games/The Lost Vikings/Program.txt = IMGMOUNT A "./Assets/disk.img" -t floppy
 # file: All Programs/Games/The Lost Vikings/Program.txt
-# file: All Programs/Games/The Lost Vikings/Program.txt = IF NOT EXIST C:\VIKINGS\VIKINGS.EXE GOTO F_INSTALL
-# file: All Programs/Games/The Lost Vikings/Program.txt = IF EXIST C:\VIKINGS\VIKINGS.EXE GOTO F_START
+# file: All Programs/Games/The Lost Vikings/Program.txt = IF NOT EXIST C:\LOSTVIK\VIKINGS.EXE GOTO F_INSTALL
+# file: All Programs/Games/The Lost Vikings/Program.txt = IF EXIST C:\LOSTVIK\VIKINGS.EXE GOTO F_START
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = :F_INSTALL
-# file: All Programs/Games/The Lost Vikings/Program.txt = C:
-# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\
-# file: All Programs/Games/The Lost Vikings/Program.txt = MD UNZIP
-# file: All Programs/Games/The Lost Vikings/Program.txt = CD UNZIP
-# file: All Programs/Games/The Lost Vikings/Program.txt = X:\UNZ542X3.EXE
-# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\
-# file: All Programs/Games/The Lost Vikings/Program.txt = MD VIKINGS
-# file: All Programs/Games/The Lost Vikings/Program.txt = CD VIKINGS
-# file: All Programs/Games/The Lost Vikings/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
-# file: All Programs/Games/The Lost Vikings/Program.txt = SETUP.EXE
+# file: All Programs/Games/The Lost Vikings/Program.txt = A:
+# file: All Programs/Games/The Lost Vikings/Program.txt = INSTALL.EXE
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = :F_START
 # file: All Programs/Games/The Lost Vikings/Program.txt = C:
-# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\VIKINGS
+# file: All Programs/Games/The Lost Vikings/Program.txt = CD C:\LOSTVIK
 # file: All Programs/Games/The Lost Vikings/Program.txt = VIKINGS.EXE
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = :F_EXIT
@@ -970,12 +965,10 @@
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = # asset: coverart.jpg = https://cdn.mobygames.com/covers/5274011-the-lost-vikings-dos-front-cover.jpg
 # file: All Programs/Games/The Lost Vikings/Program.txt = # check: coverart.jpg = fc4be327b4197ededf63bc725fc7881455e5c308ddbecc7b4f02cab3e39c72ca
-# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: game.zip = https://archive.org/download/Various_DOS_Abandonware_Ark/Lost%20Vikings%20The%20%281992%29%28Interplay%29.zip
-# file: All Programs/Games/The Lost Vikings/Program.txt = # check: game.zip = 6c5bfda553fd9372a21ecaf676989604984554615ac26ae1d46d84d0db5e4613
+# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: disk.img = https://archive.org/download/002467-TheLostVikings/002467_the_lost_vikings.7z/002467_the_lost_vikings%2Fdisk1.img
+# file: All Programs/Games/The Lost Vikings/Program.txt = # check: disk.img = a68f63e941706f8fe0f93716c64b22ca89f2d72a6667e548a4da0002da1d39af
 # file: All Programs/Games/The Lost Vikings/Program.txt = # asset: manual.pdf = https://archive.org/download/The_Lost_Vikings/The_Lost_Vikings.pdf
 # file: All Programs/Games/The Lost Vikings/Program.txt = # check: manual.pdf = 8d62f41ea0844b01dd07aeb111e07a7e3345660ddadff24da51f92f9c1f22bc8
-# file: All Programs/Games/The Lost Vikings/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
-# file: All Programs/Games/The Lost Vikings/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
 #
 #
 # file: All Programs/Games/Xargon/Program.txt = # vim: filetype=ini:syntax=dosini

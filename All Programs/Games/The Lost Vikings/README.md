@@ -7,14 +7,16 @@
 > ❝ In 2014, the game was added to Battle.net as a free download emulated through DOSBox. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1993** ┃ Genre: **Action • Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Fantasy • Sci-fi • Comedy** ┃ Media: **Compressed Package** 
+📌 ┃ Year: **1993** ┃ Genre: **Action • Puzzle** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Platform • Fantasy • Sci-fi • Comedy** ┃ Media: **Floppy Disk** ┃ **Copy Protection** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/The_Lost_Vikings)** ┃ **[MobyGames](https://www.mobygames.com/game/1547/the-lost-vikings/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=The+Lost+Vikings&gid=1032)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/the-lost-vikings-1mi)** 
 
 ## Installation Notes
+- Use the default **drive** and **directory** for the installation location.
 - Select sound driver: **Sound Blaster**, sound card port address: **220 (default)**.
+- Consult `Assets/MANUAL.PDF` for the game copy protection.
 
 ![](Montage.png 'The Lost Vikings')
 
