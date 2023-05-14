@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5c
+# script-version: 1.0.23.5d
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -170,17 +170,17 @@
     printf '%s\n' "    ┃ ${*}"
   }
   sdc__message__prompt() {
-    printf '%s ' "[?] ${*} [Y/*]?"
-    __stty="$(stty -g)"
-    stty raw -echo
-    sdc__prompt__reply="$(head -c 1)"
-    stty "${__stty}"
-    unset __stty
+    printf '%s\n' "[?] ${*} [Y/*]?"
+    printf '%s ' "[!] Press Y/y and ENTER to confirm >"
+    read -r __key </dev/tty
+    sdc__prompt__reply="$(echo "${__key}" | head -c 1 | tr '[:upper:]' '[:lower:]')"
+    unset __key
   }
   sdc__message__error() {
     printf '%s\n' "[E] ${*}" >&2
-    printf '%s ' "[!] Press any key to quit" >&2
+    printf '%s ' "[!] Press ENTER key to quit" >&2
     read -r __key </dev/tty
+    unset __key
     exit 1
   }
 }
@@ -379,7 +379,7 @@
       sdc__message__action "$> ${1}"
       sdc__message__prompt "Execute the above command"
       if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
-        sdc__message__plain "executing..."
+        sdc__message__info "Executing command"
         if ! sh -c "${1}"; then
           sdc__utility__uninstall_program
           sdc__message__error "Command execution failed: ${1} <sdc__callback__execute_code>"
@@ -387,6 +387,7 @@
         sdc__message__info "Command executed"
       else
         sdc__message__plain ""
+        sdc__utility__uninstall_program
         sdc__message__info "Command cancelled"
         exit 1
       fi
@@ -957,7 +958,7 @@
       if [ -f "Snapshot-${sdc__dosbox__variant}.tgz" ]; then
         sdc__message__prompt "Restore ${sdc__application__name} snapshot"
         if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
-          sdc__message__plain "restoring..."
+          sdc__message__info "Restoring snapshot"
           tar -zxvf "Snapshot-${sdc__dosbox__variant}.tgz" --directory "System/drive"
           __restore="1"
           sdc__message__info "${sdc__application__name} snapshot restored"
@@ -1073,7 +1074,7 @@
     fi
     sdc__message__prompt "Uninstall ${sdc__application__name}"
     if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
-      sdc__message__plain "uninstalling..."
+      sdc__message__info "Uninstalling program"
       sdc__utility__uninstall_program
       sdc__message__info "${sdc__application__name} uninstalled"
     else
