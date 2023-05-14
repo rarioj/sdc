@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5d
+# script-version: 1.0.23.5e
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -171,7 +171,7 @@
   }
   sdc__message__prompt() {
     printf '%s\n' "[?] ${*} [Y/*]?"
-    printf '%s ' "[!] Press Y/y and ENTER to confirm >"
+    printf '%s ' "[!] Press Y/y and ENTER to confirm:"
     read -r __key </dev/tty
     sdc__prompt__reply="$(echo "${__key}" | head -c 1 | tr '[:upper:]' '[:lower:]')"
     unset __key
@@ -194,9 +194,9 @@
     if [ -n "${1}" ] && [ -n "${2}" ]; then
       __config="$(grep "^# ${1}: " "${3}" | sed "s/^# ${1}: //g")"
       if [ -n "${4}" ] && [ -f "${4}" ] && [ "${4}" != "${3}" ]; then
-        __alter="$(grep "^# ${1}: " "${4}" | sed "s/^# ${1}: //g")"
-        if [ -n "${__alter}" ]; then
-          __config="${__alter}"
+        __override="$(grep "^# ${1}: " "${4}" | sed "s/^# ${1}: //g")"
+        if [ -n "${__override}" ]; then
+          __config="${__override}"
         fi
       fi
       __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__parse__key_value>"
@@ -215,7 +215,7 @@
         fi
       done <"${__tmpfile}"
     fi
-    unset __config __alter __tmpfile __index __key __value
+    unset __config __override __tmpfile __index __key __value
   }
   sdc__parse__value() {
     if [ -z "${3}" ] || [ ! -f "${3}" ]; then
@@ -224,9 +224,9 @@
     if [ -n "${1}" ] && [ -n "${2}" ]; then
       __config="$(grep "^# ${1}: " "${3}" | sed "s/^# ${1}: //g")"
       if [ -n "${4}" ] && [ -f "${4}" ] && [ "${4}" != "${3}" ]; then
-        __alter="$(grep "^# ${1}: " "${4}" | sed "s/^# ${1}: //g")"
-        if [ -n "${__alter}" ]; then
-          __config="${__alter}"
+        __override="$(grep "^# ${1}: " "${4}" | sed "s/^# ${1}: //g")"
+        if [ -n "${__override}" ]; then
+          __config="${__override}"
         fi
       fi
       __tmpfile="$(mktemp "${sdc__script__tmpdir}/sdc.XXXXXXXX")" || sdc__message__error "Temporary file creation failed <sdc__parse__value>"
@@ -239,7 +239,7 @@
         fi
       done <"${__tmpfile}"
     fi
-    unset __config __alter __tmpfile __index
+    unset __config __override __tmpfile __index
   }
   sdc__parse__text() {
     if [ -z "${3}" ] || [ ! -f "${3}" ]; then
@@ -248,9 +248,9 @@
     if [ -n "${1}" ] && [ -n "${2}" ]; then
       __config="$(grep "^# ${1}:" "${3}" | sed "s/^# ${1}: //g;s/^# ${1}://g")"
       if [ -n "${4}" ] && [ -f "${4}" ] && [ "${4}" != "${3}" ]; then
-        __alter="$(grep "^# ${1}:" "${4}" | sed "s/^# ${1}: //g;s/^# ${1}://g")"
-        if [ -n "${__alter}" ]; then
-          __config="${__alter}"
+        __override="$(grep "^# ${1}:" "${4}" | sed "s/^# ${1}: //g;s/^# ${1}://g")"
+        if [ -n "${__override}" ]; then
+          __config="${__override}"
         fi
       fi
       if [ "$(command -v "sdc__callback__${2}")" = "sdc__callback__${2}" ]; then
@@ -259,7 +259,7 @@
         sdc__message__error "Unimplemented callback function: sdc__callback__${2} <sdc__parse__text>"
       fi
     fi
-    unset __config __alter
+    unset __config __override
   }
 }
 
@@ -376,7 +376,9 @@
   }
   sdc__callback__execute_code() {
     if [ -n "${1}" ]; then
-      sdc__message__action "$> ${1}"
+      sdc__message__plain ""
+      sdc__message__plain "${1}"
+      sdc__message__plain ""
       sdc__message__prompt "Execute the above command"
       if echo "${sdc__prompt__reply}" | grep -iq "^y"; then
         sdc__message__info "Executing command"
@@ -534,23 +536,21 @@
     unset __curpath __dirpath __verify __tfile
   }
   sdc__utility__application_document() {
-    __config="${sdc__program__file}"
-    if [ -n "${1}" ] && [ -f "${1}" ]; then
-      __config="${1}"
-    fi
-    __alter=""
-    if [ -n "${2}" ] && [ -f "${2}" ]; then
-      __alter="${2}"
+    __config="${sdc__script__file}"
+    if [ "${sdc__script__file}" = "Setup" ]; then
+      __override="${sdc__library__file}"
+    else
+      __override="${sdc__program__file}"
     fi
     if [ -f "${sdc__markdown__file}" ]; then
       rm -f "${sdc__markdown__file}"
     fi
-    __tfile="$(sdc__parse__value thumbnail-file print "${sdc__script__file}" "${__alter}")"
-    __tsource="$(sdc__parse__value thumbnail-source print "${sdc__script__file}" "${__alter}")"
+    __tfile="$(sdc__parse__value thumbnail-file print "${__config}" "${__override}")"
+    __tsource="$(sdc__parse__value thumbnail-source print "${__config}" "${__override}")"
     if [ -f "${__tfile}" ]; then
       printf '%s\n\n' "![](${__tfile} 'application-thumbnail')" >>"${sdc__markdown__file}"
     elif [ -f "${__tsource}" ] && [ -x "$(command -v montage)" ]; then
-      __twidth="$(sdc__parse__value thumbnail-width print "${sdc__script__file}" "${__alter}")"
+      __twidth="$(sdc__parse__value thumbnail-width print "${__config}" "${__override}")"
       montage -background none -shadow -geometry +5+5 -resize "${__twidth}" "${__tsource}" "${__tfile}"
       if [ -x "$(command -v pngquant)" ]; then
         pngquant "${__tfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__tfile}"
@@ -560,53 +560,53 @@
       fi
     fi
     printf '%s\n\n' "# ${sdc__application__name}" >>"${sdc__markdown__file}"
-    __alias="$(sdc__parse__key_value name markdown_name "${__config}" "${__alter}")"
+    __alias="$(sdc__parse__key_value name markdown_name "${__config}" "${__override}")"
     if [ -n "${__alias}" ]; then
       printf '%s\n\n' "${__alias}" >>"${sdc__markdown__file}"
     fi
-    __info="$(sdc__parse__key_value info markdown_quote "${__config}" "${__alter}")"
+    __info="$(sdc__parse__key_value info markdown_quote "${__config}" "${__override}")"
     if [ -n "${__info}" ]; then
       printf '%s\n\n' "${__info}" >>"${sdc__markdown__file}"
     fi
-    __tag="$(sdc__parse__key_value tag markdown_divider "${__config}" "${__alter}")"
+    __tag="$(sdc__parse__key_value tag markdown_divider "${__config}" "${__override}")"
     if [ -n "${__tag}" ]; then
       printf '%s\n\n' "📌 ${__tag}" >>"${sdc__markdown__file}"
     fi
-    __dosbox="$(sdc__parse__key_value dosbox markdown_divider "${sdc__script__file}" "${__alter}")"
+    __dosbox="$(sdc__parse__key_value dosbox markdown_divider "${__config}" "${__override}")"
     if [ -n "${__dosbox}" ]; then
       printf '%s\n\n' "📦 ${__dosbox}" >>"${sdc__markdown__file}"
     fi
-    __site="$(sdc__parse__key_value site markdown_divider "${__config}" "${__alter}")"
+    __site="$(sdc__parse__key_value site markdown_divider "${__config}" "${__override}")"
     if [ -n "${__site}" ]; then
       printf '%s\n\n' "📎 ${__site}" >>"${sdc__markdown__file}"
     fi
-    __include="$(sdc__parse__value script-include-text print "${sdc__script__file}" "${__alter}")"
+    __include="$(sdc__parse__value script-include-text print "${__config}" "${__override}")"
     if [ "${sdc__script__file}" = "Setup" ]; then
       if [ "${__include}" = "-1" ]; then
-        __text="$(sdc__parse__text text print "${sdc__script__file}")"
+        __text="$(sdc__parse__text text print "${__config}")"
         if [ -n "${__text}" ]; then
           printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
         fi
       fi
-      if [ -n "${__alter}" ]; then
-        __text="$(sdc__parse__text text print "${__alter}")"
+      if [ -n "${__override}" ]; then
+        __text="$(sdc__parse__text text print "${__override}")"
         if [ -n "${__text}" ]; then
           printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
         fi
       fi
       if [ "${__include}" = "1" ]; then
-        __text="$(sdc__parse__text text print "${sdc__script__file}")"
+        __text="$(sdc__parse__text text print "${__config}")"
         if [ -n "${__text}" ]; then
           printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
         fi
       fi
     else
-      __text="$(sdc__parse__text text print "${__config}")"
+      __text="$(sdc__parse__text text print "${__override}")"
       if [ -n "${__text}" ]; then
         printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
       fi
     fi
-    __code="$(sdc__parse__text code print "${__config}" "${__alter}")"
+    __code="$(sdc__parse__text code print "${__config}" "${__override}")"
     if [ -n "${__code}" ]; then
       {
         printf '%s\n' '```shell'
@@ -614,7 +614,7 @@
         printf '%s\n\n' '```'
       } >>"${sdc__markdown__file}"
     fi
-    __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${__alter}")"
+    __mfile="$(sdc__parse__value montage-file print "${__config}" "${__override}")"
     if [ -f "${__mfile}" ]; then
       printf '%s\n\n' "![](${__mfile} '${sdc__application__name}')" >>"${sdc__markdown__file}"
     fi
@@ -638,7 +638,7 @@
         printf '%s\n\n' "&nbsp;"
       } >>"${sdc__markdown__file}"
     fi
-    unset __config __alter __tfile __tsource __twidth __alias __info __tag __dosbox __site __include __text __code __mfile __catlabel __applabel
+    unset __config __override __tfile __tsource __twidth __alias __info __tag __dosbox __site __include __text __code __mfile __catlabel __applabel
   }
   sdc__utility__category_document() {
     if [ -n "${1}" ] && [ -f "${1}" ]; then
@@ -916,7 +916,7 @@
           pngquant "${__mfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__mfile}"
         fi
       fi
-      sdc__utility__application_document "${sdc__script__file}" "${sdc__library__file}"
+      sdc__utility__application_document
       sed -i".sdc" "s/###script-version###/${sdc__script__version}/g" "${sdc__markdown__file}"
       rm -f -- *.sdc
       sdc__utility__convert_html
