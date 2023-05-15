@@ -1,14 +1,14 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.5d
+# library-version: 23.5e
 #
 # site: Cover Arts = [MobyGames](https://www.mobygames.com/)
 # site: Program Assets = [Archive.org](https://archive.org/)
 #
 # text: ## Getting Started
 # text: ### The Example Library
-# text: It is not necessary to clone or download the whole repository. All you need is the latest [`Setup ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script. An example library file is also available as [`Library.txt ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
+# text: It is not necessary to clone or download the whole repository. All you need is a [`Setup`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script and a library configuration file. An example library file is available as [`Library.txt`](https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
 # text:
 # text: 1. Create an empty library directory.
 # text: 2. Download the `Library.txt` configuration file and the `Setup` script.
@@ -24,7 +24,7 @@
 # text: ./Setup
 # text: ```
 # text:
-# text: 5. When everything goes well, go to the desired game directory.
+# text: 5. Once the library is ready, go to the desired game directory.
 # text: 6. Run the `Launch` script and enjoy the game.
 # text:
 # text: ```shell
@@ -39,7 +39,7 @@
 # text: 2. Download the `Setup` script.
 # text: 3. Make the `Setup` script executable.
 # text: 4. Run the `Setup` script.
-# text: 5. When everything goes well, go to the desired program directory.
+# text: 5. Once the library is ready, go to the desired program directory.
 # text: 6. Run the `Launch` script.
 # text:
 # text: ```shell

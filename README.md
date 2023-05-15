@@ -64,7 +64,7 @@ SDC_DOSBOX="dosbox-x" ./Launch
 
 ## Getting Started
 ### The Example Library
-It is not necessary to clone or download the whole repository. All you need is the latest [`Setup ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script. An example library file is also available as [`Library.txt ⤴`](https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
+It is not necessary to clone or download the whole repository. All you need is a [`Setup`](https://raw.githubusercontent.com/rarioj/sdc/main/Setup) script and a library configuration file. An example library file is available as [`Library.txt`](https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt). It includes _**fifteen freeware games**_ ready to play. Steps to follow:
 
 1. Create an empty library directory.
 2. Download the `Library.txt` configuration file and the `Setup` script.
@@ -80,7 +80,7 @@ chmod a+x Setup
 ./Setup
 ```
 
-5. When everything goes well, go to the desired game directory.
+5. Once the library is ready, go to the desired game directory.
 6. Run the `Launch` script and enjoy the game.
 
 ```shell
@@ -95,7 +95,7 @@ If you have a `Library.txt` configuration file available, all you need is the `S
 2. Download the `Setup` script.
 3. Make the `Setup` script executable.
 4. Run the `Setup` script.
-5. When everything goes well, go to the desired program directory.
+5. Once the library is ready, go to the desired program directory.
 6. Run the `Launch` script.
 
 ```shell
