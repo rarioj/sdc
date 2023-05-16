@@ -1,8 +1,15 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.5e
+# library-version: 23.5f
 #
+# tag: Script Version = ###script-version###
+# tag: Type = Shell Script
+# tag: Shell = POSIX Compliant
+# tag: Interface = CLI
+# tag: License = MIT
+# tag: Library Version = ###library-version###
+# tag: Library Name = Example Freeware
 # site: Cover Arts = [MobyGames](https://www.mobygames.com/)
 # site: Program Assets = [Archive.org](https://archive.org/)
 #
@@ -662,7 +669,7 @@
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: One Must Fall: 2097
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF:2097
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Governments are puppets to big corporations - and the largest corporation being "World Aeronautics and Robotics" (WAR). If you want to get ahead in the competitive corporate corridors of WAR, you need to master the use of human-assisted robots (HARs). These gigantic robots' purposes include defence and controlling far-flung planetary outposts. The next outpost up for colonization is Jupiter's moon Ganymede. The highly-paid job as pilot of the WAR representative will compete fiercely, and you must qualify for the position by proving your worth in the arena. It will be the grandest one-on-one combat since the Roman Era.
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Governments are puppets to big corporations and the largest corporation being “World Aeronautics and Robotics” (WAR). If you want to get ahead in the competitive corporate corridors of WAR, you need to master the use of human-assisted robots (HARs). These gigantic robots’ purposes include defence and controlling far-flung planetary outposts. The next outpost up for colonization is Jupiter’s moon Ganymede. The highly-paid job as pilot of the WAR representative will compete fiercely, and you must qualify for the position by proving your worth in the arena. It will be the grandest one-on-one combat since the Roman Era.
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Wikipedia = In February 1999, the game was declared freeware by the developers.
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Year = 1994
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Genre = Action

@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5e
+# script-version: 1.0.23.5f
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -40,7 +40,7 @@
 # name: Simple DOSBox Client
 # name: SDC
 # info: A lightweight DOSBox client in one shell script
-# tag: Version = ###script-version###
+# tag: Script Version = ###script-version###
 # tag: Type = Shell Script
 # tag: Shell = POSIX Compliant
 # tag: Interface = CLI
@@ -812,8 +812,9 @@
     sdc__message__action "Checking library"
     {
       if [ -f "${sdc__library__file}" ]; then
+        sdc__library__version="$(sdc__parse__value library-version print "${sdc__library__file}")"
         __source="$(sdc__parse__value library-source print "${sdc__library__file}")"
-        __cversion="$(sdc__parse__value library-version print "${sdc__library__file}")"
+        __cversion="${sdc__library__version}"
         if [ -n "${__source}" ] && [ -n "${__cversion}" ]; then
           curl -s "${__source}" -o "${sdc__script__tmpdir}/${sdc__library__file}"
           __sversion="$(sdc__parse__value library-version print "${sdc__script__tmpdir}/${sdc__library__file}")"
@@ -918,6 +919,9 @@
       fi
       sdc__utility__application_document
       sed -i".sdc" "s/###script-version###/${sdc__script__version}/g" "${sdc__markdown__file}"
+      if [ -n "${sdc__library__version}" ]; then
+        sed -i".sdc" "s/###library-version###/${sdc__library__version}/g" "${sdc__markdown__file}"
+      fi
       rm -f -- *.sdc
       sdc__utility__convert_html
     }
