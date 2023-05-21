@@ -1,7 +1,7 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.5f
+# library-version: 23.5g
 #
 # tag: Script Version = ###script-version###
 # tag: Type = Shell Script
@@ -95,7 +95,7 @@
 # file: All Programs/Games/Alien Carnage/Program.txt = # text: ## Installation Notes
 # file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press `S` to select Sound Blaster.
 # file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press `M` to enable Music.
-# file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press `K` to calibrate keyboard.
+# file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press `K` to calibrate the keyboard.
 # file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press `ESC` or `ENTER` to complete the configuration.
 # file: All Programs/Games/Alien Carnage/Program.txt
 # file: All Programs/Games/Alien Carnage/Program.txt = [cpu]
@@ -809,7 +809,7 @@
 # file: All Programs/Games/Supaplex/Program.txt = # text:
 # file: All Programs/Games/Supaplex/Program.txt = # text: ## Additional Notes
 # file: All Programs/Games/Supaplex/Program.txt = # text: - Consult `Assets/MANUAL.PDF` for the game copy protection.
-# file: All Programs/Games/Supaplex/Program.txt = # text: - Select **controls** (game main menu) to configure sound. Click **S.BLASTER + MUSIC + FX**.
+# file: All Programs/Games/Supaplex/Program.txt = # text: - Click **controls** from the main menu to configure the sound. Select **S.BLASTER + MUSIC + FX**.
 # file: All Programs/Games/Supaplex/Program.txt
 # file: All Programs/Games/Supaplex/Program.txt = [sdl]
 # file: All Programs/Games/Supaplex/Program.txt = autolock = true
@@ -876,7 +876,7 @@
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/teenagent)
 # file: All Programs/Games/Teen Agent/Program.txt = #
 # file: All Programs/Games/Teen Agent/Program.txt = # text: ## Installation Notes
-# file: All Programs/Games/Teen Agent/Program.txt = # text: - Sound Source Setup: Select **SoundBlaster**, **Music and sound**, **220h**, **IRQ 7**, and **DMA channel 1**. Save setup & exit.
+# file: All Programs/Games/Teen Agent/Program.txt = # text: - Sound Source Setup: Select **SoundBlaster**, **Music and Sound**, **220h**, **IRQ 7**, and **DMA channel 1**. Save setup & exit.
 # file: All Programs/Games/Teen Agent/Program.txt
 # file: All Programs/Games/Teen Agent/Program.txt = [sdl]
 # file: All Programs/Games/Teen Agent/Program.txt = autolock = true
@@ -941,7 +941,7 @@
 # file: All Programs/Games/The Lost Vikings/Program.txt = #
 # file: All Programs/Games/The Lost Vikings/Program.txt = # text: ## Installation Notes
 # file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
-# file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Select sound driver: **Sound Blaster**, sound card port address: **220 (default)**.
+# file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Select sound driver: **Sound Blaster**; sound card port address: **220 (default)**.
 # file: All Programs/Games/The Lost Vikings/Program.txt = # text: - Consult `Assets/MANUAL.PDF` for the game copy protection.
 # file: All Programs/Games/The Lost Vikings/Program.txt
 # file: All Programs/Games/The Lost Vikings/Program.txt = [cpu]

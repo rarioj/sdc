@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5f
+# script-version: 1.0.23.5g
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -588,7 +588,7 @@
           printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
         fi
       fi
-      if [ -n "${__override}" ]; then
+      if [ -f "${__override}" ]; then
         __text="$(sdc__parse__text text print "${__override}")"
         if [ -n "${__text}" ]; then
           printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
@@ -601,9 +601,11 @@
         fi
       fi
     else
-      __text="$(sdc__parse__text text print "${__override}")"
-      if [ -n "${__text}" ]; then
-        printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
+      if [ -f "${__override}" ]; then
+        __text="$(sdc__parse__text text print "${__override}")"
+        if [ -n "${__text}" ]; then
+          printf '%s\n\n' "${__text}" >>"${sdc__markdown__file}"
+        fi
       fi
     fi
     __code="$(sdc__parse__text code print "${__config}" "${__override}")"

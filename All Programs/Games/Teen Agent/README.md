@@ -16,7 +16,7 @@
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Teenagent)** ┃ **[MobyGames](https://www.mobygames.com/game/6423/teen-agent/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Teen+Agent&gid=2206)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/teen-agent-23o)** ┃ **[GOG 🆓](https://www.gog.com/en/game/teenagent)** 
 
 ## Installation Notes
-- Sound Source Setup: Select **SoundBlaster**, **Music and sound**, **220h**, **IRQ 7**, and **DMA channel 1**. Save setup & exit.
+- Sound Source Setup: Select **SoundBlaster**, **Music and Sound**, **220h**, **IRQ 7**, and **DMA channel 1**. Save setup & exit.
 
 ![](Montage.png 'Teen Agent')
 

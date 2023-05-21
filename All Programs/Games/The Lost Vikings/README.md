@@ -15,7 +15,7 @@
 
 ## Installation Notes
 - Use the default **drive** and **directory** for the installation location.
-- Select sound driver: **Sound Blaster**, sound card port address: **220 (default)**.
+- Select sound driver: **Sound Blaster**; sound card port address: **220 (default)**.
 - Consult `Assets/MANUAL.PDF` for the game copy protection.
 
 ![](Montage.png 'The Lost Vikings')

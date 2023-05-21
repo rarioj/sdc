@@ -20,7 +20,7 @@
 
 ## Additional Notes
 - Consult `Assets/MANUAL.PDF` for the game copy protection.
-- Select **controls** (game main menu) to configure sound. Click **S.BLASTER + MUSIC + FX**.
+- Click **controls** from the main menu to configure the sound. Select **S.BLASTER + MUSIC + FX**.
 
 ![](Montage.png 'Supaplex')
 

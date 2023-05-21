@@ -18,7 +18,7 @@
 ## Installation Notes
 - Press `S` to select Sound Blaster.
 - Press `M` to enable Music.
-- Press `K` to calibrate keyboard.
+- Press `K` to calibrate the keyboard.
 - Press `ESC` or `ENTER` to complete the configuration.
 
 ![](Montage.png 'Alien Carnage')
