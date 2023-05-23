@@ -13,7 +13,7 @@
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Blackthorne)** ┃ **[MobyGames](https://www.mobygames.com/game/1445/blackthorne/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Blackthorne&gid=1645)** ┃ Game Manual: **[MyAbandonware](https://www.myabandonware.com/game/blackthorne-2p8)** 
+📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Blackthorne)** ┃ **[MobyGames](https://www.mobygames.com/game/1445/blackthorne/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Blackthorne&gid=1645)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/blackthorne-2p8)** 
 
 ## Installation Notes
 - Use the default **drive** and **directory** for the installation location.
