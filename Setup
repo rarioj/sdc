@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5g
+# script-version: 1.0.23.5h
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -799,15 +799,19 @@
       __cversion="${sdc__script__version}"
       if [ -n "${__source}" ] && [ -n "${__cversion}" ]; then
         curl -s "${__source}" -o "${sdc__script__tmpdir}/${sdc__script__file}"
-        __sversion="$(sdc__parse__value script-version print "${sdc__script__tmpdir}/${sdc__script__file}")"
-        if [ -n "${__sversion}" ]; then
-          __vcompare="$(printf '%s\n%s' "${__cversion}" "${__sversion}" | sort -rV | head -n1)"
-          if [ "${__cversion}" != "${__vcompare}" ]; then
-            sdc__message__item "Updating script to ${__sversion}"
-            cp "${sdc__script__tmpdir}/${sdc__script__file}" "${sdc__script__file}"
-            sdc__message__info "Script updated to ${__sversion} (please re-run ${sdc__script__file})"
-            exit 0
+        if [ -f "${sdc__script__tmpdir}/${sdc__script__file}" ]; then
+          __sversion="$(sdc__parse__value script-version print "${sdc__script__tmpdir}/${sdc__script__file}")"
+          if [ -n "${__sversion}" ]; then
+            __vcompare="$(printf '%s\n%s' "${__cversion}" "${__sversion}" | sort -rV | head -n1)"
+            if [ "${__cversion}" != "${__vcompare}" ]; then
+              sdc__message__item "Updating script to ${__sversion}"
+              cp "${sdc__script__tmpdir}/${sdc__script__file}" "${sdc__script__file}"
+              sdc__message__info "Script updated to ${__sversion} (please re-run ${sdc__script__file})"
+              exit 0
+            fi
           fi
+        else
+          sdc__message__item "Warning: Unable to check latest script version"
         fi
       fi
     }
@@ -819,15 +823,19 @@
         __cversion="${sdc__library__version}"
         if [ -n "${__source}" ] && [ -n "${__cversion}" ]; then
           curl -s "${__source}" -o "${sdc__script__tmpdir}/${sdc__library__file}"
-          __sversion="$(sdc__parse__value library-version print "${sdc__script__tmpdir}/${sdc__library__file}")"
-          if [ -n "${__sversion}" ]; then
-            __vcompare="$(printf '%s\n%s' "${__cversion}" "${__sversion}" | sort -rV | head -n1)"
-            if [ "${__cversion}" != "${__vcompare}" ]; then
-              sdc__message__item "Updating library to ${__sversion}"
-              cp "${sdc__script__tmpdir}/${sdc__library__file}" "${sdc__library__file}"
-              sdc__message__info "Library updated to ${__sversion} (please re-run ${sdc__script__file})"
-              exit 0
+          if [ -f "${sdc__script__tmpdir}/${sdc__library__file}" ]; then
+            __sversion="$(sdc__parse__value library-version print "${sdc__script__tmpdir}/${sdc__library__file}")"
+            if [ -n "${__sversion}" ]; then
+              __vcompare="$(printf '%s\n%s' "${__cversion}" "${__sversion}" | sort -rV | head -n1)"
+              if [ "${__cversion}" != "${__vcompare}" ]; then
+                sdc__message__item "Updating library to ${__sversion}"
+                cp "${sdc__script__tmpdir}/${sdc__library__file}" "${sdc__library__file}"
+                sdc__message__info "Library updated to ${__sversion} (please re-run ${sdc__script__file})"
+                exit 0
+              fi
             fi
+          else
+            sdc__message__item "Warning: Unable to check latest library version"
           fi
         fi
       fi
