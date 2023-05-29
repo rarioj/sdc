@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Supaplex
 
@@ -22,5 +22,5 @@
 - Consult `Assets/MANUAL.PDF` for the game copy protection.
 - Click **controls** from the main menu to configure the sound. Select **S.BLASTER + MUSIC + FX**.
 
-![](Montage.png 'Supaplex')
+![](Montage.png "Supaplex")
 

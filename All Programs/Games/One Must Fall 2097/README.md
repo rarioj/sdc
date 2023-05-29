@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # One Must Fall 2097
 
@@ -21,5 +21,5 @@
 ## Additional Notes
 - Select sound card: **Sound Blaster 16 (Stereo)** and **Ultra High Quality (Pentium)**.
 
-![](Montage.png 'One Must Fall 2097')
+![](Montage.png "One Must Fall 2097")
 

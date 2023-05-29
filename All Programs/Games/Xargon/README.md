@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Xargon
 
@@ -15,5 +15,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Xargon)** ┃ **[MobyGames](https://www.mobygames.com/game/1057/xargon/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Xargon&gid=2905)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/xargon-21c)** 
 
-![](Montage.png 'Xargon')
+![](Montage.png "Xargon")
 

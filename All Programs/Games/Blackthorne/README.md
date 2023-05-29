@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Blackthorne
 
@@ -21,5 +21,5 @@
   - Select digitized sound card: **Sound Blaster**; Port: **220**; IRQ: **7**; DMA Channel: **1**.
   - Select music sound card: **Sound Blaster**; Port: **220**.
 
-![](Montage.png 'Blackthorne')
+![](Montage.png "Blackthorne")
 

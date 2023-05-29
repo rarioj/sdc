@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Flight of the Amazon Queen
 
@@ -18,5 +18,5 @@
 - Sound Effects: **Sound Blaster**
 - Press `ENTER` when done.
 
-![](Montage.png 'Flight of the Amazon Queen')
+![](Montage.png "Flight of the Amazon Queen")
 

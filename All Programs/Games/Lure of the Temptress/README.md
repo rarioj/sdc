@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Lure of the Temptress
 
@@ -13,5 +13,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Lure_of_the_Temptress)** ┃ **[MobyGames](https://www.mobygames.com/game/1134/lure-of-the-temptress/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Lure+of+the+Temptress&gid=1087)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/lure-of-the-temptress-1ge)** ┃ **[GOG 🆓](https://www.gog.com/en/game/lure_of_the_temptress)** 
 
-![](Montage.png 'Lure of the Temptress')
+![](Montage.png "Lure of the Temptress")
 

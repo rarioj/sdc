@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # God of Thunder
 
@@ -15,5 +15,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/God_of_Thunder_(video_game))** ┃ **[MobyGames](https://www.mobygames.com/game/1019/god-of-thunder/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=God+of+Thunder&gid=1277)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/god-of-thunder-1um)** ┃ **[Adept Software](https://www.adeptsoftware.com/got/)** 
 
-![](Montage.png 'God of Thunder')
+![](Montage.png "God of Thunder")
 

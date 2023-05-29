@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5h
+# script-version: 1.0.23.5i
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -548,7 +548,7 @@
     __tfile="$(sdc__parse__value thumbnail-file print "${__config}" "${__override}")"
     __tsource="$(sdc__parse__value thumbnail-source print "${__config}" "${__override}")"
     if [ -f "${__tfile}" ]; then
-      printf '%s\n\n' "![](${__tfile} 'application-thumbnail')" >>"${sdc__markdown__file}"
+      printf '%s\n\n' "![](${__tfile} \"application-thumbnail\")" >>"${sdc__markdown__file}"
     elif [ -f "${__tsource}" ] && [ -x "$(command -v montage)" ]; then
       __twidth="$(sdc__parse__value thumbnail-width print "${__config}" "${__override}")"
       montage -background none -shadow -geometry +5+5 -resize "${__twidth}" "${__tsource}" "${__tfile}"
@@ -556,7 +556,7 @@
         pngquant "${__tfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__tfile}"
       fi
       if [ -f "${__tfile}" ]; then
-        printf '%s\n\n' "![](${__tfile} 'application-thumbnail')" >>"${sdc__markdown__file}"
+        printf '%s\n\n' "![](${__tfile} \"application-thumbnail\")" >>"${sdc__markdown__file}"
       fi
     fi
     printf '%s\n\n' "# ${sdc__application__name}" >>"${sdc__markdown__file}"
@@ -618,7 +618,7 @@
     fi
     __mfile="$(sdc__parse__value montage-file print "${__config}" "${__override}")"
     if [ -f "${__mfile}" ]; then
-      printf '%s\n\n' "![](${__mfile} '${sdc__application__name}')" >>"${sdc__markdown__file}"
+      printf '%s\n\n' "![](${__mfile} \"${sdc__application__name}\")" >>"${sdc__markdown__file}"
     fi
     if [ "${sdc__script__file}" = "Setup" ] && [ -n "${sdc__category__list}" ] && [ -n "${sdc__program__list}" ]; then
       __catlabel="Category"
@@ -663,7 +663,7 @@
           __cover="1"
           {
             printf '%s\n>\n' "> <table><tr><td width=\"255\">"
-            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__tfile}") '${sdc__application__name}')"
+            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__tfile}") \"${sdc__application__name}\")"
             printf '%s\n>\n' "> </td>"
             printf '%s\n>\n' "> <td>"
           } >>"${__catpath}/${sdc__markdown__file}"
@@ -680,7 +680,7 @@
         if [ "${__cover}" = "0" ]; then
           __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${1}")"
           if [ -f "${__dirpath}/${__mfile}" ]; then
-            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__mfile}") '${sdc__application__name}')" >>"${__catpath}/${sdc__markdown__file}"
+            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__mfile}") \"${sdc__application__name}\")" >>"${__catpath}/${sdc__markdown__file}"
           fi
         else
           printf '%s\n' "> </td></tr></table>" >>"${__catpath}/${sdc__markdown__file}"

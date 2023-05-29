@@ -2,7 +2,7 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/Beneath%20a%20Steel%20Sky/Thumbnail.png 'Beneath a Steel Sky')
+> ![](../../../All%20Programs/Games/Beneath%20a%20Steel%20Sky/Thumbnail.png "Beneath a Steel Sky")
 >
 > </td>
 >
@@ -23,7 +23,7 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/Flight%20of%20the%20Amazon%20Queen/Thumbnail.png 'Flight of the Amazon Queen')
+> ![](../../../All%20Programs/Games/Flight%20of%20the%20Amazon%20Queen/Thumbnail.png "Flight of the Amazon Queen")
 >
 > </td>
 >
@@ -44,7 +44,7 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/Lure%20of%20the%20Temptress/Thumbnail.png 'Lure of the Temptress')
+> ![](../../../All%20Programs/Games/Lure%20of%20the%20Temptress/Thumbnail.png "Lure of the Temptress")
 >
 > </td>
 >
@@ -65,7 +65,7 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/Teen%20Agent/Thumbnail.png 'Teen Agent')
+> ![](../../../All%20Programs/Games/Teen%20Agent/Thumbnail.png "Teen Agent")
 >
 > </td>
 >

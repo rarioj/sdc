@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Teen Agent
 
@@ -18,5 +18,5 @@
 ## Installation Notes
 - Sound Source Setup: Select **SoundBlaster**, **Music and Sound**, **220h**, **IRQ 7**, and **DMA channel 1**. Save setup & exit.
 
-![](Montage.png 'Teen Agent')
+![](Montage.png "Teen Agent")
 

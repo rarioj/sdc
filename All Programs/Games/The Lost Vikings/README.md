@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # The Lost Vikings
 
@@ -18,5 +18,5 @@
 - Select sound driver: **Sound Blaster**; sound card port address: **220 (default)**.
 - Consult `Assets/MANUAL.PDF` for the game copy protection.
 
-![](Montage.png 'The Lost Vikings')
+![](Montage.png "The Lost Vikings")
 

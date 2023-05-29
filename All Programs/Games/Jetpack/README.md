@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Jetpack
 
@@ -13,5 +13,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Jetpack_(video_game))** ┃ **[MobyGames](https://www.mobygames.com/game/10449/jetpack/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Jetpack&gid=1263)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/jetpack-1pg)** ┃ **[Adept Software](https://www.adeptsoftware.com/jetpack/)** 
 
-![](Montage.png 'Jetpack')
+![](Montage.png "Jetpack")
 

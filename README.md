@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Simple DOSBox Client
 
@@ -7,7 +7,7 @@
 > ❝ A lightweight DOSBox client in one shell script ❞
 >
 
-📌 ┃ Script Version: **1.0.23.5h** ┃ Type: **Shell Script** ┃ Shell: **POSIX Compliant** ┃ Interface: **CLI** ┃ License: **MIT** ┃ Library Version: **23.5h** ┃ Library Name: **Example Freeware** 
+📌 ┃ Script Version: **1.0.23.5i** ┃ Type: **Shell Script** ┃ Shell: **POSIX Compliant** ┃ Interface: **CLI** ┃ License: **MIT** ┃ Library Version: **23.5h** ┃ Library Name: **Example Freeware** 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
@@ -122,7 +122,7 @@ chmod a+x Launch
 ./Launch
 ```
 
-![](Montage.png 'Simple DOSBox Client')
+![](Montage.png "Simple DOSBox Client")
 
 > <table><tr><td width="50%">
 >

@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Bio Menace
 
@@ -15,5 +15,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Bio_Menace)** ┃ **[MobyGames](https://www.mobygames.com/game/236/bio-menace/)** ┃ **[AbandonwareDOS - Bio Menace Episode 1: Dr. Mangle's Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+1%3A+Dr.+Mangle%27s+Lab&gid=1345)** ┃ **[AbandonwareDOS - Bio Menace Episode 2: The Hidden Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+2%3A+The+Hidden+Lab&gid=2964)** ┃ **[AbandonwareDOS - Bio Menace Episode 3: Master Cain](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+3%3A+Master+Cain&gid=2965)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/bio-menace-22a)** ┃ **[GOG 🆓](https://www.gog.com/en/game/bio_menace)** ┃ **[3DRealms 🆓](https://3drealms.com/catalog/bio-menace_42/)** 
 
-![](Montage.png 'Bio Menace')
+![](Montage.png "Bio Menace")
 

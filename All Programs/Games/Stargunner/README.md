@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Stargunner
 
@@ -13,5 +13,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Stargunner)** ┃ **[MobyGames](https://www.mobygames.com/game/922/stargunner/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Stargunner&gid=2492)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/stargunner-c8g)** ┃ **[3DRealms 🆓](https://3drealms.com/catalog/stargunner_45/)** ┃ **[GOG 🆓](https://www.gog.com/en/game/stargunner)** ┃ **[Steam 🆓](https://store.steampowered.com/app/358390/Stargunner/)** 
 
-![](Montage.png 'Stargunner')
+![](Montage.png "Stargunner")
 

@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Electroman
 
@@ -15,5 +15,5 @@
 
 📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Electro_Man)** ┃ **[MobyGames](https://www.mobygames.com/game/752/electroman/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Electroman&gid=3021)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/electroman-1ux)** 
 
-![](Montage.png 'Electroman')
+![](Montage.png "Electroman")
 

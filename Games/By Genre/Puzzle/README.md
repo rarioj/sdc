@@ -2,7 +2,7 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/Supaplex/Thumbnail.png 'Supaplex')
+> ![](../../../All%20Programs/Games/Supaplex/Thumbnail.png "Supaplex")
 >
 > </td>
 >
@@ -23,7 +23,7 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/The%20Lost%20Vikings/Thumbnail.png 'The Lost Vikings')
+> ![](../../../All%20Programs/Games/The%20Lost%20Vikings/Thumbnail.png "The Lost Vikings")
 >
 > </td>
 >

@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Alien Carnage
 
@@ -21,5 +21,5 @@
 - Press `K` to calibrate the keyboard.
 - Press `ESC` or `ENTER` to complete the configuration.
 
-![](Montage.png 'Alien Carnage')
+![](Montage.png "Alien Carnage")
 

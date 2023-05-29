@@ -1,4 +1,4 @@
-![](Thumbnail.png 'application-thumbnail')
+![](Thumbnail.png "application-thumbnail")
 
 # Beneath a Steel Sky
 
@@ -21,5 +21,5 @@
   - Sound Card: **Sound Blaster / Ad lib**.
   - Port Addresses: All **Auto-Detect**.
 
-![](Montage.png 'Beneath a Steel Sky')
+![](Montage.png "Beneath a Steel Sky")
 
