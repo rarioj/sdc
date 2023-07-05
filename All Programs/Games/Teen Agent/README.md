@@ -2,7 +2,7 @@
 
 # Teen Agent
 
-「**Teenagent**」
+「**Teenagent** (Polish/Original)」
 
 > ❝ One day, two men in dark glasses and long coats captured a teenager; this could be a start of a very long day! Get ready for a wonderfully humorous adventure. Teen Agent is a point-and-click animated graphic adventure that features dozens of detailed hand-painted backgrounds. ❞
 >

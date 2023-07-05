@@ -2,8 +2,6 @@
 
 # God of Thunder
 
-「**GoT**」
-
 > ❝ You are Thor, The God of Thunder! Your father is Odin, the mightiest Norse God and the ruler of Asgard. Odin must fall into a deep sleep (known as the Odinsleep) every few hundred centuries to rejuvenate his power. Your half-brother is Loki, The God of Mischief. Loki has seized the opportunity of this most recent Odinsleep and obtained the help of his most powerful allies to take control of Midgard (Earth). ❞
 >
 > ❝ On March 27, 2020, Ron Davis released the source code, music and sound effects as public-domain software on SourceForge. ❞ — *Wikipedia*

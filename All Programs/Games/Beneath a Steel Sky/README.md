@@ -2,7 +2,7 @@
 
 # Beneath a Steel Sky
 
-「**BASS**」「**Beyond The Abyss**」
+「**Beyond The Abyss**」
 
 > ❝ Robert Foster is an innocent outsider stranded in a vast city where oppressed civilians live and work in soaring tower blocks. All while the corrupt, covetous and wealthy lie underground, shielded from all pollution. Alone, save for a robot circuit board; Foster must fight for survival and discover the sinister truth behind this abduction. ❞
 >

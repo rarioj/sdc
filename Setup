@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.5i
+# script-version: 1.0.23.7a
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -804,9 +804,9 @@
           if [ -n "${__sversion}" ]; then
             __vcompare="$(printf '%s\n%s' "${__cversion}" "${__sversion}" | sort -rV | head -n1)"
             if [ "${__cversion}" != "${__vcompare}" ]; then
-              sdc__message__item "Updating script to ${__sversion}"
+              sdc__message__item "Updating script from ${__cversion} to ${__sversion}"
               cp "${sdc__script__tmpdir}/${sdc__script__file}" "${sdc__script__file}"
-              sdc__message__info "Script updated to ${__sversion} (please re-run ${sdc__script__file})"
+              sdc__message__info "Script updated (please re-run ${sdc__script__file})"
               exit 0
             fi
           fi
@@ -828,9 +828,9 @@
             if [ -n "${__sversion}" ]; then
               __vcompare="$(printf '%s\n%s' "${__cversion}" "${__sversion}" | sort -rV | head -n1)"
               if [ "${__cversion}" != "${__vcompare}" ]; then
-                sdc__message__item "Updating library to ${__sversion}"
+                sdc__message__item "Updating library from ${__cversion} to ${__sversion}"
                 cp "${sdc__script__tmpdir}/${sdc__library__file}" "${sdc__library__file}"
-                sdc__message__info "Library updated to ${__sversion} (please re-run ${sdc__script__file})"
+                sdc__message__info "Library updated (please re-run ${sdc__script__file})"
                 exit 0
               fi
             fi
@@ -1194,9 +1194,9 @@
 # file: Template-Library.txt = ### 🟨 Runnable with issues
 # file: Template-Library.txt = ### 🟥 Unsupported, unplayable, or broken
 # file: Template-Library.txt = ### ⬜ Untested
-# file: Template-Library.txt = # dosbox: DOSBox = <version> 🟩🟨🟥⬜
-# file: Template-Library.txt = # dosbox: DOSBox Staging = <version> 🟩🟨🟥⬜
-# file: Template-Library.txt = # dosbox: DOSBox-X = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: [DOSBox](https://www.dosbox.com/) = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: [DOSBox-X](https://dosbox-x.com/) = <version> 🟩🟨🟥⬜
 # file: Template-Library.txt = #
 # file: Template-Library.txt = # name: Library Name
 # file: Template-Library.txt = # name: <alias>
@@ -1249,9 +1249,9 @@
 # file: Template-Program.txt = ### 🟨 Runnable with issues
 # file: Template-Program.txt = ### 🟥 Unsupported, unplayable, or broken
 # file: Template-Program.txt = ### ⬜ Untested
-# file: Template-Program.txt = # dosbox: DOSBox = <version> 🟩🟨🟥⬜
-# file: Template-Program.txt = # dosbox: DOSBox Staging = <version> 🟩🟨🟥⬜
-# file: Template-Program.txt = # dosbox: DOSBox-X = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: [DOSBox](https://www.dosbox.com/) = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: [DOSBox-X](https://dosbox-x.com/) = <version> 🟩🟨🟥⬜
 # file: Template-Program.txt = #
 # file: Template-Program.txt = # name: Program Name
 # file: Template-Program.txt = # name: <alias>
@@ -1278,12 +1278,6 @@
 # file: Template-Program.txt = # text:
 # file: Template-Program.txt = # text: ## Additional Notes
 # file: Template-Program.txt = # text: - Things to do after installation or during the program run (e.g. in-game settings, post-installation tasks, etc).
-# file: Template-Program.txt = # text:
-# file: Template-Program.txt = # text: ## Known Issues
-# file: Template-Program.txt = # text: - Issues encountered when running the program on a specific DOSBox variant.
-# file: Template-Program.txt = # text:
-# file: Template-Program.txt = # text: ## Licensing Information
-# file: Template-Program.txt = # text: - Things to note regarding the program license or release.
 # file: Template-Program.txt
 # file: Template-Program.txt = [sdl]
 # file: Template-Program.txt = #fullscreen = true

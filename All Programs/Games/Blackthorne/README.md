@@ -2,7 +2,7 @@
 
 # Blackthorne
 
-「**Blackhawk** (Europe)」
+「**Blackhawk** (European)」
 
 > ❝ Through the dark vastness of space, exiled prince Kyle Blackthorne returns to Tuul to avenge his murdered father and restore the shattered Lightstone. The conqueror Sarlac opposes his vicious troops against the enraged prince. But the evil lord will soon find out: an army is not enough against a single fierce fighter with a vengeance! ❞
 >

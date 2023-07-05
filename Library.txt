@@ -1,7 +1,7 @@
 # vim: filetype=ini:syntax=dosini
 #
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.5h
+# library-version: 23.7a
 #
 # tag: Script Version = ###script-version###
 # tag: Type = Shell Script
@@ -77,7 +77,7 @@
 # file: All Programs/Games/Alien Carnage/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Alien Carnage/Program.txt = #
 # file: All Programs/Games/Alien Carnage/Program.txt = # name: Alien Carnage
-# file: All Programs/Games/Alien Carnage/Program.txt = # name: Halloween Harry
+# file: All Programs/Games/Alien Carnage/Program.txt = # name: Halloween Harry = Original
 # file: All Programs/Games/Alien Carnage/Program.txt = # info: Harry is the name. Action is the game! If Duke Nukem has a twin separated at birth, you can bet it is the hot-action hero Halloween Harry! Do not let the name fool you. This guy is no pumpkinhead! The planet is in trouble, so Harry is blasting double! Only you can help him save the earth from aliens intent on transforming humans into zombie slaves to conquer the universe. Called to Space Station Liberty, Harry stands tall and receives his orders. Join him on his high-risk mission to infiltrate the bizarre alien ship, now burrowed under a high-rise city!
 # file: All Programs/Games/Alien Carnage/Program.txt = # info: Wikipedia = In May 2007, John Passfield and 3D Realms released Alien Carnage as freeware.
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: Year = 1993
@@ -137,7 +137,6 @@
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = #
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: Beneath a Steel Sky
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: BASS
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: Beyond The Abyss
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Robert Foster is an innocent outsider stranded in a vast city where oppressed civilians live and work in soaring tower blocks. All while the corrupt, covetous and wealthy lie underground, shielded from all pollution. Alone, save for a robot circuit board; Foster must fight for survival and discover the sinister truth behind this abduction.
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Wikipedia = The game was made available as freeware – and with the source code released – for PC platforms in 2003.
@@ -291,7 +290,7 @@
 # file: All Programs/Games/Blackthorne/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Blackthorne/Program.txt = #
 # file: All Programs/Games/Blackthorne/Program.txt = # name: Blackthorne
-# file: All Programs/Games/Blackthorne/Program.txt = # name: Blackhawk = Europe
+# file: All Programs/Games/Blackthorne/Program.txt = # name: Blackhawk = European
 # file: All Programs/Games/Blackthorne/Program.txt = # info: Through the dark vastness of space, exiled prince Kyle Blackthorne returns to Tuul to avenge his murdered father and restore the shattered Lightstone. The conqueror Sarlac opposes his vicious troops against the enraged prince. But the evil lord will soon find out: an army is not enough against a single fierce fighter with a vengeance!
 # file: All Programs/Games/Blackthorne/Program.txt = # info: Wikipedia = In 2013, Blizzard released the game for free on their Battle.net PC client.
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: Year = 1994
@@ -352,8 +351,7 @@
 # file: All Programs/Games/Electroman/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Electroman/Program.txt = #
 # file: All Programs/Games/Electroman/Program.txt = # name: Electroman
-# file: All Programs/Games/Electroman/Program.txt = # name: Electro Man
-# file: All Programs/Games/Electroman/Program.txt = # name: Electro Body
+# file: All Programs/Games/Electroman/Program.txt = # name: Electro Body = German/Polish
 # file: All Programs/Games/Electroman/Program.txt = # info: After drifting off to sleep late one night at the planetary base, Jacek woke to discover that his unit had lost all its power. Climbing the darkened stairway, he found that alien beings had invaded the HQ and killed all humans - including his wife and children! Only his friend Placek remained, and together they escaped to another planet. Now it is time for revenge. Spending all his insurance money, Jacek underwent many costly operations giving him superhuman strength and senses. He armed himself with weapons and set out for the conquered station. Jacek is unaware that the aliens have rebuilt the station with numerous security systems built to keep him out. Can you help our hero?
 # file: All Programs/Games/Electroman/Program.txt = # info: Wikipedia = Though initially offered under a shareware license, the game was released as freeware by the developer on June 25, 2006, under the Creative Commons Attribution-ShareAlike 2.5 license.
 # file: All Programs/Games/Electroman/Program.txt = # tag: Year = 1992
@@ -462,7 +460,6 @@
 # file: All Programs/Games/God of Thunder/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/God of Thunder/Program.txt = #
 # file: All Programs/Games/God of Thunder/Program.txt = # name: God of Thunder
-# file: All Programs/Games/God of Thunder/Program.txt = # name: GoT
 # file: All Programs/Games/God of Thunder/Program.txt = # info: You are Thor, The God of Thunder! Your father is Odin, the mightiest Norse God and the ruler of Asgard. Odin must fall into a deep sleep (known as the Odinsleep) every few hundred centuries to rejuvenate his power. Your half-brother is Loki, The God of Mischief. Loki has seized the opportunity of this most recent Odinsleep and obtained the help of his most powerful allies to take control of Midgard (Earth).
 # file: All Programs/Games/God of Thunder/Program.txt = # info: Wikipedia = On March 27, 2020, Ron Davis released the source code, music and sound effects as public-domain software on SourceForge.
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: Year = 1993
@@ -646,9 +643,7 @@
 #
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/One Must Fall 2097/Program.txt = #
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # name: One Must Fall 2097
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: One Must Fall: 2097
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF:2097
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Governments are puppets to big corporations and the largest corporation being “World Aeronautics and Robotics” (WAR). If you want to get ahead in the competitive corporate corridors of WAR, you need to master the use of human-assisted robots (HARs). These gigantic robots’ purposes include defence and controlling far-flung planetary outposts. The next outpost up for colonization is Jupiter’s moon Ganymede. The highly-paid job as pilot of the WAR representative will compete fiercely, and you must qualify for the position by proving your worth in the arena. It will be the grandest one-on-one combat since the Roman Era.
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Wikipedia = In February 1999, the game was declared freeware by the developers.
@@ -840,7 +835,7 @@
 # file: All Programs/Games/Teen Agent/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Teen Agent/Program.txt = #
 # file: All Programs/Games/Teen Agent/Program.txt = # name: Teen Agent
-# file: All Programs/Games/Teen Agent/Program.txt = # name: Teenagent
+# file: All Programs/Games/Teen Agent/Program.txt = # name: Teenagent = Polish/Original
 # file: All Programs/Games/Teen Agent/Program.txt = # info: One day, two men in dark glasses and long coats captured a teenager; this could be a start of a very long day! Get ready for a wonderfully humorous adventure. Teen Agent is a point-and-click animated graphic adventure that features dozens of detailed hand-painted backgrounds.
 # file: All Programs/Games/Teen Agent/Program.txt = # info: Wikipedia = When the game was originally released, "The Three Tasks" was shareware, and the remaining two sections could be obtained by registering the game. However, the game was later released as freeware.
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Year = 1995

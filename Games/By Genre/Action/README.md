@@ -128,13 +128,13 @@
 
 > <table><tr><td width="255">
 >
-> ![](../../../All%20Programs/Games/One%20Must%20Fall%202097/Thumbnail.png "One Must Fall 2097")
+> ![](../../../All%20Programs/Games/One%20Must%20Fall%202097/Thumbnail.png "One Must Fall: 2097")
 >
 > </td>
 >
 > <td>
 >
-> ## [One Must Fall 2097](../../../All%20Programs/Games/One%20Must%20Fall%202097/README.md)
+> ## [One Must Fall: 2097](../../../All%20Programs/Games/One%20Must%20Fall%202097/README.md)
 >
 > 📌 ┃ Year: **1994** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Side view • Arcade • Fighting • Mecha • Sci-fi** ┃ Media: **CD-ROM** 
 >
