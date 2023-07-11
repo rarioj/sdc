@@ -7,11 +7,11 @@
 > ❝ A lightweight DOSBox client in one shell script ❞
 >
 
-📌 ┃ Script Version: **1.0.23.7a** ┃ Type: **Shell Script** ┃ Shell: **POSIX Compliant** ┃ Interface: **CLI** ┃ License: **MIT** ┃ Library Version: **23.7a** ┃ Library Name: **Example Freeware** 
+📌 ┃ **Script Version** ‣ 1.0.23.7b ┃ **Type** ‣ Shell Script ┃ **Shell** ‣ POSIX Compliant ┃ **Interface** ‣ CLI ┃ **License** ‣ MIT ┃ **Library Version** ‣ 23.7b ┃ **Library Name** ‣ SDC Freeware Examples 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ Cover Arts: **[MobyGames](https://www.mobygames.com/)** ┃ Program Assets: **[Archive.org](https://archive.org/)** 
+📎 ┃ **Cover Arts** ‣ [MobyGames](https://www.mobygames.com/) ┃ **Program Assets** ‣ [Archive.org](https://archive.org/) 
 
 ## What is *Simple DOSBox Client*?
 Ever want to relive your past gaming experience, but your modern computer can no longer run it?
@@ -122,23 +122,17 @@ chmod a+x Launch
 ./Launch
 ```
 
-![](Montage.png "Simple DOSBox Client")
-
-> <table><tr><td width="50%">
->
-> ### 🗄️ 6 Categories
-> - 🗂️ [All Programs ‣ Games (15)](./All%20Programs/Games/README.md)
-> - 🗂️ [Games ‣ By Genre ‣ Action (10)](./Games/By%20Genre/Action/README.md)
-> - 🗂️ [Games ‣ By Genre ‣ Adventure (4)](./Games/By%20Genre/Adventure/README.md)
-> - 🗂️ [Games ‣ By Genre ‣ Puzzle (2)](./Games/By%20Genre/Puzzle/README.md)
-> - 🗂️ [Games ‣ By License ‣ Freeware (15)](./Games/By%20License/Freeware/README.md)
-> - 🗂️ [Games ‣ By Platform ‣ DOS (15)](./Games/By%20Platform/DOS/README.md)
->
-> </td><td width="50%">
->
-> ### 📓 15 Programs
-> 🔎 ┃ [Alien Carnage](./All%20Programs/Games/Alien%20Carnage/README.md) ┃ [Beneath a Steel Sky](./All%20Programs/Games/Beneath%20a%20Steel%20Sky/README.md) ┃ [Bio Menace](./All%20Programs/Games/Bio%20Menace/README.md) ┃ [Blackthorne](./All%20Programs/Games/Blackthorne/README.md) ┃ [Electroman](./All%20Programs/Games/Electroman/README.md) ┃ [Flight of the Amazon Queen](./All%20Programs/Games/Flight%20of%20the%20Amazon%20Queen/README.md) ┃ [God of Thunder](./All%20Programs/Games/God%20of%20Thunder/README.md) ┃ [Jetpack](./All%20Programs/Games/Jetpack/README.md) ┃ [Lure of the Temptress](./All%20Programs/Games/Lure%20of%20the%20Temptress/README.md) ┃ [One Must Fall: 2097](./All%20Programs/Games/One%20Must%20Fall%202097/README.md) ┃ [Stargunner](./All%20Programs/Games/Stargunner/README.md) ┃ [Supaplex](./All%20Programs/Games/Supaplex/README.md) ┃ [Teen Agent](./All%20Programs/Games/Teen%20Agent/README.md) ┃ [The Lost Vikings](./All%20Programs/Games/The%20Lost%20Vikings/README.md) ┃ [Xargon](./All%20Programs/Games/Xargon/README.md) 
-> </td></tr></table>
-
 &nbsp;
+
+---
+
+### ▶ **SDC Freeware Examples**
+
+#### 【6 Categories】
+🗂️ ┃ [All Programs ‣ Games (15)](./All%20Programs/Games/README.md)┃ [Games ‣ By Genre ‣ Action (10)](./Games/By%20Genre/Action/README.md)┃ [Games ‣ By Genre ‣ Adventure (4)](./Games/By%20Genre/Adventure/README.md)┃ [Games ‣ By Genre ‣ Puzzle (2)](./Games/By%20Genre/Puzzle/README.md)┃ [Games ‣ By License ‣ Freeware (15)](./Games/By%20License/Freeware/README.md)┃ [Games ‣ By Platform ‣ DOS (15)](./Games/By%20Platform/DOS/README.md)
+
+#### 【15 Programs】
+🔎 ┃ [Alien Carnage](./All%20Programs/Games/Alien%20Carnage/README.md) ┃ [Beneath a Steel Sky](./All%20Programs/Games/Beneath%20a%20Steel%20Sky/README.md) ┃ [Bio Menace](./All%20Programs/Games/Bio%20Menace/README.md) ┃ [Blackthorne](./All%20Programs/Games/Blackthorne/README.md) ┃ [Electroman](./All%20Programs/Games/Electroman/README.md) ┃ [Flight of the Amazon Queen](./All%20Programs/Games/Flight%20of%20the%20Amazon%20Queen/README.md) ┃ [God of Thunder](./All%20Programs/Games/God%20of%20Thunder/README.md) ┃ [Jetpack](./All%20Programs/Games/Jetpack/README.md) ┃ [Lure of the Temptress](./All%20Programs/Games/Lure%20of%20the%20Temptress/README.md) ┃ [One Must Fall: 2097](./All%20Programs/Games/One%20Must%20Fall%202097/README.md) ┃ [Stargunner](./All%20Programs/Games/Stargunner/README.md) ┃ [Supaplex](./All%20Programs/Games/Supaplex/README.md) ┃ [Teen Agent](./All%20Programs/Games/Teen%20Agent/README.md) ┃ [The Lost Vikings](./All%20Programs/Games/The%20Lost%20Vikings/README.md) ┃ [Xargon](./All%20Programs/Games/Xargon/README.md) 
+
+![](Montage.png "Simple DOSBox Client")
 

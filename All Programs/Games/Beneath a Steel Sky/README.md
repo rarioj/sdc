@@ -9,7 +9,7 @@
 > ❝ The game was made available as freeware – and with the source code released – for PC platforms in 2003. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1994** ┃ Genre: **Adventure** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania** ┃ Media: **CD-ROM** 
+📌 ┃ **Year** ‣ 1994 ┃ **Genre** ‣ Adventure ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ 3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania ┃ **Media** ‣ CD-ROM 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.7a
+# script-version: 1.0.23.7b
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -11,6 +11,7 @@
 # hypertext-file: README.html
 #
 ###### Library properties (overridable in library configuration file)
+## library-name: Library Name
 ## library-source: <url>
 ## library-version: x.y.z
 # backup-directory: .backup
@@ -420,7 +421,7 @@
   sdc__callback__markdown_divider() {
     if [ -n "${1}" ]; then
       if [ -n "${2}" ]; then
-        printf '%s' "┃ ${1}: **${2}** "
+        printf '%s' "┃ **${1}** ‣ ${2} "
       else
         printf '%s' "┃ **${1}** "
       fi
@@ -616,31 +617,30 @@
         printf '%s\n\n' '```'
       } >>"${sdc__markdown__file}"
     fi
+    if [ "${sdc__script__file}" = "Setup" ] && [ -n "${sdc__category__list}" ] && [ -n "${sdc__program__list}" ]; then
+      __catlabel="Category"
+      __applabel="Program"
+      printf '%s\n\n' "&nbsp;" >>"${sdc__markdown__file}"
+      printf '%s\n\n' "---" >>"${sdc__markdown__file}"
+      if [ -n "${sdc__library__name}" ]; then
+        printf '%s\n\n' "### ▶ **###library-name###**" >>"${sdc__markdown__file}"
+      fi
+      if [ -n "${sdc__category__count}" ] && [ "${sdc__category__count}" -gt 1 ]; then
+        __catlabel="${sdc__category__count} Categories"
+        printf '%s\n' "#### 【${__catlabel}】" >>"${sdc__markdown__file}"
+        printf '%s\n\n' "🗂️ ${sdc__category__list}" >>"${sdc__markdown__file}"
+      fi
+      if [ -n "${sdc__program__count}" ] && [ "${sdc__program__count}" -gt 1 ]; then
+        __applabel="${sdc__program__count} Programs"
+        printf '%s\n' "#### 【${__applabel}】" >>"${sdc__markdown__file}"
+        printf '%s\n\n' "🔎 ${sdc__program__list}" >>"${sdc__markdown__file}"
+      fi
+    fi
     __mfile="$(sdc__parse__value montage-file print "${__config}" "${__override}")"
     if [ -f "${__mfile}" ]; then
       printf '%s\n\n' "![](${__mfile} \"${sdc__application__name}\")" >>"${sdc__markdown__file}"
     fi
-    if [ "${sdc__script__file}" = "Setup" ] && [ -n "${sdc__category__list}" ] && [ -n "${sdc__program__list}" ]; then
-      __catlabel="Category"
-      __applabel="Program"
-      if [ -n "${sdc__category__count}" ] && [ "${sdc__category__count}" -gt 1 ]; then
-        __catlabel="${sdc__category__count} Categories"
-      fi
-      if [ -n "${sdc__program__count}" ] && [ "${sdc__program__count}" -gt 1 ]; then
-        __applabel="${sdc__program__count} Programs"
-      fi
-      {
-        printf '%s\n>\n' "> <table><tr><td width=\"50%\">"
-        printf '%s\n' "> ### 🗄️ ${__catlabel}"
-        printf '%b>\n' "${sdc__category__list}"
-        printf '%s\n>\n' "> </td><td width=\"50%\">"
-        printf '%s\n' "> ### 📓 ${__applabel}"
-        printf '%s\n' "> 🔎 ${sdc__program__list}"
-        printf '%s\n\n' "> </td></tr></table>"
-        printf '%s\n\n' "&nbsp;"
-      } >>"${sdc__markdown__file}"
-    fi
-    unset __config __override __tfile __tsource __twidth __alias __info __tag __dosbox __site __include __text __code __mfile __catlabel __applabel
+    unset __config __override __tfile __tsource __twidth __alias __info __tag __dosbox __site __include __text __code __catlabel __applabel __mfile
   }
   sdc__utility__category_document() {
     if [ -n "${1}" ] && [ -f "${1}" ]; then
@@ -703,7 +703,7 @@
         if [ -z "${sdc__category__count}" ]; then
           sdc__category__count=0
         fi
-        sdc__category__list="${sdc__category__list}> - 🗂️ [$(echo "${__dirpath} (${__count})" | sed 's/\.\///;s/\// ‣ /g')]($(sdc__utility__urlencode_string "${1}"))\n"
+        sdc__category__list="${sdc__category__list}┃ [$(echo "${__dirpath} (${__count})" | sed 's/\.\///;s/\// ‣ /g')]($(sdc__utility__urlencode_string "${1}"))"
         sdc__category__count=$((sdc__category__count + 1))
       fi
     fi
@@ -819,6 +819,10 @@
     {
       if [ -f "${sdc__library__file}" ]; then
         sdc__library__version="$(sdc__parse__value library-version print "${sdc__library__file}")"
+        sdc__library__name="$(sdc__parse__value library-name print "${sdc__library__file}")"
+        if [ -z "${sdc__library__name}" ]; then
+          sdc__library__name="${sdc__application__name}"
+        fi
         __source="$(sdc__parse__value library-source print "${sdc__library__file}")"
         __cversion="${sdc__library__version}"
         if [ -n "${__source}" ] && [ -n "${__cversion}" ]; then
@@ -931,6 +935,9 @@
       sed -i".sdc" "s/###script-version###/${sdc__script__version}/g" "${sdc__markdown__file}"
       if [ -n "${sdc__library__version}" ]; then
         sed -i".sdc" "s/###library-version###/${sdc__library__version}/g" "${sdc__markdown__file}"
+      fi
+      if [ -n "${sdc__library__name}" ]; then
+        sed -i".sdc" "s/###library-name###/${sdc__library__name}/g" "${sdc__markdown__file}"
       fi
       rm -f -- *.sdc
       sdc__utility__convert_html
@@ -1180,6 +1187,7 @@
 # file: Template-Library.txt = # vim: filetype=ini:syntax=dosini
 # file: Template-Library.txt = #
 # file: Template-Library.txt = ###### Library properties
+# file: Template-Library.txt = ## library-name: Library Name
 # file: Template-Library.txt = ## library-source: <url>
 # file: Template-Library.txt = ## library-version: x.y.z
 # file: Template-Library.txt = # backup-directory: .backup
@@ -1213,25 +1221,7 @@
 # file: Template-Library.txt = # text: ### Library Sub-heading
 # file: Template-Library.txt = # text: More library information (markdown format).
 # file: Template-Library.txt = #
-# file: Template-Library.txt = # file: LICENSE = Content of LICENSE line #1
-# file: Template-Library.txt = # file: LICENSE = Content of LICENSE line #2
-# file: Template-Library.txt = # file: LICENSE = Content of LICENSE line #3
-# file: Template-Library.txt = #
-# file: Template-Library.txt = # file: Template-Library.txt = Content of Template-Library.txt line #1
-# file: Template-Library.txt = # file: Template-Library.txt = Content of Template-Library.txt line #2
-# file: Template-Library.txt = # file: Template-Library.txt = Content of Template-Library.txt line #3
-# file: Template-Library.txt = #
-# file: Template-Library.txt = # file: Template-Program.txt = Content of Template-Program.txt line #1
-# file: Template-Library.txt = # file: Template-Program.txt = Content of Template-Program.txt line #2
-# file: Template-Library.txt = # file: Template-Program.txt = Content of Template-Program.txt line #3
-# file: Template-Library.txt = #
-# file: Template-Library.txt = # file: Games/Example/Program.txt = Content of Program.txt line #1
-# file: Template-Library.txt = # file: Games/Example/Program.txt = Content of Program.txt line #2
-# file: Template-Library.txt = # file: Games/Example/Program.txt = Content of Program.txt line #3
-# file: Template-Library.txt = #
-# file: Template-Library.txt = # link: <destination1> = <source1>
-# file: Template-Library.txt = # link: <destination2> = <source2>
-# file: Template-Library.txt = # link: <destination3> = <source3>
+# file: Template-Library.txt = # <<< program configuration files >>>
 #
 # file: Template-Program.txt = # vim: filetype=ini:syntax=dosini
 # file: Template-Program.txt = #

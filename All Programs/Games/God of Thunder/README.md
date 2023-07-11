@@ -7,7 +7,7 @@
 > ❝ On March 27, 2020, Ron Davis released the source code, music and sound effects as public-domain software on SourceForge. ❞ — *Wikipedia*
 >
 
-📌 ┃ Year: **1993** ┃ Genre: **Action** ┃ Platform: **DOS** ┃ License: **Freeware** ┃ Category: **Top-down • Puzzle elements • Fantasy** ┃ Media: **Compressed Package** 
+📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ Top-down • Puzzle elements • Fantasy ┃ **Media** ‣ Compressed Package 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

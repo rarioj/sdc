@@ -1,7 +1,8 @@
 # vim: filetype=ini:syntax=dosini
 #
+# library-name: SDC Freeware Examples
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.7a
+# library-version: 23.7b
 #
 # tag: Script Version = ###script-version###
 # tag: Type = Shell Script
@@ -9,7 +10,7 @@
 # tag: Interface = CLI
 # tag: License = MIT
 # tag: Library Version = ###library-version###
-# tag: Library Name = Example Freeware
+# tag: Library Name = ###library-name###
 # site: Cover Arts = [MobyGames](https://www.mobygames.com/)
 # site: Program Assets = [Archive.org](https://archive.org/)
 #
@@ -206,9 +207,7 @@
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Bio_Menace)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/236/bio-menace/)
-# file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 1: Dr. Mangle's Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+1%3A+Dr.+Mangle%27s+Lab&gid=1345)
-# file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 2: The Hidden Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+2%3A+The+Hidden+Lab&gid=2964)
-# file: All Programs/Games/Bio Menace/Program.txt = # site: [AbandonwareDOS - Bio Menace Episode 3: Master Cain](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+3%3A+Master+Cain&gid=2965)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: AbandonwareDOS = [Bio Menace Episode 1: Dr. Mangle's Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+1%3A+Dr.+Mangle%27s+Lab&gid=1345) • [Bio Menace Episode 2: The Hidden Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+2%3A+The+Hidden+Lab&gid=2964) • [Bio Menace Episode 3: Master Cain](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+3%3A+Master+Cain&gid=2965)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/bio-menace-22a)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/bio_menace)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/bio-menace_42/)
@@ -241,7 +240,7 @@
 # file: All Programs/Games/Bio Menace/Program.txt = CLS
 # file: All Programs/Games/Bio Menace/Program.txt = ECHO Bio Menace
 # file: All Programs/Games/Bio Menace/Program.txt = ECHO.
-# file: All Programs/Games/Bio Menace/Program.txt = ECHO 1. Play Bio Menace Episode 1: Dr. Mangle''s Lab
+# file: All Programs/Games/Bio Menace/Program.txt = ECHO 1. Play Bio Menace Episode 1: Dr. Mangle's Lab
 # file: All Programs/Games/Bio Menace/Program.txt = ECHO 2. Play Bio Menace Episode 2: The Hidden Lab
 # file: All Programs/Games/Bio Menace/Program.txt = ECHO 3. Play Bio Menace Episode 3: Master Cain
 # file: All Programs/Games/Bio Menace/Program.txt = ECHO 4. Exit Program
