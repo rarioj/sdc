@@ -7,7 +7,7 @@
 > ❝ A lightweight DOSBox client in one shell script ❞
 >
 
-📌 ┃ **Script Version** ‣ 1.0.23.7b ┃ **Type** ‣ Shell Script ┃ **Shell** ‣ POSIX Compliant ┃ **Interface** ‣ CLI ┃ **License** ‣ MIT ┃ **Library Version** ‣ 23.8a ┃ **Library Name** ‣ SDC Freeware Examples 
+📌 ┃ **Script Version** ‣ 1.0.23.8a ┃ **Type** ‣ Shell Script ┃ **Shell** ‣ POSIX Compliant ┃ **Interface** ‣ CLI ┃ **License** ‣ MIT ┃ **Library Version** ‣ 23.8a ┃ **Library Name** ‣ SDC Freeware Examples 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 

@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.7b
+# script-version: 1.0.23.8a
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -337,10 +337,10 @@
       mkdir "Assets"
     fi
     if [ -n "${1}" ] && [ -n "${2}" ] && [ ! -f "Assets/${1}" ]; then
-      if [ -z "${sdc__download__match}" ]; then
-        __download="y"
-      elif [ -n "${sdc__download__match}" ] && [ "${sdc__download__match}" = "Assets/${1}" ]; then
-        __download="y"
+      if [ -n "${sdc__download__match}" ]; then
+        if [ "${sdc__download__match}" = "Assets/${1}" ] || [ "${sdc__download__match}" = "all" ]; then
+          __download="y"
+        fi
       fi
       if [ "${__download}" = "y" ]; then
         sdc__message__item "Fetching ${2} ‣‣‣ Assets/${1}"
@@ -355,10 +355,10 @@
   sdc__callback__verify_file() {
     __verify="n"
     if [ -n "${1}" ] && [ -n "${2}" ]; then
-      if [ -z "${sdc__download__match}" ]; then
-        __verify="y"
-      elif [ -n "${sdc__download__match}" ] && [ "${sdc__download__match}" = "Assets/${1}" ]; then
-        __verify="y"
+      if [ -n "${sdc__download__match}" ]; then
+        if [ "${sdc__download__match}" = "Assets/${1}" ] || [ "${sdc__download__match}" = "all" ]; then
+          __verify="y"
+        fi
       fi
       if [ "${__verify}" = "y" ]; then
         if [ -f "Assets/${1}" ]; then
@@ -505,8 +505,11 @@
       __curpath="$(pwd)"
       __dirpath="$(dirname "${1}")"
       __verify="$(sdc__parse__value asset-verify print "Setup" "${1}")"
-      if [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ]; then
+      sdc__download__match=""
+      if [ "${sdc__download__asset}" = "cover" ] && [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ]; then
         sdc__download__match="$(sdc__parse__value thumbnail-source print "Setup" "${1}")"
+      elif [ "${sdc__download__asset}" = "all" ]; then
+        sdc__download__match="all"
       fi
       sdc__parse__value name application "${1}"
       sdc__application__slug="${sdc__application__name}"
@@ -789,6 +792,7 @@
 # section: Script command functions
 {
   sdc__script__Setup() {
+    sdc__download__asset="${SDC_DOWNLOAD:-cover}"
     sdc__library__file="$(sdc__parse__value library-file print "${sdc__script__file}")"
     sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
     sdc__markdown__file="$(sdc__parse__value markdown-file print "${sdc__script__file}")"
@@ -946,6 +950,7 @@
     unset __source __cversion __sversion __vcompare __bakpath __export __index __tmpfile __mfile __mgrid __mwidth
   }
   sdc__script__Launch() {
+    sdc__download__asset="all"
     sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
     sdc__markdown__file="$(sdc__parse__value markdown-file print "${sdc__script__file}")"
     sdc__hypertext__file="$(sdc__parse__value hypertext-file print "${sdc__script__file}")"
