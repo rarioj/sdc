@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.8a
+# script-version: 1.0.23.8b
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -951,6 +951,7 @@
   }
   sdc__script__Launch() {
     sdc__download__asset="all"
+    sdc__download__match="${sdc__download__asset}"
     sdc__program__file="$(sdc__parse__value program-file print "${sdc__script__file}")"
     sdc__markdown__file="$(sdc__parse__value markdown-file print "${sdc__script__file}")"
     sdc__hypertext__file="$(sdc__parse__value hypertext-file print "${sdc__script__file}")"
