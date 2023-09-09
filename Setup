@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.8b
+# script-version: 1.0.23.9a
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -102,6 +102,7 @@
     "${sdc__dosbox__command}" -noautoexec -conf ./dosbox.conf >>./dosbox.logs 2>&1
   }
   sdc__dosbox__config() {
+    touch "./System/variant/dosbox.env"
     if [ -f "${sdc__program__file}" ]; then
       "${sdc__dosbox__command}" -noautoexec -exit -c "config -writeconf System/dosbox.conf" -c "exit" -conf "${sdc__program__file}" >>./System/dosbox.logs 2>&1
     else
@@ -122,6 +123,7 @@
     sdc__dosbox__debug
   }
   sdc__dosbox_staging__config() {
+    touch "./System/variant/staging.env"
     if [ -f "${sdc__program__file}" ]; then
       "${sdc__dosbox__command}" -noautoexec -exit -c "config -wcp System/dosbox.conf" -conf "${sdc__program__file}" >>./System/dosbox.logs 2>&1
     else
@@ -142,6 +144,7 @@
     "${sdc__dosbox__command}" -noautoexec -set title="[ ${sdc__application__name} ]" -conf ./dosbox.conf >>./dosbox.logs 2>&1
   }
   sdc__dosbox_x__config() {
+    touch "./System/variant/x.env"
     if [ -f "${sdc__program__file}" ]; then
       "${sdc__dosbox__command}" -noautoexec -silent -exit -nolog -c "config -all -wcp ./System/dosbox.conf" -conf "${sdc__program__file}" >>./System/dosbox.logs 2>&1
     else
@@ -975,6 +978,7 @@
     if [ ! -d "System" ]; then
       mkdir -p "System/drive"
       mkdir -p "System/drivez"
+      mkdir -p "System/variant"
       if [ -d "Assets" ] && [ "$(ls -A Assets)" ]; then
         (
           cd System || sdc__message__error "Inaccessible directory: System <sdc__script__Launch>"
