@@ -2,7 +2,7 @@
 #
 # library-name: SDC Freeware Examples
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.8a
+# library-version: 23.9a
 #
 # tag: Script Version = ###script-version###
 # tag: Type = Shell Script
@@ -139,7 +139,7 @@
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = #
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: Beneath a Steel Sky
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # name: Beyond The Abyss
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Robert Foster is an innocent outsider stranded in a vast city where oppressed civilians live and work in soaring tower blocks. All while the corrupt, covetous and wealthy lie underground, shielded from all pollution. Alone, save for a robot circuit board; Foster must fight for survival and discover the sinister truth behind this abduction.
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Robert Foster is an innocent outsider stranded in a vast city where oppressed civilians live and work in soaring tower blocks. All while the corrupt, covetous and wealthy lie underground, shielded from all pollution. Alone with a robot circuit board, Foster must fight for survival and discover the sinister truth behind this abduction.
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # info: Wikipedia = The game was made available as freeware – and with the source code released – for PC platforms in 2003.
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Year = 1994
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Genre = Adventure
@@ -197,7 +197,7 @@
 # file: All Programs/Games/Bio Menace/Program.txt = #
 # file: All Programs/Games/Bio Menace/Program.txt = # name: Bio Menace
 # file: All Programs/Games/Bio Menace/Program.txt = # name: Bio Hazard
-# file: All Programs/Games/Bio Menace/Program.txt = # info: You are Snake Logan, a top CIA operative who likes to do things his way. Metro City has fallen under the attack of hideous mutants. Your mission is to fly recon over the city and report back. While circling over the city, you're shot down by hostile forces and forced to crash land on the streets of Metro. Grabbing any supplies you can find, you are out to discover the source of these mutants and especially the guy who shot you down!
+# file: All Programs/Games/Bio Menace/Program.txt = # info: You are Snake Logan, a top CIA operative who likes to do things his way. Metro City has fallen under the attack of hideous mutants. Your mission is to fly recon over the city and report back. While circling over the city, you're shot down by hostile forces and forced to crash land on the streets of Metro. Grabbing any supplies you can find, you are out to discover the source of these mutants, especially the guy who shot you down!
 # file: All Programs/Games/Bio Menace/Program.txt = # info: Wikipedia = Apogee released the game as freeware on December 23, 2005 as a 'Christmas present', and the full game can be downloaded from the Apogee website.
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Year = 1993
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Genre = Action
@@ -351,7 +351,7 @@
 # file: All Programs/Games/Electroman/Program.txt = #
 # file: All Programs/Games/Electroman/Program.txt = # name: Electroman
 # file: All Programs/Games/Electroman/Program.txt = # name: Electro Body = German/Polish
-# file: All Programs/Games/Electroman/Program.txt = # info: After drifting off to sleep late one night at the planetary base, Jacek woke to discover that his unit had lost all its power. Climbing the darkened stairway, he found that alien beings had invaded the HQ and killed all humans - including his wife and children! Only his friend Placek remained, and together they escaped to another planet. Now it is time for revenge. Spending all his insurance money, Jacek underwent many costly operations giving him superhuman strength and senses. He armed himself with weapons and set out for the conquered station. Jacek is unaware that the aliens have rebuilt the station with numerous security systems built to keep him out. Can you help our hero?
+# file: All Programs/Games/Electroman/Program.txt = # info: After drifting off to sleep late one night at the planetary base, Jacek woke to discover that his unit had lost all its power. Climbing the darkened stairway, he found that alien beings had invaded the HQ and killed all humans - including his wife and children! Only his friend Placek remained, and together they escaped to another planet. Now, it is time for revenge. Spending all his insurance money, Jacek underwent many costly operations, giving him superhuman strength and senses. He armed himself with weapons and set out for the conquered station. Jacek is unaware that the aliens have rebuilt the station with numerous security systems built to keep him out. Can you help our hero?
 # file: All Programs/Games/Electroman/Program.txt = # info: Wikipedia = Though initially offered under a shareware license, the game was released as freeware by the developer on June 25, 2006, under the Creative Commons Attribution-ShareAlike 2.5 license.
 # file: All Programs/Games/Electroman/Program.txt = # tag: Year = 1992
 # file: All Programs/Games/Electroman/Program.txt = # tag: Genre = Action
@@ -406,7 +406,7 @@
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = #
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # name: Flight of the Amazon Queen
-# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # info: Joe King, a pilot for hire and owner of the Amazon Queen aeroplane, arrives at a hotel in Rio de Janeiro to transport his next customer, famous film actress Faye Russel only to be ambushed by his Dutch rival Anderson. When Joe pilots the Amazon Queen towards the location of Faye's shoot, a storm causes him to crashland in the Amazon jungle. Joe begins searching the jungle, encountering an entire tribe of Amazon women who capture him and take in Faye.
+# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # info: Joe King, a pilot for hire and owner of the Amazon Queen aeroplane, arrives at a hotel in Rio de Janeiro to transport his next customer, famous film actress Faye Russel, only to be ambushed by his Dutch rival Anderson. When Joe pilots the Amazon Queen towards the location of Faye's shoot, a storm causes him to crashland in the Amazon jungle. Joe begins searching the jungle, encountering an entire tribe of Amazon women who capture him and take in Faye.
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # info: Wikipedia = In March 2004, the game was released as freeware, and support for it was added to ScummVM, allowing it to be played on Linux, Mac OS X, Windows, and many other operating systems and consoles.
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Year = 1995
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Genre = Adventure
@@ -644,7 +644,7 @@
 # file: All Programs/Games/One Must Fall 2097/Program.txt = #
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: One Must Fall: 2097
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # name: OMF:2097
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Governments are puppets to big corporations and the largest corporation being “World Aeronautics and Robotics” (WAR). If you want to get ahead in the competitive corporate corridors of WAR, you need to master the use of human-assisted robots (HARs). These gigantic robots' purposes include defence and controlling far-flung planetary outposts. The next outpost up for colonization is Jupiter's moon Ganymede. The highly-paid job as pilot of the WAR representative will compete fiercely, and you must qualify for the position by proving your worth in the arena. It will be the grandest one-on-one combat since the Roman Era.
+# file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Governments are puppets to big corporations. One of the largest corporations is "World Aeronautics and Robotics" (WAR). If you want to get ahead in the competitive corporate corridors of WAR, you need to master the use of human-assisted robots (HARs). These gigantic robots' purposes include defence and controlling far-flung planetary outposts. The next outpost up for colonization is Jupiter's moon Ganymede. The highly-paid job as pilot of the WAR representative will compete fiercely, and you must qualify for the position by proving your worth in the arena. It will be the grandest one-on-one combat since the Roman Era.
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # info: Wikipedia = In February 1999, the game was declared freeware by the developers.
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Year = 1994
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Genre = Action
@@ -701,7 +701,7 @@
 # file: All Programs/Games/Stargunner/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Stargunner/Program.txt = #
 # file: All Programs/Games/Stargunner/Program.txt = # name: Stargunner
-# file: All Programs/Games/Stargunner/Program.txt = # info: Deep within the Andromeda galaxy, the people of Zile grow restless and greedy. The Zilions secretly prepare for a massive strike against the nearby planet Ytima. Fearing such an attack, the Ytimians train an elite squad of "Stargunners." Their mission: To strike and cripple the Zilions' three strongholds, where the Zilion war fleets await the launch order. Good will triumph if the Stargunners can surprise the Zilions and destroy most of their fleet.
+# file: All Programs/Games/Stargunner/Program.txt = # info: Deep within the Andromeda galaxy, the people of Zile grow restless and greedy. The Zilions secretly prepare for a massive strike against the nearby planet Ytima. Fearing such an attack, the Ytimians train an elite squad of "Stargunners." Their mission: To strike and wipe out the Zilions' three strongholds, where the Zilion war fleets await the launch order. Good will triumph if the Stargunners can surprise the Zilions and destroy most of their fleet.
 # file: All Programs/Games/Stargunner/Program.txt = # info: Wikipedia = On June 22, 2005, Stargunner was released as freeware.
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Year = 1996
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Genre = Action

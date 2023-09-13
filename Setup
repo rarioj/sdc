@@ -3,12 +3,12 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.9a
+# script-version: 1.0.23.9b
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
 # markdown-file: README.md
-# hypertext-file: README.html
+# hypertext-file: index.html
 #
 ###### Library properties (overridable in library configuration file)
 ## library-name: Library Name
@@ -1167,7 +1167,7 @@
 # file: .gitignore = Uninstall
 # file: .gitignore = Snapshot*.tgz
 # file: .gitignore = Template-*.txt
-# file: .gitignore = README.html
+# file: .gitignore = index.html
 #
 # file: LICENSE = The MIT License (MIT)
 # file: LICENSE
