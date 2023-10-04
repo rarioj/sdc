@@ -9,11 +9,11 @@
 > ❝ In May 2007, John Passfield and 3D Realms released Alien Carnage as freeware. ❞ — *Wikipedia*
 >
 
-📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ Side view • Platform • Shooter • Horror ┃ **Media** ‣ CD-ROM 
+📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ CD-ROM 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Alien_Carnage)** ┃ **[MobyGames](https://www.mobygames.com/game/522/alien-carnage/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Halloween+Harry&gid=2378)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/alien-carnage-1pe)** ┃ **[3DRealms 🆓](https://3drealms.com/catalog/alien-carnage_48/)** 
+📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Alien_Carnage)** ┃ **[MobyGames](https://www.mobygames.com/game/522/alien-carnage/)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/alien-carnage-1pe)** ┃ **[Zoom 🆓](https://www.zoom-platform.com/product/alien-carnage-halloween-harry)** 
 
 ## Installation Notes
 - Press `S` to select Sound Blaster.
@@ -22,4 +22,6 @@
 - Press `ESC` or `ENTER` to complete the configuration.
 
 ![](Montage.png "Alien Carnage")
+
+---
 

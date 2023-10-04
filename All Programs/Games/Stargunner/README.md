@@ -7,11 +7,13 @@
 > ❝ On June 22, 2005, Stargunner was released as freeware. ❞ — *Wikipedia*
 >
 
-📌 ┃ **Year** ‣ 1996 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ Side view • Shooter • Sci-fi ┃ **Media** ‣ Compressed Package 
+📌 ┃ **Year** ‣ 1996 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ Compressed Package 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Stargunner)** ┃ **[MobyGames](https://www.mobygames.com/game/922/stargunner/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Stargunner&gid=2492)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/stargunner-c8g)** ┃ **[3DRealms 🆓](https://3drealms.com/catalog/stargunner_45/)** ┃ **[GOG 🆓](https://www.gog.com/en/game/stargunner)** ┃ **[Steam 🆓](https://store.steampowered.com/app/358390/Stargunner/)** 
+📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Stargunner)** ┃ **[MobyGames](https://www.mobygames.com/game/922/stargunner/)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/stargunner-c8g)** ┃ **[GOG 🆓](https://www.gog.com/en/game/stargunner)** ┃ **[Steam 🆓](https://store.steampowered.com/app/358390/Stargunner/)** 
 
 ![](Montage.png "Stargunner")
+
+---
 

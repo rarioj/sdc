@@ -9,11 +9,13 @@
 > ❝ Allen Pilgrim declared the registered version freeware and released the source code on August 4, 2008. ❞ — *Wikipedia*
 >
 
-📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ Side view • Arcade • Platform • Fantasy ┃ **Media** ‣ Compressed Package 
+📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ Compressed Package 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Xargon)** ┃ **[MobyGames](https://www.mobygames.com/game/1057/xargon/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Xargon&gid=2905)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/xargon-21c)** 
+📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Xargon)** ┃ **[MobyGames](https://www.mobygames.com/game/1057/xargon/)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/xargon-21c)** 
 
 ![](Montage.png "Xargon")
+
+---
 

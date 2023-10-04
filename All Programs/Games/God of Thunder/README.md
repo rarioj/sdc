@@ -7,11 +7,13 @@
 > ❝ On March 27, 2020, Ron Davis released the source code, music and sound effects as public-domain software on SourceForge. ❞ — *Wikipedia*
 >
 
-📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ Top-down • Puzzle elements • Fantasy ┃ **Media** ‣ Compressed Package 
+📌 ┃ **Year** ‣ 1993 ┃ **Genre** ‣ Action ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ Compressed Package 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/God_of_Thunder_(video_game))** ┃ **[MobyGames](https://www.mobygames.com/game/1019/god-of-thunder/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=God+of+Thunder&gid=1277)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/god-of-thunder-1um)** ┃ **[Adept Software](https://www.adeptsoftware.com/got/)** 
+📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/God_of_Thunder_(video_game))** ┃ **[MobyGames](https://www.mobygames.com/game/1019/god-of-thunder/)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/god-of-thunder-1um)** ┃ **[Adept Software](https://www.adeptsoftware.com/got/)** 
 
 ![](Montage.png "God of Thunder")
+
+---
 

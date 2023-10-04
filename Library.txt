@@ -2,7 +2,7 @@
 #
 # library-name: SDC Freeware Examples
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.9a
+# library-version: 23.10a
 #
 # tag: Script Version = ###script-version###
 # tag: Type = Shell Script
@@ -85,13 +85,11 @@
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Alien Carnage/Program.txt = # tag: Category = Side view • Platform • Shooter • Horror
 # file: All Programs/Games/Alien Carnage/Program.txt = # tag: Media = CD-ROM
 # file: All Programs/Games/Alien Carnage/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Alien_Carnage)
 # file: All Programs/Games/Alien Carnage/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/522/alien-carnage/)
-# file: All Programs/Games/Alien Carnage/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Halloween+Harry&gid=2378)
 # file: All Programs/Games/Alien Carnage/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/alien-carnage-1pe)
-# file: All Programs/Games/Alien Carnage/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/alien-carnage_48/)
+# file: All Programs/Games/Alien Carnage/Program.txt = # site: [Zoom 🆓](https://www.zoom-platform.com/product/alien-carnage-halloween-harry)
 # file: All Programs/Games/Alien Carnage/Program.txt = #
 # file: All Programs/Games/Alien Carnage/Program.txt = # text: ## Installation Notes
 # file: All Programs/Games/Alien Carnage/Program.txt = # text: - Press `S` to select Sound Blaster.
@@ -145,13 +143,11 @@
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Genre = Adventure
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements • Cyberpunk • Oceania
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # tag: Media = CD-ROM
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Beneath_a_Steel_Sky)
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/386/beneath-a-steel-sky/)
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Beneath+a+Steel+Sky&gid=1740)
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/beneath-a-steel-sky-21i)
-# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/beneath_a_steel_sky)
+# file: All Programs/Games/Beneath a Steel Sky/Program.txt = # site: [GOG 🆓](https://www.gamesdatabase.org/game/microsoft-dos/beneath-a-steel-sky)
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = #
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text: ## Installation Notes
 # file: All Programs/Games/Beneath a Steel Sky/Program.txt = # text: - Use the default **drive** and **directory** for the installation location.
@@ -203,14 +199,12 @@
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Bio Menace/Program.txt = # tag: Category = Side view • Platform
 # file: All Programs/Games/Bio Menace/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Bio_Menace)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/236/bio-menace/)
-# file: All Programs/Games/Bio Menace/Program.txt = # site: AbandonwareDOS = [Bio Menace Episode 1: Dr. Mangle's Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+1%3A+Dr.+Mangle%27s+Lab&gid=1345) • [Bio Menace Episode 2: The Hidden Lab](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+2%3A+The+Hidden+Lab&gid=2964) • [Bio Menace Episode 3: Master Cain](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Bio+Menace+Episode+3%3A+Master+Cain&gid=2965)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/bio-menace-22a)
 # file: All Programs/Games/Bio Menace/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/bio_menace)
-# file: All Programs/Games/Bio Menace/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/bio-menace_42/)
+# file: All Programs/Games/Bio Menace/Program.txt = # site: [Zoom 🆓](https://www.zoom-platform.com/product/bio-menace)
 # file: All Programs/Games/Bio Menace/Program.txt
 # file: All Programs/Games/Bio Menace/Program.txt = [autoexec]
 # file: All Programs/Games/Bio Menace/Program.txt = @ECHO OFF
@@ -282,6 +276,8 @@
 # file: All Programs/Games/Bio Menace/Program.txt = # check: coverart.jpg = fd0ecf61455194c78f16b3c4c53ea742425019b87fe446a7a2cc80dca9201365
 # file: All Programs/Games/Bio Menace/Program.txt = # asset: game.zip = https://archive.org/download/bmfreew/bmfreew.zip
 # file: All Programs/Games/Bio Menace/Program.txt = # check: game.zip = 09a889331ef0bb259dd9b60ce58033fed8d2eef94d1ff21474c6a53c2fe86d6d
+# file: All Programs/Games/Bio Menace/Program.txt = # asset: secret.pdf = https://www.gamesdatabase.org/Media/SYSTEM/Microsoft_DOS//Manual/formated/Bio_Menace.pdf
+# file: All Programs/Games/Bio Menace/Program.txt = # check: secret.pdf = 69e5295506d5460a8ceaff5b3acd02356241c8e532c05b50731428d6b97a9346
 # file: All Programs/Games/Bio Menace/Program.txt = # asset: unz542x3.exe = https://archive.org/download/Archivers-DOS/unz542x3.exe
 # file: All Programs/Games/Bio Menace/Program.txt = # check: unz542x3.exe = 78007137ccf46a30a5bb9015457a5d860319f0124eb4c5e470bca4d90e75edaa
 #
@@ -296,11 +292,9 @@
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Blackthorne/Program.txt = # tag: Category = Side view • Platform • Shooter • Fantasy
 # file: All Programs/Games/Blackthorne/Program.txt = # tag: Media = CD-ROM
 # file: All Programs/Games/Blackthorne/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Blackthorne)
 # file: All Programs/Games/Blackthorne/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1445/blackthorne/)
-# file: All Programs/Games/Blackthorne/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Blackthorne&gid=1645)
 # file: All Programs/Games/Blackthorne/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/blackthorne-2p8)
 # file: All Programs/Games/Blackthorne/Program.txt = #
 # file: All Programs/Games/Blackthorne/Program.txt = # text: ## Installation Notes
@@ -339,8 +333,8 @@
 # file: All Programs/Games/Blackthorne/Program.txt = # check: coverart.jpg = 483e966c5396680bd6210935f3006e2da313167fc1e831dc03b8db084299fbf7
 # file: All Programs/Games/Blackthorne/Program.txt = # asset: cdrom.bin = https://archive.org/download/blackthorneusarerelease/Blackthorne%20%28USA%29%20%28Rerelease%29.zip/Blackthorne%20%28USA%29%20%28Rerelease%29.bin
 # file: All Programs/Games/Blackthorne/Program.txt = # check: cdrom.bin = f6174c8d6af6f0125070d19d881a585f7edf8231ca86fa1b226fc257ea691d0b
-# file: All Programs/Games/Blackthorne/Program.txt = # asset: manual.pdf = https://www.myabandonware.com/download/3ke-blackthorne
-# file: All Programs/Games/Blackthorne/Program.txt = # check: manual.pdf = b6e59c1a6564522f431cc60dd9f56aca9b7cb820d2ef364e7e300e608be97f95
+# file: All Programs/Games/Blackthorne/Program.txt = # asset: manual.pdf = https://www.gamesdatabase.org/Media/SYSTEM/Microsoft_DOS//Manual/formated/Blackthorne.pdf
+# file: All Programs/Games/Blackthorne/Program.txt = # check: manual.pdf = 85653a066deee321d255ec6a278aa6bcd490a52752d38b5a494f536537cd6c32
 # file: All Programs/Games/Blackthorne/Program.txt = #
 # file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue = FILE "cdrom.bin" BINARY
 # file: All Programs/Games/Blackthorne/Program.txt = # file: Assets/cdrom.cue =   TRACK 01 MODE1/2352
@@ -350,6 +344,7 @@
 # file: All Programs/Games/Electroman/Program.txt = # vim: filetype=ini:syntax=dosini
 # file: All Programs/Games/Electroman/Program.txt = #
 # file: All Programs/Games/Electroman/Program.txt = # name: Electroman
+# file: All Programs/Games/Electroman/Program.txt = # name: Electro Man
 # file: All Programs/Games/Electroman/Program.txt = # name: Electro Body = German/Polish
 # file: All Programs/Games/Electroman/Program.txt = # info: After drifting off to sleep late one night at the planetary base, Jacek woke to discover that his unit had lost all its power. Climbing the darkened stairway, he found that alien beings had invaded the HQ and killed all humans - including his wife and children! Only his friend Placek remained, and together they escaped to another planet. Now, it is time for revenge. Spending all his insurance money, Jacek underwent many costly operations, giving him superhuman strength and senses. He armed himself with weapons and set out for the conquered station. Jacek is unaware that the aliens have rebuilt the station with numerous security systems built to keep him out. Can you help our hero?
 # file: All Programs/Games/Electroman/Program.txt = # info: Wikipedia = Though initially offered under a shareware license, the game was released as freeware by the developer on June 25, 2006, under the Creative Commons Attribution-ShareAlike 2.5 license.
@@ -357,11 +352,9 @@
 # file: All Programs/Games/Electroman/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Electroman/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Electroman/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Electroman/Program.txt = # tag: Category = Side view • Platform • Shooter • Sci-fi
 # file: All Programs/Games/Electroman/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Electroman/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Electro_Man)
 # file: All Programs/Games/Electroman/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/752/electroman/)
-# file: All Programs/Games/Electroman/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Electroman&gid=3021)
 # file: All Programs/Games/Electroman/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/electroman-1ux)
 # file: All Programs/Games/Electroman/Program.txt
 # file: All Programs/Games/Electroman/Program.txt = [autoexec]
@@ -412,11 +405,9 @@
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Genre = Adventure
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # tag: Media = CD-ROM
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Flight_of_the_Amazon_Queen)
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/352/flight-of-the-amazon-queen/)
-# file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Flight+of+the+Amazon+Queen&gid=1780)
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/flight-of-the-amazon-queen-2rn)
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/flight_of_the_amazon_queen)
 # file: All Programs/Games/Flight of the Amazon Queen/Program.txt = #
@@ -465,11 +456,9 @@
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/God of Thunder/Program.txt = # tag: Category = Top-down • Puzzle elements • Fantasy
 # file: All Programs/Games/God of Thunder/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/God_of_Thunder_(video_game))
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1019/god-of-thunder/)
-# file: All Programs/Games/God of Thunder/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=God+of+Thunder&gid=1277)
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/god-of-thunder-1um)
 # file: All Programs/Games/God of Thunder/Program.txt = # site: [Adept Software](https://www.adeptsoftware.com/got/)
 # file: All Programs/Games/God of Thunder/Program.txt
@@ -492,7 +481,6 @@
 # file: All Programs/Games/God of Thunder/Program.txt = MD GOT
 # file: All Programs/Games/God of Thunder/Program.txt = CD GOT
 # file: All Programs/Games/God of Thunder/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
-# file: All Programs/Games/God of Thunder/Program.txt = IF NOT EXIST X:\MANUAL.TXT COPY MANUAL.TXT X:\MANUAL.TXT
 # file: All Programs/Games/God of Thunder/Program.txt
 # file: All Programs/Games/God of Thunder/Program.txt = :F_START
 # file: All Programs/Games/God of Thunder/Program.txt = C:
@@ -525,11 +513,9 @@
 # file: All Programs/Games/Jetpack/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Jetpack/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Jetpack/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Jetpack/Program.txt = # tag: Category = Side view • Arcade • Platform • Puzzle elements • Shooter
 # file: All Programs/Games/Jetpack/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Jetpack/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Jetpack_(video_game))
 # file: All Programs/Games/Jetpack/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/10449/jetpack/)
-# file: All Programs/Games/Jetpack/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Jetpack&gid=1263)
 # file: All Programs/Games/Jetpack/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/jetpack-1pg)
 # file: All Programs/Games/Jetpack/Program.txt = # site: [Adept Software](https://www.adeptsoftware.com/jetpack/)
 # file: All Programs/Games/Jetpack/Program.txt
@@ -553,7 +539,6 @@
 # file: All Programs/Games/Jetpack/Program.txt = X:\UNZ542X3.EXE
 # file: All Programs/Games/Jetpack/Program.txt = CD C:\
 # file: All Programs/Games/Jetpack/Program.txt = C:\UNZIP\UNZIP.EXE X:\GAME.ZIP
-# file: All Programs/Games/Jetpack/Program.txt = IF NOT EXIST X:\MANUAL.TXT COPY C:\JETPAK15\MANUAL.TXT X:\MANUAL.TXT
 # file: All Programs/Games/Jetpack/Program.txt
 # file: All Programs/Games/Jetpack/Program.txt = :F_START
 # file: All Programs/Games/Jetpack/Program.txt = CLS
@@ -607,11 +592,9 @@
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Genre = Adventure
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Puzzle elements • Fantasy
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # tag: Media = CD-ROM
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Lure_of_the_Temptress)
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1134/lure-of-the-temptress/)
-# file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Lure+of+the+Temptress&gid=1087)
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/lure-of-the-temptress-1ge)
 # file: All Programs/Games/Lure of the Temptress/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/lure_of_the_temptress)
 # file: All Programs/Games/Lure of the Temptress/Program.txt
@@ -650,11 +633,9 @@
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Category = Side view • Arcade • Fighting • Mecha • Sci-fi
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # tag: Media = CD-ROM
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/One_Must_Fall:_2097)
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/234/one-must-fall-2097/)
-# file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=One+Must+Fall+2097&gid=1843)
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/one-must-fall-2097-2a7)
 # file: All Programs/Games/One Must Fall 2097/Program.txt = #
 # file: All Programs/Games/One Must Fall 2097/Program.txt = # text: ## Installation Notes
@@ -707,13 +688,10 @@
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Stargunner/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Stargunner/Program.txt = # tag: Category = Side view • Shooter • Sci-fi
 # file: All Programs/Games/Stargunner/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Stargunner/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Stargunner)
 # file: All Programs/Games/Stargunner/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/922/stargunner/)
-# file: All Programs/Games/Stargunner/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Stargunner&gid=2492)
 # file: All Programs/Games/Stargunner/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/stargunner-c8g)
-# file: All Programs/Games/Stargunner/Program.txt = # site: [3DRealms 🆓](https://3drealms.com/catalog/stargunner_45/)
 # file: All Programs/Games/Stargunner/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/stargunner)
 # file: All Programs/Games/Stargunner/Program.txt = # site: [Steam 🆓](https://store.steampowered.com/app/358390/Stargunner/)
 # file: All Programs/Games/Stargunner/Program.txt
@@ -769,14 +747,13 @@
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Genre = Puzzle
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Supaplex/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Supaplex/Program.txt = # tag: Category = Side view
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Supaplex/Program.txt = # tag: Patched • Copy Protection
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Patched = Sound Fix
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Copy Protection
 # file: All Programs/Games/Supaplex/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Supaplex)
 # file: All Programs/Games/Supaplex/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/2106/supaplex/)
-# file: All Programs/Games/Supaplex/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Supaplex&gid=1618)
 # file: All Programs/Games/Supaplex/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/supaplex-19v)
-# file: All Programs/Games/Supaplex/Program.txt = # site: [Artsoft - Rocks'n'Diamonds](https://www.artsoft.org/rocksndiamonds/)
+# file: All Programs/Games/Supaplex/Program.txt = # site: [Rocks'n'Diamonds](https://www.artsoft.org/rocksndiamonds/)
 # file: All Programs/Games/Supaplex/Program.txt = # site: Game Patch = [Boulder Dash Fan Site 🔓](http://www.bd-fans.com/Supaplex.html)
 # file: All Programs/Games/Supaplex/Program.txt = #
 # file: All Programs/Games/Supaplex/Program.txt = # text: ## Installation Notes
@@ -835,18 +812,16 @@
 # file: All Programs/Games/Teen Agent/Program.txt = #
 # file: All Programs/Games/Teen Agent/Program.txt = # name: Teen Agent
 # file: All Programs/Games/Teen Agent/Program.txt = # name: Teenagent = Polish/Original
-# file: All Programs/Games/Teen Agent/Program.txt = # info: One day, two men in dark glasses and long coats captured a teenager; this could be a start of a very long day! Get ready for a wonderfully humorous adventure. Teen Agent is a point-and-click animated graphic adventure that features dozens of detailed hand-painted backgrounds.
+# file: All Programs/Games/Teen Agent/Program.txt = # info: One day, two men in dark glasses and long coats captured a teenager; this could be the start of a very long day! Get ready for a wonderfully humorous adventure. Teen Agent is a point-and-click animated graphic adventure that features dozens of detailed hand-painted backgrounds.
 # file: All Programs/Games/Teen Agent/Program.txt = # info: Wikipedia = When the game was originally released, "The Three Tasks" was shareware, and the remaining two sections could be obtained by registering the game. However, the game was later released as freeware.
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Year = 1995
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Genre = Adventure
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Teen Agent/Program.txt = # tag: Category = 3rd-person • Graphic adventure • Contemporary • Europe • Comedy • Detective • Spy
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Teen Agent/Program.txt = # tag: No Manual
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Teenagent)
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/6423/teen-agent/)
-# file: All Programs/Games/Teen Agent/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Teen+Agent&gid=2206)
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/teen-agent-23o)
 # file: All Programs/Games/Teen Agent/Program.txt = # site: [GOG 🆓](https://www.gog.com/en/game/teenagent)
 # file: All Programs/Games/Teen Agent/Program.txt = #
@@ -906,12 +881,10 @@
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Genre = Action • Puzzle
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Category = Side view • Platform • Fantasy • Sci-fi • Comedy
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Media = Floppy Disk
 # file: All Programs/Games/The Lost Vikings/Program.txt = # tag: Copy Protection
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/The_Lost_Vikings)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1547/the-lost-vikings/)
-# file: All Programs/Games/The Lost Vikings/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=The+Lost+Vikings&gid=1032)
 # file: All Programs/Games/The Lost Vikings/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/the-lost-vikings-1mi)
 # file: All Programs/Games/The Lost Vikings/Program.txt = #
 # file: All Programs/Games/The Lost Vikings/Program.txt = # text: ## Installation Notes
@@ -964,11 +937,9 @@
 # file: All Programs/Games/Xargon/Program.txt = # tag: Genre = Action
 # file: All Programs/Games/Xargon/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Xargon/Program.txt = # tag: License = Freeware
-# file: All Programs/Games/Xargon/Program.txt = # tag: Category = Side view • Arcade • Platform • Fantasy
 # file: All Programs/Games/Xargon/Program.txt = # tag: Media = Compressed Package
 # file: All Programs/Games/Xargon/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Xargon)
 # file: All Programs/Games/Xargon/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/1057/xargon/)
-# file: All Programs/Games/Xargon/Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Xargon&gid=2905)
 # file: All Programs/Games/Xargon/Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/game/xargon-21c)
 # file: All Programs/Games/Xargon/Program.txt
 # file: All Programs/Games/Xargon/Program.txt = [cpu]

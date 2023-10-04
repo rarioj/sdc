@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.9b
+# script-version: 1.0.23.10a
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -646,6 +646,7 @@
     if [ -f "${__mfile}" ]; then
       printf '%s\n\n' "![](${__mfile} \"${sdc__application__name}\")" >>"${sdc__markdown__file}"
     fi
+    printf '%s\n\n' "---" >>"${sdc__markdown__file}"
     unset __config __override __tfile __tsource __twidth __alias __info __tag __dosbox __site __include __text __code __catlabel __applabel __mfile
   }
   sdc__utility__category_document() {
@@ -949,6 +950,19 @@
       rm -f -- *.sdc
       sdc__utility__convert_html
     }
+    sdc__message__plain ""
+    if [ -f "${sdc__markdown__file}" ]; then
+      if [ -x "$(command -v mdcat)" ]; then
+        mdcat "${sdc__markdown__file}"
+      else
+        if [ -x "$(command -v pandoc)" ]; then
+          pandoc -f markdown -t plain "${sdc__markdown__file}"
+        else
+          cat "${sdc__markdown__file}"
+        fi
+      fi
+    fi
+    sdc__message__plain ""
     sdc__message__info "Library setup completed"
     unset __source __cversion __sversion __vcompare __bakpath __export __index __tmpfile __mfile __mgrid __mwidth
   }
@@ -962,6 +976,21 @@
       sdc__parse__value name application "${sdc__program__file}"
     fi
     if [ -f "${sdc__program__file}" ]; then
+      sdc__message__action "Creating ${sdc__application__name} document"
+      sdc__utility__application_document
+      sdc__utility__convert_html
+      sdc__message__plain ""
+      if [ -f "${sdc__program__file}" ] && [ -f "${sdc__markdown__file}" ]; then
+        if [ -x "$(command -v mdcat)" ]; then
+          mdcat "${sdc__markdown__file}"
+        else
+          if [ -x "$(command -v pandoc)" ]; then
+            pandoc -f markdown -t plain "${sdc__markdown__file}"
+          else
+            cat "${sdc__markdown__file}"
+          fi
+        fi
+      fi
       sdc__message__action "Downloading assets"
       sdc__parse__key_value asset download_file "${sdc__program__file}"
       __verify="$(sdc__parse__value asset-verify print "${sdc__script__file}" "${sdc__program__file}")"
@@ -1027,22 +1056,7 @@
       fi
     fi
     sdc__utility__configure_dosbox
-    sdc__message__action "Creating ${sdc__application__name} document"
-    sdc__utility__application_document
-    sdc__utility__convert_html
     sdc__message__action "Launching ${sdc__application__name} program"
-    sdc__message__plain ""
-    if [ -f "${sdc__program__file}" ] && [ -f "${sdc__markdown__file}" ]; then
-      if [ -x "$(command -v mdcat)" ]; then
-        mdcat "${sdc__markdown__file}"
-      else
-        if [ -x "$(command -v pandoc)" ]; then
-          pandoc -f markdown -t plain "${sdc__markdown__file}"
-        else
-          cat "${sdc__markdown__file}"
-        fi
-      fi
-    fi
     if [ "$(command -v "sdc__${sdc__dosbox__variant}__launch")" = "sdc__${sdc__dosbox__variant}__launch" ]; then
       (
         cd "System" || sdc__message__error "Inaccessible directory: System <sdc__script__Launch>"
@@ -1260,12 +1274,11 @@
 # file: Template-Program.txt = # tag: Genre = Action • Adventure • Educational • Gambling • Idle • Puzzle • Racing • Role-playing • Simulation • Sports • Strategy
 # file: Template-Program.txt = # tag: Platform = DOS / Windows 3.1x / Windows 9x
 # file: Template-Program.txt = # tag: License = Abandonware / Shareware / Freeware / Demo / Unlicensed / Discontinued / Proprietary
-# file: Template-Program.txt = # tag: Category = <Perspective> • <Pacing> • <Gameplay> • <Sports> • <Educational> • <Vehicular> • <Setting> • <Narrative> • <Other>
 # file: Template-Program.txt = # tag: Media = Compressed Package / CD-ROM / Floppy Disk
-# file: Template-Program.txt = # tag: Patched • Add-on • Compilation • Extras • Copy Protection • No Manual • Extra Command
+# file: Template-Program.txt = # tag: Patched = <version>
+# file: Template-Program.txt = # tag: Add-on • Compilation • Extras • Copy Protection • No Manual • Extra Command
 # file: Template-Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 # file: Template-Program.txt = # site: [MobyGames](https://www.mobygames.com/)
-# file: Template-Program.txt = # site: [AbandonwareDOS](https://www.abandonwaredos.com/)
 # file: Template-Program.txt = # site: [MyAbandonware](https://www.myabandonware.com/)
 # file: Template-Program.txt = # site: [Where to buy? 💰🆓](https://)
 # file: Template-Program.txt = #

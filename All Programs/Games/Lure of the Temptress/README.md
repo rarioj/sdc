@@ -7,11 +7,13 @@
 > ❝ The game was well-received and re-released as freeware on April 1, 2003. ❞ — *Wikipedia*
 >
 
-📌 ┃ **Year** ‣ 1992 ┃ **Genre** ‣ Adventure ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Category** ‣ 3rd-person • Graphic adventure • Puzzle elements • Fantasy ┃ **Media** ‣ CD-ROM 
+📌 ┃ **Year** ‣ 1992 ┃ **Genre** ‣ Adventure ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ CD-ROM 
 
 📦 ┃ **[DOSBox](https://www.dosbox.com/) 🟩** ┃ **[DOSBox Staging](https://dosbox-staging.github.io/) 🟩** ┃ **[DOSBox-X](https://dosbox-x.com/) 🟩** 
 
-📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Lure_of_the_Temptress)** ┃ **[MobyGames](https://www.mobygames.com/game/1134/lure-of-the-temptress/)** ┃ **[AbandonwareDOS](https://www.abandonwaredos.com/abandonware-game.php?abandonware=Lure+of+the+Temptress&gid=1087)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/lure-of-the-temptress-1ge)** ┃ **[GOG 🆓](https://www.gog.com/en/game/lure_of_the_temptress)** 
+📎 ┃ **[Wikipedia](https://en.wikipedia.org/wiki/Lure_of_the_Temptress)** ┃ **[MobyGames](https://www.mobygames.com/game/1134/lure-of-the-temptress/)** ┃ **[MyAbandonware](https://www.myabandonware.com/game/lure-of-the-temptress-1ge)** ┃ **[GOG 🆓](https://www.gog.com/en/game/lure_of_the_temptress)** 
 
 ![](Montage.png "Lure of the Temptress")
+
+---
 
