@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.10a
+# script-version: 1.0.23.10b
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -976,6 +976,20 @@
       sdc__parse__value name application "${sdc__program__file}"
     fi
     if [ -f "${sdc__program__file}" ]; then
+      if [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ] && [ -d "System/capture" ]; then
+        __count="$(find "System/capture" -name "*.png" | wc -l | sed "s/^ *//;s/ *$//")"
+        __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${sdc__program__file}")"
+        __mgrid="$(sdc__parse__value montage-grid print "${sdc__script__file}" "${sdc__program__file}")"
+        __mwidth="$(sdc__parse__value montage-width print "${sdc__script__file}" "${sdc__program__file}")"
+        if [ "${__mgrid}" != "0" ] && [ "${__count}" != "0" ]; then
+          sdc__message__action "Creating montage"
+          montage -background none -shadow -geometry +5+5 -tile "${__mgrid}" "System/capture/*.png" "${__mfile}" &&
+            mogrify -resize "${__mwidth}" "${__mfile}"
+          if [ -x "$(command -v pngquant)" ]; then
+            pngquant "${__mfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__mfile}"
+          fi
+        fi
+      fi
       sdc__message__action "Creating ${sdc__application__name} document"
       sdc__utility__application_document
       sdc__utility__convert_html
@@ -1040,20 +1054,6 @@
     fi
     if [ ! -f "Uninstall" ]; then
       cp "${sdc__script__file}" "Uninstall"
-    fi
-    if [ -x "$(command -v mogrify)" ] && [ -x "$(command -v montage)" ] && [ -d "System/capture" ]; then
-      __count="$(find "System/capture" -name "*.png" | wc -l | sed "s/^ *//;s/ *$//")"
-      __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${sdc__program__file}")"
-      __mgrid="$(sdc__parse__value montage-grid print "${sdc__script__file}" "${sdc__program__file}")"
-      __mwidth="$(sdc__parse__value montage-width print "${sdc__script__file}" "${sdc__program__file}")"
-      if [ "${__mgrid}" != "0" ] && [ "${__count}" != "0" ]; then
-        sdc__message__action "Creating montage"
-        montage -background none -shadow -geometry +5+5 -tile "${__mgrid}" "System/capture/*.png" "${__mfile}" &&
-          mogrify -resize "${__mwidth}" "${__mfile}"
-        if [ -x "$(command -v pngquant)" ]; then
-          pngquant "${__mfile}" --output sdc-tmp.png && mv sdc-tmp.png "${__mfile}"
-        fi
-      fi
     fi
     sdc__utility__configure_dosbox
     sdc__message__action "Launching ${sdc__application__name} program"
