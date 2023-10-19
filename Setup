@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.10b
+# script-version: 1.0.23.10c
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -346,10 +346,14 @@
         fi
       fi
       if [ "${__download}" = "y" ]; then
-        sdc__message__item "Fetching ${2} ‣‣‣ Assets/${1}"
-        if ! curl --progress-bar -f -o "Assets/${1}" -L -S "${2}"; then
+        sdc__message__item "Fetching Assets/${1} with curl ◄ ${2}"
+        if ! curl "${2}" -o "Assets/${1}" --progress-bar -f -L -S --retry 50 --retry-max-time 0 -C -; then
           rm -f "Assets/${1}"
-          sdc__message__error "Failed to download asset file: ${2} <sdc__callback__download_file>"
+          sdc__message__item "Fetching Assets/${1} with wget ◄ ${2}"
+          if ! wget "${2}" -O "Assets/${1}" --show-progress -t 50 -c; then
+            rm -f "Assets/${1}"
+            sdc__message__error "Failed to download asset file: ${2} <sdc__callback__download_file>"
+          fi
         fi
       fi
     fi
@@ -438,6 +442,15 @@
         printf '%s\n' "> ❝ ${1} ❞"
       fi
       printf '%s\n' ">"
+    fi
+  }
+  sdc__callback__markdown_break() {
+    if [ -n "${1}" ]; then
+      if [ -n "${2}" ]; then
+        printf '%s' "<br>❝ ${2} ❞ — *${1}*<br>"
+      else
+        printf '%s' "<br>❝ ${1} ❞<br>"
+      fi
     fi
   }
 }
@@ -660,42 +673,33 @@
       if [ ! -f "${__catpath}/${sdc__markdown__file}" ]; then
         __count="$(find -L "${__catpath}" -name "${__config}" | wc -l | xargs)"
         sdc__message__item "${__catpath#./}"
-        printf '%s\n\n' "# 🗂️ $(echo "${__catpath}" | sed "s/\.\///;s/\// ‣ /g") (${__count})" >>"${__catpath}/${sdc__markdown__file}"
+        printf '%s\n\n---\n\n' "# 🗂️ $(echo "${__catpath}" | sed "s/\.\///;s/\// ‣ /g") (${__count})" >>"${__catpath}/${sdc__markdown__file}"
       fi
       sdc__message__item "${__catpath#./} ◄ ${sdc__application__name}"
       {
         __tfile="$(sdc__parse__value thumbnail-file print "${sdc__script__file}" "${1}")"
-        __cover="0"
-        if [ -f "${__dirpath}/${__tfile}" ]; then
-          __cover="1"
-          {
-            printf '%s\n>\n' "> <table><tr><td width=\"255\">"
-            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__tfile}") \"${sdc__application__name}\")"
-            printf '%s\n>\n' "> </td>"
-            printf '%s\n>\n' "> <td>"
-          } >>"${__catpath}/${sdc__markdown__file}"
-        fi
-        printf '%s\n>\n' "> ## [${sdc__application__name}]($(sdc__utility__urlencode_string "${__apppath}/${sdc__markdown__file}"))" >>"${__catpath}/${sdc__markdown__file}"
+        __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${1}")"
         __tag="$(sdc__parse__key_value tag markdown_divider "${1}")"
-        if [ -n "${__tag}" ]; then
-          printf '%s\n>\n' "> 📌 ${__tag}" >>"${__catpath}/${sdc__markdown__file}"
+        {
+          printf '%s\n' "| [${sdc__application__name}]($(sdc__utility__urlencode_string "${__apppath}/${sdc__markdown__file}")) | 📌 ${__tag} |"
+          printf '%s\n' "|:---:|:---|"
+        } >>"${__catpath}/${sdc__markdown__file}"
+        printf '%s' "| " >>"${__catpath}/${sdc__markdown__file}"
+        if [ -f "${__dirpath}/${__tfile}" ]; then
+          printf '%s' " [![${sdc__application__name}]($(sdc__utility__urlencode_string "${__apppath}/${__tfile}") \"${sdc__application__name}\")]($(sdc__utility__urlencode_string "${__apppath}/${sdc__markdown__file}")) " >>"${__catpath}/${sdc__markdown__file}"
+        elif [ -f "${__dirpath}/${__mfile}" ]; then
+          printf '%s' " [![${sdc__application__name}]($(sdc__utility__urlencode_string "${__apppath}/${__mfile}") \"${sdc__application__name}\")]($(sdc__utility__urlencode_string "${__apppath}/${sdc__markdown__file}")) " >>"${__catpath}/${sdc__markdown__file}"
         fi
-        __info="$(sdc__parse__key_value info markdown_quote "${1}")"
+        printf '%s' "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" >>"${__catpath}/${sdc__markdown__file}"
+        printf '%s' " | " >>"${__catpath}/${sdc__markdown__file}"
+        __info="$(sdc__parse__key_value info markdown_break "${1}")"
         if [ -n "${__info}" ]; then
-          printf '%s\n>\n' "${__info}" >>"${__catpath}/${sdc__markdown__file}"
+          printf '%s' "${__info}" >>"${__catpath}/${sdc__markdown__file}"
         fi
-        if [ "${__cover}" = "0" ]; then
-          __mfile="$(sdc__parse__value montage-file print "${sdc__script__file}" "${1}")"
-          if [ -f "${__dirpath}/${__mfile}" ]; then
-            printf '%s\n>\n' "> ![]($(sdc__utility__urlencode_string "${__apppath}/${__mfile}") \"${sdc__application__name}\")" >>"${__catpath}/${sdc__markdown__file}"
-          fi
-        else
-          printf '%s\n' "> </td></tr></table>" >>"${__catpath}/${sdc__markdown__file}"
-        fi
-        printf '\n%s\n\n' "&nbsp;" >>"${__catpath}/${sdc__markdown__file}"
+        printf '%s\n\n---\n\n' " |" >>"${__catpath}/${sdc__markdown__file}"
       }
     fi
-    unset __config __dirpath __catpath __apppath __count __tfile __cover __tag __info __mfile
+    unset __config __dirpath __catpath __apppath __count __tfile __mfile __tag __info
   }
   sdc__utility__category_list() {
     if [ -n "${1}" ] && [ -f "${1}" ]; then
@@ -721,7 +725,7 @@
       {
         printf '%s\n' "<html><head>"
         printf '%s\n' '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">'
-        printf '%s\n' '<style>[title~="application-thumbnail"] { float: right; padding: 0 0 2.5% 2.5%; }</style>'
+        printf '%s\n' '<style>[title~="application-thumbnail"] { float: right; padding: 0 0 2.5% 2.5%; } thead, tbody { border: none; }</style>'
         printf '%s\n' "</head><body>"
       } >"${sdc__hypertext__file}"
       pandoc -f markdown -t html "${sdc__markdown__file}" | sed "s/${sdc__markdown__file}/${sdc__hypertext__file}/g" >>"${sdc__hypertext__file}"
@@ -1132,7 +1136,7 @@
 
 # section: Main process
 {
-  for __index in base64 basename cat cp curl date dirname find grep head ln ls mkdir mktemp perl rm sed sh sort stty tar touch tr wc xargs; do
+  for __index in base64 basename cat cp curl date dirname find grep head ln ls mkdir mktemp perl rm sed sh sort stty tar touch tr wc wget xargs; do
     if [ ! -x "$(command -v "${__index}")" ]; then
       sdc__message__error "Required command not found: ${__index} <sdc__main>"
     fi
