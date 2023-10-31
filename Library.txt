@@ -2,7 +2,7 @@
 #
 # library-name: SDC Freeware Examples
 # library-source: https://raw.githubusercontent.com/rarioj/sdc/main/Library.txt
-# library-version: 23.10a
+# library-version: 23.10b
 #
 # tag: Script Version = ###script-version###
 # tag: Type = Shell Script
@@ -748,7 +748,7 @@
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Platform = DOS
 # file: All Programs/Games/Supaplex/Program.txt = # tag: License = Freeware
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Media = CD-ROM
-# file: All Programs/Games/Supaplex/Program.txt = # tag: Patched = Sound Fix
+# file: All Programs/Games/Supaplex/Program.txt = # tag: Patched = Sound bugfix
 # file: All Programs/Games/Supaplex/Program.txt = # tag: Copy Protection
 # file: All Programs/Games/Supaplex/Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Supaplex)
 # file: All Programs/Games/Supaplex/Program.txt = # site: [MobyGames](https://www.mobygames.com/game/2106/supaplex/)

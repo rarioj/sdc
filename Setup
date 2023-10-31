@@ -3,7 +3,7 @@
 #
 ###### System properties (locked/read-only)
 # script-source: https://raw.githubusercontent.com/rarioj/sdc/main/Setup
-# script-version: 1.0.23.10c
+# script-version: 1.0.23.10d
 # dosbox-variants: dosbox-x dosbox-staging dosbox
 # library-file: Library.txt
 # program-file: Program.txt
@@ -12,7 +12,7 @@
 #
 ###### Library properties (overridable in library configuration file)
 ## library-name: Library Name
-## library-source: <url>
+## library-source: [url]
 ## library-version: x.y.z
 # backup-directory: .backup
 # script-export-file: 1
@@ -1216,7 +1216,7 @@
 # file: Template-Library.txt = #
 # file: Template-Library.txt = ###### Library properties
 # file: Template-Library.txt = ## library-name: Library Name
-# file: Template-Library.txt = ## library-source: <url>
+# file: Template-Library.txt = ## library-source: [url]
 # file: Template-Library.txt = ## library-version: x.y.z
 # file: Template-Library.txt = # backup-directory: .backup
 # file: Template-Library.txt = # script-export-file: 1
@@ -1230,14 +1230,14 @@
 # file: Template-Library.txt = ### 🟨 Runnable with issues
 # file: Template-Library.txt = ### 🟥 Unsupported, unplayable, or broken
 # file: Template-Library.txt = ### ⬜ Untested
-# file: Template-Library.txt = # dosbox: [DOSBox](https://www.dosbox.com/) = <version> 🟩🟨🟥⬜
-# file: Template-Library.txt = # dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) = <version> 🟩🟨🟥⬜
-# file: Template-Library.txt = # dosbox: [DOSBox-X](https://dosbox-x.com/) = <version> 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: [DOSBox](https://www.dosbox.com/) = [version] 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) = [version] 🟩🟨🟥⬜
+# file: Template-Library.txt = # dosbox: [DOSBox-X](https://dosbox-x.com/) = [version] 🟩🟨🟥⬜
 # file: Template-Library.txt = #
 # file: Template-Library.txt = # name: Library Name
-# file: Template-Library.txt = # name: <alias>
+# file: Template-Library.txt = # name: [alias]
 # file: Template-Library.txt = # info: This is a library configuration file template. Enter library description here.
-# file: Template-Library.txt = # tag: <key> = <value>
+# file: Template-Library.txt = # tag: [key] = [value]
 # file: Template-Library.txt = # site: [DOSBox](https://www.dosbox.com/)
 # file: Template-Library.txt = # site: [DOSBox Staging](https://dosbox-staging.github.io/)
 # file: Template-Library.txt = # site: [DOSBox-X](https://dosbox-x.com/)
@@ -1267,19 +1267,19 @@
 # file: Template-Program.txt = ### 🟨 Runnable with issues
 # file: Template-Program.txt = ### 🟥 Unsupported, unplayable, or broken
 # file: Template-Program.txt = ### ⬜ Untested
-# file: Template-Program.txt = # dosbox: [DOSBox](https://www.dosbox.com/) = <version> 🟩🟨🟥⬜
-# file: Template-Program.txt = # dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) = <version> 🟩🟨🟥⬜
-# file: Template-Program.txt = # dosbox: [DOSBox-X](https://dosbox-x.com/) = <version> 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: [DOSBox](https://www.dosbox.com/) = [version] 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: [DOSBox Staging](https://dosbox-staging.github.io/) = [version] 🟩🟨🟥⬜
+# file: Template-Program.txt = # dosbox: [DOSBox-X](https://dosbox-x.com/) = [version] 🟩🟨🟥⬜
 # file: Template-Program.txt = #
 # file: Template-Program.txt = # name: Program Name
-# file: Template-Program.txt = # name: <alias>
+# file: Template-Program.txt = # name: [alias]
 # file: Template-Program.txt = # info: This is a program configuration file template. Enter program description here.
 # file: Template-Program.txt = # tag: Year = YYYY
 # file: Template-Program.txt = # tag: Genre = Action • Adventure • Educational • Gambling • Idle • Puzzle • Racing • Role-playing • Simulation • Sports • Strategy
 # file: Template-Program.txt = # tag: Platform = DOS / Windows 3.1x / Windows 9x
 # file: Template-Program.txt = # tag: License = Abandonware / Shareware / Freeware / Demo / Unlicensed / Discontinued / Proprietary
 # file: Template-Program.txt = # tag: Media = Compressed Package / CD-ROM / Floppy Disk
-# file: Template-Program.txt = # tag: Patched = <version>
+# file: Template-Program.txt = # tag: Patched = [version]
 # file: Template-Program.txt = # tag: Add-on • Compilation • Extras • Copy Protection • No Manual • Extra Command
 # file: Template-Program.txt = # site: [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 # file: Template-Program.txt = # site: [MobyGames](https://www.mobygames.com/)

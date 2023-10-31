@@ -68,7 +68,7 @@
 
 ---
 
-| [Supaplex](../../../All%20Programs/Games/Supaplex/README.md) | 📌 ┃ **Year** ‣ 1991 ┃ **Genre** ‣ Puzzle ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ CD-ROM ┃ **Patched** ‣ Sound Fix ┃ **Copy Protection**  |
+| [Supaplex](../../../All%20Programs/Games/Supaplex/README.md) | 📌 ┃ **Year** ‣ 1991 ┃ **Genre** ‣ Puzzle ┃ **Platform** ‣ DOS ┃ **License** ‣ Freeware ┃ **Media** ‣ CD-ROM ┃ **Patched** ‣ Sound bugfix ┃ **Copy Protection**  |
 |:---:|:---|
 |  [![Supaplex](../../../All%20Programs/Games/Supaplex/Thumbnail.png "Supaplex")](../../../All%20Programs/Games/Supaplex/README.md) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | <br>❝ You are Murphy, a bug hunter extraordinaire, exploring deep inside a crazy computer. The only way out of each brain-teasing level is to collect the Infotrons. The fun begins! Avoid Snik Snaks at all costs; falling Zonks will trap the unwary, exploding discs, electrons, and ports. All add up to this awesome action game! ❞<br><br>❝ The developers of the game have declared the software to be freeware. ❞ — *Wikipedia*<br> |
 
